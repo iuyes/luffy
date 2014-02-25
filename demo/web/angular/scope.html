@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+  <title></title>
+  <script type="text/javascript" src="/js/luffy/seajs/2.1.1/sea.js" id="seajsnode"></script>
+  <!-- seajs配置文件 -->
+  <script type="text/javascript" src="/js/luffy/luffyconf.js"></script>
+  <!-- 当前页面模块的健康情况 -->
+  <script type="text/javascript" src="/js/luffy/seajs-health/0.1.0/seajs-health.js"></script>
+  <!-- seajs文本插件 can load .tpl .html .json 文本 -->
+  <script type="text/javascript" src="/js/luffy/seajs-text/1.0.2/seajs-text.js"></script>
+  <script type="text/javascript" src="/js/luffy/seajs-style/1.0.1/seajs-style.js"></script>
+  <link rel="stylesheet" href="/js/sea-modules/playman/shincss/base.css"/>
+  <script>
+    var Controll = function ($scope) {
+      $scope.num = 333;
+    }
+
+  </script>
+</head>
+<body>
+
+<div ng-controller="Controll">
+  <input type="text" ng-model="num"/>
+</div>
+
+</body>
+<script>
+  seajs.use(['angular/angularjs/1.1.5/angular']);
+</script>
+</html>

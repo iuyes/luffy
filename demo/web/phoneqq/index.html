@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script type="text/javascript" src="/js/luffy/seajs/2.1.1/sea.js" id="seajsnode"></script>
+    <!-- seajs配置文件 -->
+    <script type="text/javascript" src="/js/luffy/luffyconf.js"></script>
+    <!-- 当前页面模块的健康情况 -->
+    <script type="text/javascript" src="/js/luffy/seajs-health/0.1.0/seajs-health.js"></script>
+    <!-- seajs文本插件 can load .tpl .html .json 文本 -->
+    <script type="text/javascript" src="/js/luffy/seajs-text/1.0.2/seajs-text.js"></script>
+    <script type="text/javascript" src="/js/luffy/seajs-style/1.0.1/seajs-style.js"></script>
+    <!--样式-->
+    <link rel="stylesheet" href="/js/sea-modules/playman/shincss/base.css"/>
+    <link rel="stylesheet" href="/js/sea-modules/playman/shincss/function.css"/>
+    <link rel="stylesheet" href="/js/sea-modules/playman/shincss/grid.css"/>
+    <link rel="stylesheet" href="/js/sea-modules/playman/shincss/iconfont.css"/>
+    <link rel="stylesheet" href="/js/sea-modules/playman/shincss/iconfont-diao.css"/>
+    <link rel="stylesheet" href="/js/sea-modules/playman/shincss/animate.css"/>
+    <link rel="stylesheet" href="main.css"/>
+</head>
+<body>
+<header>
+    <section class="wrapper">
+        <a href="#" class="logo">手机qq</a>
+
+        <div class="topnav">
+            <ul>
+                <li>
+                    <a href="#" class="active">首页</a>
+                </li>
+                <li>
+                    <a href="#">下载</a>
+                </li>
+                <li>
+                    <a href="#">手机QQ印象</a>
+                </li>
+                <li>
+                    <a href="#">开放平台</a>
+                </li>
+                <li>
+                    <a href="#">帮助</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+</header>
+
+<section class="banner">
+    <div class="banner-wrapper">
+        <a class="download-btn" href="javascript:void(0)" id="downloadBtn">点击下载手机QQ
+        </a>
+        <ul class="download-list">
+            <li class="ios"></li>
+            <li class="android active"
+                data-url="http://softfile.3g.qq.com/msoft/apk/qq2013/qq2013_4.2.1.1575_android.apk"></li>
+            <li class="wp"></li>
+            <li class="hd"></li>
+        </ul>
+    </div>
+</section>
+
+<section class="container">
+    <ul class="fn-clear">
+        <li><a href="#" class="iphone"></a></li>
+        <li><a href="" class="android""></a></li>
+        <li><a href="" class="wphone"></a></li>
+        <li class="school"><a href="" class="last"></a></li>
+    </ul>
+</section>
+
+<section class="footer">
+    <p class="tencentNav">关于腾讯 | About Tencent | 服务条款 | 广告服务 | 商务洽谈 | 腾讯招聘 | 腾讯公益 | 客服中心 | 网站导航 | 版权所有</p>
+
+    <p class="copyright">Copyright © 1998 - 2013 Tencent. All Rights Reserved.</p>
+
+    <p class="copycn">腾讯公司 版权所有</p>
+</section>
+
+</body>
+<script src="/js/libs/download.min.js"></script>
+<script type="text/javascript">
+    seajs.use(['$'], function ($) {
+        var downurl = 'http://softfile.3g.qq.com/msoft/apk/qq2013/qq2013_4.2.1.1575_android.apk';
+        $(".topnav li a").click(function () {
+            $(".topnav").find('.active').removeClass('active');
+            $(this).addClass('active animated tada');
+        });
+
+        $(".download-list li").click(function () {
+            $(".download-list").find('.active').removeClass('active');
+            if ($(this).hasClass('ios')) {
+            　top.location.href = 'http://itunes.apple.com/cn/app/qq-2011/id444934666?mt=8';
+            }
+            else if ($(this).hasClass('wp')) {
+                top.location.href = 'http://www.windowsphone.com/zh-cn/store/app/qq/b45f0a5f-13d8-422b-9be5-c750af531762';
+            }
+            else if ($(this).hasClass('hd')) {
+                window.open('http://qqhd.qq.com/');
+            }
+            else {
+                downurl = $(this).attr('data-url');
+            }
+            $(this).addClass('active');
+        });
+
+        $("#downloadBtn").click(function () {
+            downloadFile(downurl);
+        });
+    });
+</script>
+</html>

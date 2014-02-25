@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+    <title></title>
+    <!-- seajs文件 -->
+    <script type="text/javascript" src="/js/luffy/seajs/2.1.1/sea.js" id="seajsnode"></script>
+    <!-- seajs配置文件 -->
+    <script type="text/javascript" src="/js/luffy/luffyconf.js"></script>
+    <!-- 当前页面模块的健康情况 -->
+    <script type="text/javascript" src="/js/luffy/seajs-health/0.1.0/seajs-health.js"></script>
+    <!-- seajs文本插件 can load .tpl .html .json 文本 -->
+    <script type="text/javascript" src="/js/luffy/seajs-text/1.0.2/seajs-text.js"></script>
+    <!--seajs样式插件-->
+    <script type="text/javascript" src="/js/luffy/seajs-style/1.0.1/seajs-style.js."></script>
+    <!--样式-->
+    <link rel="stylesheet" href="/css/spe/base/base.css"/>
+</head>
+<body>
+邮箱地址<input type="email" id="email"/>
+<br>
+远程数据 <input type="text" id="auto1"/>
+<br>
+ajax数据和本地数据 <input type="text" id="auto2"/>
+<br>
+locator <input type="text" id="locator"/>
+<br>
+复杂的数据结构 <input type="text" id="auto3"/>
+<br>
+自定义过滤器filter <input type="text" id="filter"/>
+
+
+</body>
+<script type="text/javascript">
+    seajs.use('arale/autocomplete/1.3.0/autocomplete.css');
+
+    seajs.use(['arale/autocomplete/1.3.0/autocomplete', '$'], function (Autocomplete, $) {
+
+        var emaildata = ['qq.com', '163.com', 'gmail.com', '126.com'];
+        var email = new Autocomplete({
+            trigger: '#email',
+            dataSource: function (value) {
+                var newemaildata = $.map(emaildata, function (v, i) {
+                    return value + '@' + v;
+                });
+                return newemaildata;
+            },
+            filter: '',
+            inputFilter: function (value) {
+                return value.replace(/^(.*)@.*$/, '$1');
+            },
+            selectFirst: true
+        }).render();
+        email.on('indexChange', function (currentIndex, lastIndex) {
+            console.log(this.items[currentIndex]);
+        });
+
+        <!--远程json-->
+        var auto1 = new Autocomplete({
+            trigger: '#auto1',
+            dataSource: './data.json'
+        }).render();
+
+        <!--远程json-->
+        var localdata = ['adgh', 'aedg', 'aereg'];
+        var auto2 = new Autocomplete({
+            trigger: '#auto2',
+            dataSource: function () {
+                var that = this;
+                $.ajax('./data.json', {
+                    dataType: 'json'
+                })
+                        .success(function (data) {
+                            that.trigger('data', data.concat(localdata));
+                        })
+                        .error(function (data) {
+                            that.trigger('data', {});
+                        });
+            }
+        }).render();
+
+
+        new Autocomplete({
+            trigger: '#locator',
+            locator: 'my.mother.father.location',
+            dataSource: {
+                my: {
+                    mother: {
+                        father: {
+                            location: ['adadd', 'ddda', 'addd']
+
+                        }
+                    }
+                }
+            }
+        }).render();
+
+
+        new Autocomplete({
+            trigger: '#auto3',
+            filter: {
+                name: 'startsWith',
+                options: {
+                    key: 'vlaue'
+                }
+            },
+            dataSource: [
+                {value: 'abc', myprop: '123'},
+                {value: 'abd', myprop: '124'},
+                {value: 'abe', myprop: '125'},
+                {value: 'acd', myprop: '134'}
+            ]
+        }).render();
+
+        <!--自定义过滤器-->
+        new Autocomplete({
+            trigger: '#filter',
+            dataSource: ['abc', 'abd', 'abe', 'acd'],
+            filter: function(data, query) {
+                var result = [];
+                $.each(data, function(index, value) {
+                    if (value.indexOf(query) > -1) {
+                        result.push({matchKey: value});
+                    }
+                });
+                return result;
+            }
+        }).render();
+
+
+    });
+</script>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <script type="text/javascript" src="/js/luffy/seajs/2.1.1/sea.js" id="seajsnode"></script>
+  <!-- seajs配置文件 -->
+  <script type="text/javascript" src="/js/luffy/luffyconf.js"></script>
+  <!-- 当前页面模块的健康情况 -->
+  <script type="text/javascript" src="/js/luffy/seajs-health/0.1.0/seajs-health.js"></script>
+  <!-- seajs文本插件 can load .tpl .html .json 文本 -->
+  <script type="text/javascript" src="/js/luffy/seajs-text/1.0.2/seajs-text.js"></script>
+  <script type="text/javascript" src="/js/luffy/seajs-style/1.0.1/seajs-style.js"></script>
+</head>
+<body>
+<div id="upload">
+  <input type="button" class="ui-button ui-button-normal-s" id="fileupload" value="Browse" />
+  <br /><br />
+  <p id="drag-container" style="height:300px;border:1px solid #000;">仅HTML5上传方式且正确配置以后才支持从外部拖拽文件到此区域.调试信息请打开console面板.</p>
+</div>
+<br/>
+</body>
+<script>
+  seajs.use('atom/uploader/uploader',function(Uploader){
+    var u = new Uploader({
+      runtimes:'html5,flash',
+      multiple: true,
+      dragContainer:'#fileupload',
+      element:'#upload',
+      uploadButton: '#fileupload',
+      uploadURL: 'http://upload.alibaba.com/fileupload',
+      fileTypes: '*.jpg;*.png',
+      fileSizeLimit: '5000KB',
+      swfURL: '../src/swfuploader/uploader.swf'
+    }).render();
+  });
+</script>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+    <title></title>
+    <!-- seajs文件 -->
+    <script type="text/javascript" src="/js/luffy/seajs/2.1.1/sea.js" id="seajsnode"></script>
+    <!-- seajs配置文件 -->
+    <script type="text/javascript" src="/js/luffy/luffyconf.js"></script>
+    <!-- 当前页面模块的健康情况 -->
+    <script type="text/javascript" src="/js/luffy/seajs-health/0.1.0/seajs-health.js"></script>
+    <!-- seajs文本插件 can load .tpl .html .json 文本 -->
+    <script type="text/javascript" src="/js/luffy/seajs-text/1.0.2/seajs-text.js"></script>
+    <style type="text/css">
+        .container {
+            width: 990px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <select id="example1">
+        <option value="option1">option1</option>
+        <option value="option2" selected="selected">option2</option>
+        <option value="option3" disabled="disabled">option3</option>
+    </select>
+
+    <a href="#" id="open">打开</a>
+    <a href="#" id="close">关闭</a>
+    <br>
+
+
+    <a href="#" id="example2" class="ui-select-trigger"></a>
+
+    <br>
+
+    <select id="example3_1">
+        <option value="WATER" selected="selected">水费</option>
+        <option value="ELECTRIC">电费</option>
+    </select>
+
+    <a href="#" id="example3_2" class="ui-select-trigger">
+        <span data-role="trigger-content"></span>
+        <i class="iconfont">&#xF03C;</i>
+    </a>
+
+    <a href="#" id="example3_3" class="ui-select-trigger">
+        <span data-role="trigger-content"></span>
+        <i class="iconfont">&#xF03C;</i>
+    </a>
+
+
+</div>
+</body>
+<script type="text/javascript">
+//    .数据json
+    var relationMap = {"WATER": {"北京": ["北京"], "浙江": ["杭州", "宁波", "温州"], "江苏": ["南京", "苏州", "无锡", "常州"], "上海": ["上海"]}, "ELECTRIC": {"北京": ["北京"], "浙江": ["杭州", "宁波", "温州"], "江苏": ["南京", "苏州", "无锡", "常州"], "上海": ["上海"]}}
+</script>
+
+<script type="text/javascript">
+    seajs.use('playman/shincss/1.0.0/base.css');
+    seajs.use('alice/select/1.0.2/select.css');
+
+    seajs.use(['$', 'arale/select/0.9.7/select'], function ($, Select) {
+        var select1 = new Select({
+            trigger: '#example1',
+            disabled: true
+        }).render();
+
+        $("#open").click(function () {
+            select1.set('disabled', false);
+        });
+        $("#close").click(function () {
+            select1.set('disabled', true);
+        });
+
+
+        var select2 = new Select({
+            trigger: '#example2',
+            model: [
+                {value: '上海', text: '上海'},
+                {value: '北京', text: '北京', selected: true},
+                {value: '杭州', text: '杭州', disabled: true}
+            ]
+        }).render();
+
+        select2.on('change', function (target) {
+            console.log(target.attr('data-value') + '...' + target.html());
+        });
+
+
+
+
+        var select3_1 = new Select({
+            trigger: '#example3_1',
+            triggerTpl: '<a href="#" class="ui-select-trigger"><span data-role="trigger-content"></span><i class="iconfont">&#xF03C;</i></a>',
+            width: 100
+        }).render();
+
+        select3_1.on('change', function (target) {
+            var value1 = target.attr('data-value');
+            var model = parseProv(value1);
+            select3_2.syncModel(model);
+        });
+
+
+        var select3_2 = new Select({
+            trigger: '#example3_2',
+            model: parseProv(select3_1.get('value')),
+            width: 100,
+            maxWidth: 300
+        }).render();
+        select3_2.on('change', function (target) {
+            var value2 = target.attr('data-value');
+            var model = parseCity(select3_1.get('value'), value2);
+            select3_3.syncModel(model);
+        });
+
+
+        var select3_3 = new Select({
+            trigger: '#example3_3',
+            model: parseCity(select3_1.get('value'), select3_2.get('value')),
+            width: 100,
+            maxWidth: 300
+        }).render();
+
+
+    });
+</script>
+
+<script type="text/javascript">
+    function parseProv(type) {
+        var o = relationMap[type], result = [];
+        result.push({value: '', text: '请选择', selected: true})
+        for (i in o) {
+            var prov = i;
+            result.push({value: prov, text: prov, selected: false})
+        }
+        return result;
+    }
+    function parseCity(type, prov) {
+        var o = relationMap[type], cities = o[prov], result = [];
+        result.push({value: '', text: '请选择', selected: true})
+        for (i in cities) {
+            var city = cities[i];
+            result.push({value: city, text: city, selected: false})
+        }
+        return result;
+    }
+</script>
+</html>

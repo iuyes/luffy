@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <script type="text/javascript" src="/js/luffy/seajs/2.1.1/sea.js" id="seajsnode"></script>
+  <!-- seajs配置文件 -->
+  <script type="text/javascript" src="/js/luffy/luffyconf.js"></script>
+  <!-- 当前页面模块的健康情况 -->
+  <script type="text/javascript" src="/js/luffy/seajs-health/0.1.0/seajs-health.js"></script>
+  <!-- seajs文本插件 can load .tpl .html .json 文本 -->
+  <script type="text/javascript" src="/js/luffy/seajs-text/1.0.2/seajs-text.js"></script>
+  <script type="text/javascript" src="/js/luffy/seajs-style/1.0.1/seajs-style.js"></script>
+  <style>
+    html{
+      width: 100%;
+    }
+    body {
+      width: 100%;
+      height: 1500px;
+    }
+
+    #gotop {
+      display: block;
+      height: 50px;
+      width: 50px;
+      background-color: #999999;
+      font-size: 18px;
+      line-height: 50px;
+      text-align: center;
+      position: absolute;
+      bottom: 50px;
+      right: 50px;
+    }
+  </style>
+</head>
+<body>
+<a href="#" id="gotop">↑</a>
+</body>
+<script>
+seajs.use('atom/ghost-panel/ghost-panel',function(Ghostpanel){
+   new Ghostpanel({
+     element: '#gotop',
+     relativeElement:'body',
+     horizontal: 'right',
+     vertical: 'bottom',
+     horizontalMargin: 50,
+     verticalMargin: 50,
+     ie6Effect: 'slide'
+   }).render();
+});
+</script>
+</html>

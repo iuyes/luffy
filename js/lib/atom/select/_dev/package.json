@@ -1,0 +1,16 @@
+{
+    "family": "icbu",
+    "name": "select",
+    "version": "1.0.0",
+    "keywords": ["widget"],
+    "description": "包含样式和基本行为（ICBU dpl）的 Select 模拟组件",
+    "homepage": "http://docs.alif2e.com/icbu/select/",
+    "author": "连沁(36919)",
+    "bugs": {
+        "url": ""
+    },
+    "spm": {
+        "output": ["select.js"]
+    },
+    "tests": ["select"]
+}

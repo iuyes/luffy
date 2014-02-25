@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <script type="text/javascript" src="/js/luffy/seajs/2.1.1/sea.js" id="seajsnode"></script>
+  <!-- seajs配置文件 -->
+  <script type="text/javascript" src="/js/luffy/luffyconf.js"></script>
+  <!-- 当前页面模块的健康情况 -->
+  <script type="text/javascript" src="/js/luffy/seajs-health/0.1.0/seajs-health.js"></script>
+  <!-- seajs文本插件 can load .tpl .html .json 文本 -->
+  <script type="text/javascript" src="/js/luffy/seajs-text/1.0.2/seajs-text.js"></script>
+  <script type="text/javascript" src="/js/luffy/seajs-style/1.0.1/seajs-style.js"></script>
+  <link rel="stylesheet" href="/js/sea-modules/playman/shincss/base.css"/>
+  <link rel="stylesheet" href="/js/sea-modules/playman/shincss/function.css"/>
+  <style type="text/css">
+    .container {
+      width: 1280px;
+      height: 1800px;
+      margin: 0 auto;
+      background-color: #eea236;
+      padding-top: 90px;
+    }
+
+    .nav {
+      position: absolute;
+      left: 40px;
+      top: 300px;
+      width: 90px;
+      border: 1px solid #efefef;
+    }
+
+    .nav li {
+      list-style: none;
+      display: block;
+      font-size: 18px;
+      text-align: center;
+      border-bottom: 1px solid #EFEFEF;
+    }
+
+    .lastli {
+      border-bottom: 0;
+    }
+
+    .nav li > a {
+      display: block;
+      height: 30px;
+      line-height: 30px;
+    }
+
+    .nav li > a:hover {
+      background-color: #3a87ad;
+      color: #fff;
+    }
+
+
+  </style>
+</head>
+<body>
+<div class="container">
+</div>
+<ul class="nav">
+  <li><a href="#">Bootstrap</a></li>
+  <li><a href="#">Bootstrap</a></li>
+  <li class="lastli"><a href="#">Bootstrap</a></li>
+</ul>
+</body>
+<script type="text/javascript">
+  seajs.use(['$', 'arale/sticky/1.2.1/sticky'], function ($, Sticky) {
+    Sticky(".nav", 300, function (status) {
+      if (status) {
+        seajs.log('static');
+      } else {
+        seajs.log('unstick');
+      }
+    });
+  });
+</script>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>花瓣网</title>
+
+    <script type="text/javascript" src="/js/luffy/seajs/2.1.1/sea.js" id="seajsnode"></script>
+    <!-- seajs配置文件 -->
+    <script type="text/javascript" src="/js/luffy/luffyconf.js"></script>
+    <!-- 当前页面模块的健康情况 -->
+    <script type="text/javascript" src="/js/luffy/seajs-health/0.1.0/seajs-health.js"></script>
+    <!-- seajs文本插件 can load .tpl .html .json 文本 -->
+    <script type="text/javascript" src="/js/luffy/seajs-text/1.0.2/seajs-text.js"></script>
+    <script type="text/javascript" src="/js/luffy/seajs-style/1.0.1/seajs-style.js"></script>
+    <!--样式-->
+    <link rel="stylesheet" href="/js/sea-modules/playman/shincss/base.css"/>
+    <link rel="stylesheet" href="/js/sea-modules/playman/shincss/function.css"/>
+    <link rel="stylesheet" href="/js/sea-modules/playman/shincss/grid.css"/>
+    <link rel="stylesheet" href="/js/sea-modules/playman/shincss/iconfont.css"/>
+    <link rel="stylesheet" href="/js/sea-modules/playman/shincss/iconfont-diao.css"/>
+    <link rel="stylesheet" href="/js/sea-modules/playman/shincss/animate.css"/>
+    <link rel="stylesheet" href="main.css"/>
+
+    <!--[if IE]>
+    <script type="text/javascript" src="/js/libs/html5shiv.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+<header>
+    <div class="inner fn-clear">
+        <h1>
+            <a href="" class="logo">优酷</a>
+        </h1>
+
+        <form action="" class="fn-clear">
+            <input type="text" name="search" id="search"/>
+            <a href="" class="btn sousuo"><i class="fa fa-search"></i>搜索</a>
+
+            <div class="video-list fn-dn fn-clear">
+                <ul class="video-list-name">
+                    <li><a href=""><span class="video-name">晓说</span><span class="video-num">更新至第1025期</span></a></li>
+                    <li><a href=""><span class="video-name">晓说</span><span class="video-num">更新至第1025期</span></a></li>
+                    <li><a href=""><span class="video-name">晓说</span><span class="video-num">更新至第1025期</span></a></li>
+                    <li><a href=""><span class="video-name">晓说</span><span class="video-num">更新至第1025期</span></a></li>
+                    <li><a href=""><span class="video-name">晓说</span><span class="video-num">更新至第1025期</span></a></li>
+                    <li><a href=""><span class="video-name">晓说</span><span class="video-num">更新至第1025期</span></a></li>
+                </ul>
+                <div class="video-list-show">
+                    <div class="video-list-show-item fn-clear">
+                        <div class="thumb">
+                            <img src="http://r2.ykimg.com/050D000051AF066F6758396D9B00AB1A" alt=""/>
+                        </div>
+                        <div class="info">
+                            <h2 class="info-title">摧残人生TV</h2>
+
+                            <p class="info-pub">电视剧</p>
+
+                            <p class="info-actor">主演:何润东</p>
+
+                            <p class="info-age">年代:2013</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <ul class="fn-clear">
+            <li class="nav-user">
+                <a href="">
+                    <img src="http://static.youku.com/user/img/avatar/30/34.jpg" alt=""/>无敌小处狼
+                </a>
+                <div class="nav-user-list fn-dn">
+                    <div class="item fn-clear dash-line">
+                        <a href=""><i class="fa fa-user"></i>观看记录</a>
+                        <a href=""><i class="fa fa-user"></i>我的收藏</a>
+                        <a href=""><i class="fa fa-user"></i>我的收藏</a>
+                        <a href=""><i class="fa fa-user"></i>我的收藏</a>
+                    </div>
+                    <div class="item fn-clear" style="margin-top: 20px">
+                        <a href=""><i class="fa fa-user"></i>观看记录</a>
+                        <a href=""><i class="fa fa-user"></i>我的收藏</a>
+                        <a href=""><i class="fa fa-user"></i>我的收藏</a>
+                    </div>
+                    <div class="nav-user-list-bottom">
+                        <a href="" class="enter">进入个人中心</a>
+                        <div class="right">
+                            <a href="">设置</a>
+                            <span>|</span>
+                            <a href="">登出</a>
+                        </div>
+                    </div>
+
+                </div>
+            </li>
+            <li class="nav-user-email">
+                <a href=""><i class="fa fa-envelope"></i></a>
+            </li>
+            <li class="nav-user-history">
+                <a href=""><i class="fa fa-heart"></i><span>观看记录</span></a>
+            </li>
+            <li class="nav-user-upload">
+                <a href=""><i class="fa fa-toggle-up"></i><span>上传</span></a>
+            </li>
+        </ul>
+    </div>
+</header>
+
+
+</body>
+<script>
+    seajs.use(['$', 'arale/popup/1.1.5/popup'], function ($, Popup) {
+        var popuplist = new Popup({
+            trigger: '#search',
+            element: '.video-list',
+            triggerType: 'focus',
+            align: {
+                baseXY: [0, '100%']
+            }
+        });
+
+        $(".nav-user").hover(function () {
+            $(".nav-user").css({'borderRight':'1px solid #ededed','borderLeft':'1px solid #ededed'});
+            $(".nav-user-list").show();
+        }, function () {
+            $(".nav-user-list").hide();
+        });
+
+
+
+
+
+
+
+    });
+
+</script>
+</html>

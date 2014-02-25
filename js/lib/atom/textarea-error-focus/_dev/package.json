@@ -1,0 +1,16 @@
+{
+    "family": "icbu",
+    "name": "textarea-error-focus",
+    "version": "1.0.1",
+    "keywords": ["widget"],
+    "description": "textarea 控件错误文案高亮聚焦功能。",
+    "homepage": "http://docs.alif2e.com/icbu/textarea-error-focus/",
+    "author": "许诺",
+    "bugs": {
+        "url": ""
+    },
+    "spm": {
+        "output": ["textarea-error-focus.js"]
+    },
+    "tests": ["textarea-error-focus"]
+}

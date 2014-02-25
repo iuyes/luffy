@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <script type="text/javascript" src="/js/luffy/seajs/2.1.1/sea.js" id="seajsnode"></script>
+  <!-- seajs配置文件 -->
+  <script type="text/javascript" src="/js/luffy/luffyconf.js"></script>
+  <!-- 当前页面模块的健康情况 -->
+  <script type="text/javascript" src="/js/luffy/seajs-health/0.1.0/seajs-health.js"></script>
+  <!-- seajs文本插件 can load .tpl .html .json 文本 -->
+  <script type="text/javascript" src="/js/luffy/seajs-text/1.0.2/seajs-text.js"></script>
+  <script type="text/javascript" src="/js/luffy/seajs-style/1.0.1/seajs-style.js"></script>
+  <style>
+    ul {
+      display: block;
+      padding: 0;
+      margin: 0;
+    }
+
+    .slide {
+      width: 600px;
+      height: 400px;
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .slide-panels {
+      width: 600px;
+      height: 400px;
+      list-style: none;
+      overflow: hidden;
+    }
+
+    .slide-panels > li {
+      float: left;
+      display: inline;
+      width: 600px;
+      height: 400px;
+    }
+
+    .slide-triggers {
+      position: absolute;
+      bottom: 15px;
+      left: 50%;
+      margin-left: -34px;
+    }
+
+    .slide-triggers > li {
+      display: inline-block;
+      height: 10px;
+      width: 10px;
+      background-color: #e8e8e8;
+      border-radius: 100%;
+      border: 1px solid #fff;
+      margin-right: 6px;
+      cursor: pointer;
+    }
+
+    .slide-triggers > li.active {
+      background-color: #000000;
+    }
+
+    .prevBtn, .nextBtn {
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      top: 50%;
+      margin-top: -30px;
+      background-image: url('http://static.zealer.com/images/slider-arrow.png');
+      cursor: pointer;
+    }
+
+    .prevBtn {
+      left: 10px;
+      background-position: 0 0;
+    }
+
+    .nextBtn {
+      right: 10px;
+      background-position: right top;
+    }
+  </style>
+</head>
+<body>
+<div class="slide">
+  <ul class="slide-panels">
+    <li><img src="/img/tech1.jpg" alt=""/></li>
+    <li><img src="/img/tech2.jpg" alt=""/></li>
+    <li><img src="/img/tech4.jpg" alt=""/></li>
+    <li><img src="/img/tech3.jpg" alt=""/></li>
+  </ul>
+  <ul class="slide-triggers">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+  <a href="javascript:void ;" class="prevBtn"></a>
+  <a href="javascript:void ;" class="nextBtn"></a>
+</div>
+</body>
+<script>
+  seajs.use('play/myslide', function (mySlide) {
+    var slide1 = new mySlide({
+      element: '.slide',
+      deply:500,
+      circular:false
+    }).render();
+  });
+</script>
+</html>

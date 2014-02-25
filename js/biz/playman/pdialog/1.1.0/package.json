@@ -1,0 +1,34 @@
+{
+  "family": "playman",
+  "name": "pdialog",
+  "version": "1.1.0",
+  "description": "pdialog base on arale/dialog",
+  "homepage": "https://github.com/playman/pdialog",
+  "author": "",
+  "maintainers": [
+    "",
+    ""
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/playman/pdialog.git"
+  },
+  "bugs": {
+    "url": ""
+  },
+  "keywords": [],
+  "licenses": "MIT",
+  "spm": {
+    "output": ["pdialog.js"],
+    "alias": {
+	        "$": "$",
+            "overlay": "arale/overlay/1.1.3/overlay",
+            "mask": "arale/overlay/1.1.3/mask",
+            "easing": "arale/easing/1.0.0/easing",
+            "events": "arale/events/1.1.0/events",
+            "templatable": "arale/templatable/0.9.1/templatable"
+	},
+    "devAlias": {},
+    "engines": {}
+  }
+}

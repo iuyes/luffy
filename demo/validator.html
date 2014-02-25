@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+    <title></title>
+    <script type="text/javascript" src="/js/luffy/seajs/2.1.1/sea.js" id="seajsnode"></script>
+    <!-- seajs配置文件 -->
+    <script type="text/javascript" src="/js/luffy/luffyconf.js"></script>
+    <!-- 当前页面模块的健康情况 -->
+    <script type="text/javascript" src="/js/luffy/seajs-health/0.1.0/seajs-health.js"></script>
+    <!-- seajs文本插件 can load .tpl .html .json 文本 -->
+    <script type="text/javascript" src="/js/luffy/seajs-text/1.0.2/seajs-text.js"></script>
+    <script type="text/javascript" src="/js/luffy/seajs-style/1.0.1/seajs-style.js."></script>
+    <style type="text/css">
+        .container {
+            width: 990px;
+            margin: 0 auto;
+        }
+        .ui-form-item {
+            padding: 0 5px 0 0;
+            zoom: 1;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <form class="ui-form">
+        <div class="ui-form-item">
+            <label for="username" class="ui-label"><span class="ui-form-required">*</span>用户名：</label>
+            <input id="username" name="username" class="ui-input" />
+            <div class="ui-form-explain">用户名为电子邮箱。</div>
+        </div>
+
+        <div class="ui-form-item">
+            <label for="password" class="ui-label"><span class="ui-form-required">*</span>密码：</label>
+            <input id="password" name="password" type="password" class="ui-input" />
+            <div class="ui-form-explain">密码的长度必须大于或等于5。</div>
+        </div>
+
+        <div class="ui-form-item">
+            <label for="password-confirmation" class="ui-label"><span class="ui-form-required">*</span>重复输入密码：</label>
+            <input id="password-confirmation" name="password-confirmation" type="password" class="ui-input" />
+        </div>
+
+        <div class="ui-form-item">
+            <input class="ui-button ui-button-morange" type="submit" value="提交"/>
+        </div>
+    </form>
+
+
+</div>
+</body>
+<script type="text/javascript">
+
+    seajs.use(['$', 'arale/validator/0.9.6/validator','arale/widget/1.1.1/widget'], function ($, Validator,Widget) {
+        $(function() {
+            var validator = new Validator({
+                element: 'form',
+            });
+
+            validator.addItem({
+                element: '[name=username]',
+                required: true,
+                rule: 'email minlength{min:1} maxlength{max:20}',
+                display:'正确的用户名',
+                onItemValidated:function(error,msg,element){
+                   console.log('onitemvalidated',arguments);
+                }
+
+            })
+
+                    .addItem({
+                        element: '[name=password]',
+                        required: true,
+                        rule: 'minlength{min:5} maxlength{max:10}',
+                        display:'5-10位的密码'
+                    })
+
+                    .addItem({
+                        element: '[name=password-confirmation]',
+                        required: true,
+                        rule: 'confirmation{target: "#password"}',
+                        display:'一致的密码'
+                    });
+
+        });
+    });
+</script>
+</html>

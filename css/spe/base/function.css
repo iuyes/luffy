@@ -1,0 +1,349 @@
+/*! define playman/shincss/1.0.0/function-debug.css */
+
+/* 让内容以 content-box 显示 */
+.fn-border-box {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  -ms-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+/* 简单的渐变 */
+.fn-linear {
+  background: -webkit-gradient(linear, left top, left bottom, from(#fcfcfc), to(#f1f1f1));
+  background: -moz-linear-gradient(top, #fcfcfc, #f1f1f1);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfcfc', endColorstr='#f1f1f1');
+  background: -o-linear-gradient(top, #fcfcfc, #f1f1f1);
+  background: linear-gradient(top, #fcfcfc, #f1f1f1);
+}
+
+/* 人民币符号 */
+.fn-rmb {
+  font-family: arial;
+  font-style: normal;
+  padding-right: 4px;
+}
+
+/* chrome 下字体过小的问题 */
+.fn-webkit-adjust {
+  -webkit-text-size-adjust: none;
+}
+
+/* 清理浮动 */
+.fn-clear:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+.fn-clear {
+  zoom: 1; /* for IE6 IE7 */
+}
+
+/* 单行文字溢出时出现省略号，需设定宽度 */
+.fn-text-overflow {
+  overflow: hidden;
+  white-space: nowrap; /*设置不折行*/
+  text-overflow: ellipsis; /*这就是省略号喽*/
+  -o-text-overflow: ellipsis; /*兼容opera*/
+}
+
+/*在块级元素中文字换行*/
+.fn-text-wrap {
+  word-wrap: break-word;
+  word-break: keep-all;
+  overflow: hidden
+}
+
+/*超出3行出现省略号*/
+.fn-p-overflow {
+  text-overflow: ellipsis;
+  display: box;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+/*文字indent*/
+.fn-ti {
+  overflow: hidden;
+  text-indent: -9999px;
+}
+
+/*不可被选择*/
+.fn-usn {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+/*鼠标形状*/
+.fn-csd {
+  cursor: default;
+}
+
+.fn-csp {
+  cursor: pointer;
+}
+
+.fn-csh {
+  cursor: help;
+}
+
+.fn-csm {
+  cursor: move;
+}
+
+/*删除划线*/
+.fn-lt {
+  text-decoration: line-through;
+}
+
+/*disploy*/
+.fn-dib {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+.fn-dn {
+  display: none;
+}
+
+.fn-db {
+  display: block;
+}
+
+/*float*/
+.fn-fl {
+  float: left;
+  display: inline;
+}
+
+.fn-fr {
+  float: right;
+  display: inline;
+}
+
+/*position*/
+.fn-pr {
+  position: relative;
+}
+
+.fn-pa {
+  position: absolute;
+}
+
+/*overflow*/
+.fn-oh {
+  overflow: hidden;
+}
+
+/*font-size*/
+.fn-fs0 {
+  font-size: 0;
+}
+
+.fn-fs12 {
+  font-size: 12px;
+}
+
+.fn-fs14 {
+  font-size: 14px;
+}
+
+.fn-fs16 {
+  font-size: 16px;
+}
+
+.fn-fs20 {
+  font-size: 20px;
+}
+
+.fn-fs32 {
+  font-size: 32px;
+}
+
+/*语义化的字体颜色*/
+.fn-cp {
+  color: #428bca;
+}
+
+.fn-cw {
+  color: #c09853;
+}
+
+.fn-cd {
+  color: #b94a48;
+}
+
+.fn-cs {
+  color: #468847;
+}
+
+.fn-ci {
+  color: #3a87ad;
+}
+
+/*font-weight*/
+.fn-fwn {
+  font-weight: normal;
+}
+
+.fn-fwb {
+  font-weight: bold;
+}
+
+/*text-align*/
+.fn-tal {
+  text-align: left;
+}
+
+.fn-tac {
+  text-align: center;
+}
+
+.fn-tar {
+  text-align: right;
+}
+
+/*两端对齐*/
+.fn-taj {
+  text-align: justify;
+  text-justify: inter-ideograph;
+}
+
+/*vertical-align*/
+.fn-vam, .fn-vam * {
+  vertical-align: middle;
+}
+
+/*透明*/
+.fn-op {
+  filter: alpha(opacity=50);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  -moz-opacity: 0.5;
+  -khtml-opacity: 0.5;
+  opacity: 0.5;
+}
+
+.fn-tu {
+  text-transform: uppercase; /*大写*/
+}
+
+.fn-tl {
+  text-transform: lowercase; /*小写*/
+}
+
+.fn-tc {
+  text-transform: capitalize; /*首字母大写*/
+}
+
+/*布局*/
+.fn-w980 {
+  width: 980px;
+  margin: 0 auto;
+}
+
+.fn-w1000 {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.fn-w1190 {
+  width: 1190px;
+  margin: 0 auto;
+}
+
+.fn-w1240 {
+  width: 1240px;
+  margin: 0 auto;
+}
+
+/*ie6兼容fixed*/
+/*固定在右下角*/
+.fn-ie6fixRB {
+  clip: rect(0 100% 100% 0);
+  _position: absolute;
+  right: 0;
+  _bottom: auto;
+  _top: expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0)));
+}
+
+/*固定在右上角*/
+.fn-ie6fixRT {
+  clip: rect(0 100% 100% 0);
+  _position: absolute;
+  _left: expression(document.documentElement.scrollLeft + document.documentElement.clientWidth - offsetWidth);
+  _top: expression(documentElement.scrollTop + "px");
+}
+
+/*固定在左上角*/
+.fn-ie6fixLT {
+  clip: rect(0 100% 100% 0);
+  _position: absolute;
+  _top: expression(documentElement.scrollTop + "px");
+}
+
+/*固定在左下角*/
+.fn-ie6fixLB {
+  clip: rect(0 100% 100% 0);
+  _position: absolute;
+  _top: expression(document.documentElement.scrollTop+document.documentElement.clientHeight-this.clientHeight);
+}
+
+/*图标*/
+.fn-arrow-t {
+  border-color: #333 transparent transparent;
+  border-width: 5px;
+  border-style: solid;
+  font-size: 0;
+  height: 0;
+  line-height: 0;
+  width: 0;
+  display: inline-block;
+}
+
+.fn-arrow-br-l {
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-top: 0;
+  width: 10px;
+  height: 10px;
+  overflow: hidden;
+  border-right: 0;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  background-color: #fff;
+  border: none \9;
+  height: 15px \9;
+  width: 7px \9;
+  background: #fff url(http://i02.i.aliimg.com/simg/sprites/app/balloon-arrow-old.png?t=71b1e83b_0) no-repeat 0 0 \9;
+}
+
+.fn-arrow-br-r {
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  border: 1px solid #ccc;
+  border-left: 0;
+  border-bottom: 0;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  background-color: #fff;
+  border: none \9;
+  height: 15px \9;
+  width: 7px \9;
+  background: #fff url(http://i02.i.aliimg.com/simg/sprites/app/balloon-arrow-old.png?t=71b1e83b_0) no-repeat -8px 0 \9;
+}

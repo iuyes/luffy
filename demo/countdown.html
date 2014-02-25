@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <script type="text/javascript" src="/js/luffy/seajs/2.1.1/sea.js" id="seajsnode"></script>
+  <!-- seajs配置文件 -->
+  <script type="text/javascript" src="/js/luffy/luffyconf.js"></script>
+  <!-- 当前页面模块的健康情况 -->
+  <script type="text/javascript" src="/js/luffy/seajs-health/0.1.0/seajs-health.js"></script>
+  <!-- seajs文本插件 can load .tpl .html .json 文本 -->
+  <script type="text/javascript" src="/js/luffy/seajs-text/1.0.2/seajs-text.js"></script>
+  <script type="text/javascript" src="/js/luffy/seajs-style/1.0.1/seajs-style.js"></script>
+</head>
+<body>
+<div id="timer">
+  <span data-role="day"></span>
+  <span data-role="hour"></span>
+  <span data-role="minute"></span>
+  <span data-role="second"></span>
+</div>
+</body>
+<script>
+  seajs.use(['$', 'atom/timer/count-down'], function ($, Countdown) {
+    var cd= new Countdown({
+      element: '#timer',
+      targetTime: '2014/1/31 23:59:59 GMT+0800',
+      timeServer: ''
+    });
+
+    cd.done(function(){
+      console.log('倒计时');
+    });
+
+  });
+</script>
+</html>

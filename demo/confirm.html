@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+    <title></title>
+    <!-- seajs文件 -->
+    <script type="text/javascript" src="/js/luffy/seajs/2.1.1/sea.js" id="seajsnode"></script>
+    <!-- seajs配置文件 -->
+    <script type="text/javascript" src="/js/luffy/luffyconf.js"></script>
+    <!-- 当前页面模块的健康情况 -->
+    <script type="text/javascript" src="/js/luffy/seajs-health/0.1.0/seajs-health.js"></script>
+    <!-- seajs文本插件 can load .tpl .html .json 文本 -->
+    <script type="text/javascript" src="/js/luffy/seajs-text/1.0.2/seajs-text.js"></script>
+    <!--seajs样式插件-->
+    <script type="text/javascript" src="/js/luffy/seajs-style/1.0.1/seajs-style.js"></script>
+
+    <!--样式-->
+    <link rel="stylesheet" href="/js/sea-modules/playman/shincss/base.css"/>
+    <link rel="stylesheet" href="/js/sea-modules/playman/shincss/function.css"/>
+    <link rel="stylesheet" href="/js/sea-modules/playman/shincss/grid.css"/>
+    <link rel="stylesheet" href="/js/sea-modules/playman/shincss/iconfont.css"/>
+    <link rel="stylesheet" href="/js/sea-modules/playman/shincss/iconfont-diao.css"/>
+    <link rel="stylesheet" href="/js/sea-modules/playman/shincss/animate.css"/>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <button class="btn btn-primary" id="btn">点击</button>
+            <button class="btn btn-parmary" id="btn4">Dialog</button>
+        </div>
+        <div class="col-md-6">
+            <button class="btn btn-primary" id="btn1">alert</button>
+            <button class="btn btn-primary" id="btn2">confirm</button>
+            <button class="btn btn-primary" id="btn3">show</button>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="jumbotron fn-hide">
+            <h1>Hello, world!</h1>
+
+            <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured
+                content or
+                information.</p>
+
+            <p><a class="btn btn-primary btn-lg" role="button">Learn more</a></p>
+        </div>
+    </div>
+</div>
+
+
+</body>
+<script type="text/javascript">
+    seajs.use('gallery/bootstrap/3.0.0/bootstrap.css');
+
+    seajs.use(['$', 'arale/dialog/1.2.4/confirmbox', 'arale/dialog/1.2.4/dialog'], function ($, Confirmbox, Dialog) {
+        var cb = new Confirmbox({
+            trigger: '#btn',
+            title: '我真是标题啊',
+            message: '我是内容 我是内容',
+            onConfirm: function () {
+                var that=this;
+                this.set('title', '三秒后关闭对话框');
+                this.set('message', '不要啊！！');
+                setTimeout(function () {
+                    that.hide();
+                }, 3000);
+            }
+        }).on('confirm',function () {
+                    console.log('confirm');
+                }).after('hide', function () {
+                    console.log('cancel');
+                });
+
+
+        <!--显示页面中的隐藏div    在显示之前显示div-->
+        new Dialog({
+            trigger: '#btn4',
+            content: $(".jumbotron")
+        }).before('show', function () {
+                    $(".jumbotron").show();
+                });
+
+
+        <!--静态方法-->
+        $("#btn1").click(function () {
+            Confirmbox.alert('您已经购买过机票了', function () {
+                console.log('alert');
+            });
+        });
+
+        $("#btn2").click(function () {
+            Confirmbox.confirm('24?', '您的年龄', function () {
+                console.log('confirm');
+            })
+        });
+
+        $("#btn3").click(function () {
+            Confirmbox.show('谢谢您的光临', function () {
+                console.log('show');
+            });
+        });
+
+    });
+
+</script>
+</html>

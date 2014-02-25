@@ -1,0 +1,16 @@
+{
+    "family": "icbu",
+    "name": "timer",
+    "version": "0.0.2",
+    "keywords": ["widget"],
+    "description": "用于获取准确的服务器时间，最小化异步请求数。",
+    "homepage": "http://docs.alif2e.com/icbu/timer/",
+    "author": "逸隼",
+    "bugs": {
+        "url": "https://github.com/atom-js/timer/issues/new"
+    },
+    "spm": {
+       "output": ["timer.js", "tic.js", "count-down.js"]
+    },
+    "tests": ["timer", "count-down"]
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <script type="text/javascript" src="/js/luffy/seajs/2.1.1/sea.js" id="seajsnode"></script>
+  <!-- seajs配置文件 -->
+  <script type="text/javascript" src="/js/luffy/luffyconf.js"></script>
+  <!-- 当前页面模块的健康情况 -->
+  <script type="text/javascript" src="/js/luffy/seajs-health/0.1.0/seajs-health.js"></script>
+  <!-- seajs文本插件 can load .tpl .html .json 文本 -->
+  <script type="text/javascript" src="/js/luffy/seajs-text/1.0.2/seajs-text.js"></script>
+  <script type="text/javascript" src="/js/luffy/seajs-style/1.0.1/seajs-style.js"></script>
+</head>
+<body>
+<ol id="item-list">
+  <li id="list-template"><input type="text"/></li>
+</ol>
+<a href="#" id="add">添加</a>
+</body>
+<script>
+  seajs.use(['$','atom/repeatable/repeatable'], function ($, Repeatable) {
+    var repeat1 = new Repeatable({
+      cloneTemplate: $("#list-template"),
+      element: $("#item-list"),
+      min: 1,
+      max: 5,
+      onChangeLength: function () {
+        var lng = this.get('length');
+        console.log(lng)
+        $("#add").css('display', ++lng == this.get('max') ? 'none' : 'block');
+      }
+    });
+
+    $("#add").click(function () {
+      repeat1.clone();
+    });
+
+  });
+</script>
+</html>

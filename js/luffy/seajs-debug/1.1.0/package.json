@@ -1,0 +1,24 @@
+{
+  "family": "seajs",
+  "name": "seajs-debug",
+  "version": "1.1.0",
+  "description": "A Sea.js libs for debugging freely",
+  "keywords": ["seajs", "libs", "debug"],
+  "author": "Frank Wang <lifesinger@gmail.com>",
+  "maintainers": [
+    "乔花 <shengyan1985@gmail.com>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/seajs/seajs-debug.git"
+  },
+  "bugs": {
+    "url": "https://github.com/seajs/seajs-debug/issues"
+  },
+  "devDependencies": {
+    "seatools": "*"
+  },
+  "spm": {
+    "output": ["seajs-debug.js"]
+  }
+}

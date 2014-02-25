@@ -1,0 +1,16 @@
+{
+	"family": "icbu",
+    "name": "balloon",
+    "version": "1.1.5",
+    "keywords": ["widget"],
+    "description": "封装了ICBU dpl的带UI的tips组件",
+    "homepage": "http://docs.alif2e.com/icbu/balloon/",
+    "author": "连沁(36919)",
+    "bugs": {
+        "url": "https://github.com/atom-js/balloon/issues/new"
+    },
+    "spm": {
+       "output": ["balloon.js"]
+    },
+    "tests": ["balloon"]
+}

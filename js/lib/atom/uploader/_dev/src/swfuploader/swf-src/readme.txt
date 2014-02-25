@@ -1,0 +1,1 @@
+使用FlashDevelop打开uploader.as3proj文件，如果修改src/Uploader.as需要编译，编译后swf文件在bin目录下

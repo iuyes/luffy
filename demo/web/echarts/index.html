@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <script type="text/javascript" src="/js/luffy/seajs/2.1.1/sea.js" id="seajsnode"></script>
+  <!-- seajs配置文件 -->
+  <script type="text/javascript" src="/js/luffy/luffyconf.js"></script>
+  <!-- 当前页面模块的健康情况 -->
+  <script type="text/javascript" src="/js/luffy/seajs-health/0.1.0/seajs-health.js"></script>
+  <!-- seajs文本插件 can load .tpl .html .json 文本 -->
+  <script type="text/javascript" src="/js/luffy/seajs-text/1.0.2/seajs-text.js"></script>
+  <script type="text/javascript" src="/js/luffy/seajs-style/1.0.1/seajs-style.js"></script>
+  <!--if lt IE 9-->
+  <script src="/js/libs/excanvas.js"></script>
+  <!--endif-->
+</head>
+<body>
+<div id="main" style="height:500px;border:1px solid #ccc;padding:10px;"></div>
+</body>
+<script>
+  seajs.use(['$', 'echarts/echarts', 'echarts/config'], function ($, Echarts, Config) {
+    seajs.use('echarts/chart/line');
+    seajs.use('echarts/chart/bar');
+    $(function () {
+      var myChart = Echarts.init(document.getElementById('main'));
+
+      option = {
+//        title
+        title: {
+          text: '某地区蒸发量和降水量',
+          subtext: '纯属虚构'
+        },
+
+//        legend
+        legend: {
+          data: ['蒸发量', '降水量']
+        },
+
+//        calculable
+        calculable: true,
+//        xAxis
+        xAxis: [
+          {
+            type: 'value',
+            splitArea: {show: true},
+            axisLabel: {
+              formatter: '{value} ml'
+            }
+          }
+        ],
+//        yAxis
+        yAxis: [
+          {
+            type: 'category',
+            data: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+            axisLabel: {
+              formatter: '{value}月'
+            }
+          }
+        ],
+
+//        tooltip
+        tooltip: {
+          trigger: 'axis',
+          axisPointer: {
+            type: 'shadow'
+          },
+          backgroundColor: 'rgba(0,0,0,.8)',
+          padding: 10,
+          borderWidth: 1,
+          borderColor: 'rgba(0,0,0,1)',
+          formatter: "{b} : {c}ML"
+        },
+
+//        toolbox
+        toolbox: {
+          show: true,
+          feature: {
+            dataView: {readOnly: false},
+            magicType: ['line', 'bar'],
+            restore: true,
+            saveAsImage: true
+          },
+          orient: 'vertical',
+          x: 'right',
+          y: 'center'
+        },
+        dataZoom:{
+          show:true,
+          realtime:true,
+          start:10,
+          end:60
+        },
+
+//        series
+        series: [
+          {
+            name: '蒸发量',
+            type: 'bar',
+            smooth: true,
+            stack: '总量',
+            itemStyle: {normal: {areaStyle: {type: 'default'}}},
+            data: [2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0, 6.4, 3.3]
+          },
+          {
+            name: '降水量',
+            type: 'bar',
+            smooth: true,
+            stack: '总量',
+            itemStyle: {normal: {
+              areaStyle: {
+                type: 'default'
+              }
+            },
+              emphasis: {
+                areaStyle: {
+                  type: 'default',
+                  color: 'rgba(0,0,0,.9)'
+                },
+               label : {show: true, position: 'inside'}
+              }
+            },
+            data: [2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2, 48.7, 18.8, 6.0, 2.3]
+          }
+          ,
+          {
+            name: '降霜',
+            type: 'bar',
+            smooth:true,
+            data:[2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2, 48.7, 18.8, 6.0, 2.3]
+          }
+        ]
+      };
+
+
+      myChart.setOption(option);
+    })
+    ;
+
+  })
+  ;
+</script>
+</html>

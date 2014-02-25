@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script type="text/javascript" src="/js/luffy/seajs/2.1.1/sea.js" id="seajsnode"></script>
+    <!-- seajs配置文件 -->
+    <script type="text/javascript" src="/js/luffy/luffyconf.js"></script>
+    <!-- 当前页面模块的健康情况 -->
+    <script type="text/javascript" src="/js/luffy/seajs-health/0.1.0/seajs-health.js"></script>
+    <!-- seajs文本插件 can load .tpl .html .json 文本 -->
+    <script type="text/javascript" src="/js/luffy/seajs-text/1.0.2/seajs-text.js"></script>
+    <script type="text/javascript" src="/js/luffy/seajs-style/1.0.1/seajs-style.js"></script>
+    <style type="text/css">
+        #demo {
+            width: 500px;
+            height: 400px;
+        }
+
+        #demo .nav {
+            margin-left: 40px;
+            height: 30px;
+        }
+
+        #demo .nav li {
+            list-style: none;
+            float: left;
+            width: 40px;
+            border: 1px solid #dddddd;
+            text-align: center;
+            font-size: 16px;
+            line-height: 30px;
+            color: #444444;
+        }
+
+        #demo .nav li.active {
+            background-color: #E1E1E1;
+        }
+
+        #demo .content {
+            border: 1px solid #dddddd;
+            height: 370px;
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="demo">
+    <ul class="nav">
+        <li>开放</li>
+        <li>简单</li>
+        <li>易用</li>
+    </ul>
+    <div class="content">
+        <div>开源开放，海纳百川。</div>
+        <div>如无必要，勿增实体。</div>
+        <div>一目了然，容易学习。</div>
+    </div>
+</div>
+
+
+<button class="ui-button ui-button-morange" id="add">添加</button>
+<input type="text" name="moditext"/>
+<button id="modify" class="ui-button ui-button-morange">修改</button>
+
+<div id="example1">
+    <h3>这是head</h3>
+    <p>this is a demo</p>
+</div>
+
+
+</body>
+<script type="text/javascript">
+    seajs.use('alice/one/1.1.0/one.css');
+    seajs.use(['play/tabview'],function(Tabview){
+      var tabview = new Tabview({
+        element: '#demo',
+        activeIndex: 0
+      }).render();
+    });
+
+</script>
+</html>

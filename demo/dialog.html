@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+    <title></title>
+    <script type="text/javascript" src="/js/luffy/seajs/2.1.1/sea.js" id="seajsnode"></script>
+    <!-- seajs配置文件 -->
+    <script type="text/javascript" src="/js/luffy/luffyconf.js"></script>
+    <!-- 当前页面模块的健康情况 -->
+    <script type="text/javascript" src="/js/luffy/seajs-health/0.1.0/seajs-health.js"></script>
+    <!-- seajs文本插件 can load .tpl .html .json 文本 -->
+    <script type="text/javascript" src="/js/luffy/seajs-text/1.0.2/seajs-text.js"></script>
+    <!--seajs样式插件-->
+    <script type="text/javascript" src="/js/luffy/seajs-style/1.0.1/seajs-style.js"></script>
+    <style type="text/css">
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <button class="btn btn-primary web" data-url='http://www.baidu.com'>百度</button>
+            <button class="btn btn-primary web" data-url='http://www.douban.com'>豆瓣</button>
+            <button class="btn btn-primary web" data-url="http://www.qq.com">腾讯</button>
+        </div>
+        <div class="col-md-6">
+            <button class="btn btn-primary" data-url="https://placeimg.com/100/100/tech" id="img">图片</button>
+            <button class="btn btn-primary" id="iframe">Iframe</button>
+        </div>
+    </div>
+</div>
+
+</body>
+<script type="text/javascript">
+    seajs.use('gallery/bootstrap/3.0.0/bootstrap.css');
+
+    seajs.use(['$', 'playman/pdialog/1.1.0/pdialog', 'dnd'], function ($, Pdialog, Dnd) {
+        new Pdialog({
+            trigger: '.web',
+            height: '600px',
+            width: '600px'
+        }).before('show',function () {
+                    this.set('content', this.activeTrigger.attr('data-url'));
+                }).after('hide', function () {
+                    console.log('这是dialog的关闭事件');
+                });
+
+
+        new Pdialog({
+            trigger: '#iframe',
+            content: '/html/frame.html',
+            effect: 'fade'
+        }).on('complete:show',function () {
+                    console.log('显示完毕');
+                }).after('hide', function () {
+                    console.log('关闭');
+                });
+
+
+        var img1 = new Pdialog({
+            trigger: '#img',
+            width: 498,
+            content: '<embed src="http://static.video.qq.com/TPout.swf?vid=z0013uxd0h7&auto=0" allowFullScreen="true" quality="high" width="480" height="400" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>',
+            hasMask: true
+        });
+
+
+    });
+
+
+</script>
+</html>

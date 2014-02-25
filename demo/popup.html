@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+    <title></title>
+    <!-- seajs文件 -->
+    <script type="text/javascript" src="/js/luffy/seajs/2.1.1/sea.js" id="seajsnode"></script>
+    <!-- seajs配置文件 -->
+    <script type="text/javascript" src="/js/luffy/luffyconf.js"></script>
+    <!-- 当前页面模块的健康情况 -->
+    <script type="text/javascript" src="/js/luffy/seajs-health/0.1.0/seajs-health.js"></script>
+    <!-- seajs文本插件 can load .tpl .html .json 文本 -->
+    <script type="text/javascript" src="/js/luffy/seajs-text/1.0.2/seajs-text.js"></script>
+    <link rel="stylesheet" href="/js/sea-modules/playman/shincss/base.css"/>
+    <link rel="stylesheet" href="/js/sea-modules/playman/shincss/function.css"/>
+    <link rel="stylesheet" href="/js/sea-modules/playman/shincss/grid.css"/>
+    <style type="text/css">
+        #citylist {
+            width: 90px;
+            height: 120px;
+            border: 1px solid #444444;
+        }
+        #citylist li {
+            display: block;
+            width: 90px;
+            height: 29px;
+            border-bottom: 1px dotted #444444;
+        }
+
+        #citylist li.last {
+            border-bottom: 0;
+        }
+
+        #citylist li a {
+            font-size: 16px;
+            line-height: 30px;
+            color: #3c3c3c;
+        }
+
+        #city {
+            display: block;
+            width: 90px;
+            line-height: 40px;
+            text-align: center;
+            margin: 200px auto;
+        }
+    </style>
+</head>
+<body>
+
+<input type="text" value="居住地" id="city"/>
+<ul id="citylist" class="fn-dn">
+    <li><a href="#">杭州</a></li>
+    <li><a href="#">上海</a></li>
+    <li><a href="#">北京</a></li>
+    <li><a href="#">深圳</a></li>
+</ul>
+
+</body>
+<script type="text/javascript">
+    seajs.use(['$', 'arale/popup/1.1.5/popup'], function ($, Popup) {
+        var popuplist = new Popup({
+            trigger: '#city',
+            element: '#citylist',
+            triggerType: 'focus',
+            align: {
+                baseXY: [0, '100%+2']
+            },
+            effect: 'slide',
+            duration: 500
+        });
+        <!--结束动画事件-->
+        popuplist.on('animated', function () {
+            console.log('动画结束了');
+        });
+        <!--autocomplete-->
+        popuplist.element.find('a').click(function (e) {
+            e.preventDefault();
+            $("#city").val($(this).html());
+            popuplist.element.hide();
+        });
+
+    });
+</script>
+</html>

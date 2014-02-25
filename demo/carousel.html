@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+    <title></title>
+    <!-- seajs文件 -->
+    <script type="text/javascript" src="/js/luffy/seajs/2.1.1/sea.js" id="seajsnode"></script>
+    <!-- seajs配置文件 -->
+    <script type="text/javascript" src="/js/luffy/luffyconf.js"></script>
+    <!-- 当前页面模块的健康情况 -->
+    <script type="text/javascript" src="/js/luffy/seajs-health/0.1.0/seajs-health.js"></script>
+    <!-- seajs文本插件 can load .tpl .html .json 文本 -->
+    <script type="text/javascript" src="/js/luffy/seajs-text/1.0.2/seajs-text.js"></script>
+    <style type="text/css">
+        .container {
+            width: 990px;
+            margin: 0 auto;
+        }
+
+        #carousel-demo-1 {
+            position: relative;
+            width: 664px;
+        }
+
+        #carousel-demo-1 .ui-switchable-prev-btn, #carousel-demo-1 .ui-switchable-next-btn {
+            position: absolute;
+            top: 122px;
+            color: #666;
+            cursor: pointer;
+        }
+
+        #carousel-demo-1 .ui-switchable-prev-btn {
+            left: 10px;
+        }
+
+        #carousel-demo-1 .ui-switchable-next-btn {
+            right: 10px;
+        }
+
+        #carousel-demo-1 .ui-switchable-disabled-btn {
+            color: #ddd;
+            cursor: default;
+        }
+
+        #carousel-demo-1 .scroller {
+            width: 664px;
+            height: 120px;
+            border: 1px solid #ccc;
+            background-color: #F9F9F9;
+            overflow: hidden;
+        }
+
+        #carousel-demo-1 .scroller .ui-switchable-content {
+            padding: 20px 0;
+            height: 80px;
+        }
+
+        #carousel-demo-1 .scroller .ui-switchable-content img {
+            float: left;
+            display: block;
+            width: 300px;
+            height: 80px;
+            margin: 0 15px;
+            border: 1px solid #ccc;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <div id="carousel-demo-1" class="carousel-demo">
+        <span class="ui-switchable-prev-btn" data-role="prev">&lsaquo; 上一页</span>
+        <span class="ui-switchable-next-btn" data-role="next">下一页 &rsaquo;</span>
+
+        <div class="scroller">
+            <div class="ui-switchable-content" data-role="content">
+                <img src="https://i.alipayobjects.com/e/201306/SzpUxptFt.png" alt="" class="ui-switchable-panel">
+                <img src="https://i.alipayobjects.com/e/201306/SzpaKukGz.png" alt="" class="ui-switchable-panel">
+                <img src="https://i.alipayobjects.com/e/201306/SzpBApQi5.png" alt="" class="ui-switchable-panel">
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+</body>
+<script type="text/javascript">
+    seajs.use('alice/one/1.1.0/one.css');
+
+    seajs.use(['$', 'arale/switchable/1.0.0/carousel'], function ($, Carousel) {
+        var tab1 = new Carousel({
+            element: '#carousel-demo-1',
+            hasTriggers: false,
+            easing: 'easeOutStrong',
+            effect: 'scrollx',
+            step: 2,
+            viewSize: [332],
+            circular: false,
+            autoplay: true
+        }).render();
+    });
+
+</script>
+</html>

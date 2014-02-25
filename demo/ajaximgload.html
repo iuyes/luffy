@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <script type="text/javascript" src="/js/luffy/seajs/2.1.1/sea.js" id="seajsnode"></script>
+  <!-- seajs配置文件 -->
+  <script type="text/javascript" src="/js/luffy/luffyconf.js"></script>
+  <!-- 当前页面模块的健康情况 -->
+  <script type="text/javascript" src="/js/luffy/seajs-health/0.1.0/seajs-health.js"></script>
+  <!-- seajs文本插件 can load .tpl .html .json 文本 -->
+  <script type="text/javascript" src="/js/luffy/seajs-text/1.0.2/seajs-text.js"></script>
+  <script type="text/javascript" src="/js/luffy/seajs-style/1.0.1/seajs-style.js"></script>
+  <link rel="stylesheet" href="/js/sea-modules/playman/shincss/base.css"/>
+  <style>
+    #container {
+      width: 1000px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+
+<ul id="container" style="position: relative;">
+
+</ul>
+
+</body>
+<script src="/js/libs/jquery-1.10.2.min.js"></script>
+<script src="/js/sea-modules/playman/jqex/jquery.imagesloaded.js"></script>
+<script src="/js/libs/jquery.wookmark.min.js"></script>
+<script>
+  var page = 1, isLoading = false;
+  loadData();
+
+  function loadData() {
+    isLoading = true;
+    $.ajax({
+      url: 'http://www.wookmark.com/api/json/popular',
+      dataType: 'jsonp',
+      data: {page: page},
+      success: onLoadData
+    });
+  }
+
+  function onLoadData(data) {
+    isLoading = false;
+    page++;
+    for (var i = 0; i < data.length; i++) {
+      var html = '<li><img style="width: 210px;" src="' + data[i].image + '"/><p>' + i + 1 + '</p></li>';
+      $("#container").append(html);
+    }
+    isLoading = false;
+    applyLayout();
+  }
+
+  function applyLayout() {
+    imagesLoaded('#container', function (instance) {
+      console.log('all images are loaded');
+      $("#container li").wookmark({
+        autoResize: true,
+        container: $("#container"),
+        offset: 10,
+        itemWidth: 210
+      });
+    });
+  }
+
+  function onScroll(event) {
+    // Only check when we're not still waiting for data.
+    if (!isLoading) {
+      // Check if we're within 100 pixels of the bottom edge of the broser window.
+      var closeToBottom = ($(window).scrollTop() + $(window).height() > $(document).height() - 100);
+      if (closeToBottom) {
+        loadData();
+      }
+    }
+  }
+
+  $(document).on('scroll',onScroll);
+
+</script>
+</html>

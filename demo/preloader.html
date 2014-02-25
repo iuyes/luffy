@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>新建页面</title>
+  <meta name="keywords" content=""/>
+  <meta name="description" content=""/>
+  <meta name="viewport" content="width=device-width"/>
+  <script src="/js/libs/html5Preloader.js"></script>
+</head>
+<body>
+
+</body>
+<script>
+  var preloader=html5Preloader();
+  preloader.addFiles('http://whj.com/img/any.jpg');
+  preloader.on('finish',function(){
+    alert('file loaded');
+  });
+  preloader.on('error',function(){
+    alert('出现了错误');
+  });
+</script>
+</html>

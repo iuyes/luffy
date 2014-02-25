@@ -1,0 +1,16 @@
+{
+    "family": "icbu",
+    "name": "repeatable",
+    "version": "1.1.0",
+    "keywords": ["widget"],
+    "description": "动态添加移除元素",
+    "homepage": "http://docs.alif2e.com/icbu/repeatable/",
+    "author": "章小新(38353)",
+    "bugs": {
+        "url": "https://github.com/atom-js/repeatable/issues/new"
+    },
+    "spm": {
+       "output": ["repeatable.js"]
+    },
+    "tests": ["repeatable"]
+}

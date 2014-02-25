@@ -1,0 +1,371 @@
+header {
+    width: 100%;
+    height: 65px;
+    background: #a5cad6;
+}
+
+header .container {
+    width: 1250px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.container .logo {
+    float: left;
+    height: 50px;
+    width: 200px;
+    margin: 3px 0 0;
+    line-height: 3.9rem;
+    text-indent: -9999px;
+    background: url("https://dn-pragmaticly.qbox.me/assets/landing-sprite.png") -100px -120px no-repeat;
+}
+
+ul.nav {
+    float: right;
+    height: 65px;
+    list-style-type: none;
+}
+
+ul.nav li {
+    float: right;
+    height: 65px;
+    padding: 0 10px;
+}
+
+ul.nav li a {
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 65px;
+}
+
+ul.nav li.sign-in {
+    height: 105px;
+    width: 90px;
+    background: url("https://dn-pragmaticly.qbox.me/assets/landing-sprite.png") -50px -10px no-repeat;
+}
+
+ul.nav li.sign-in a {
+    line-height: 65px;
+}
+
+ul.nav li.sign-in:hover {
+    -webkit-transform: translate(0, 10px);
+}
+
+.content {
+    width: 100%;
+}
+
+.content .home-hero {
+    height: 120px;
+    background: url("https://dn-pragmaticly.qbox.me/assets/home/shadow.png") bottom center no-repeat;
+    background-color: #a5cad6;
+}
+
+.home-hero-logo {
+    height: 120px;
+    width: 100px;
+    margin: 0 auto;
+    background: url("https://dn-pragmaticly.qbox.me/assets/landing-sprite.png") -320px 0 no-repeat;
+}
+
+section.container {
+    width: 1250px;
+    margin: 0 auto;
+}
+
+.show {
+    width: 1250px;
+    height: 180px;
+    overflow: hidden;
+}
+
+.show-content {
+    height: 112px;
+    overflow: hidden;
+    list-style-type: none;
+}
+
+.show-content li {
+    float: left;
+    height: 112px;
+    width: 1250px;
+}
+
+.show-content li h1 {
+    height: 48px;
+    font-size: 24px;
+    line-height: 48px;
+    color: #333;
+    text-align: center;
+}
+
+.show-content li p {
+    height: 64px;
+    font-size: 18px;
+    line-height: 18px;
+    color: #999;
+    text-align: center;
+}
+
+.show-nav {
+    height: 68px;
+    width: 352px;
+    margin: 2px auto 0;
+    list-style: none;
+}
+
+.show-nav li {
+    float: left;
+    width: 48px;
+    height: 48px;
+    margin: 10px 20px;
+    opacity: 0.5;
+}
+
+.show-nav li.active {
+    opacity: 1;
+}
+
+.show-nav li.show-email {
+    background: url("https://dn-pragmaticly.qbox.me/assets/landing-sprite.png") 0 -48px;
+}
+
+.show-nav li.show-qq {
+    background: url("https://dn-pragmaticly.qbox.me/assets/landing-sprite.png") 0 -100px;
+}
+
+.show-nav li.show-active {
+    background: url("https://dn-pragmaticly.qbox.me/assets/landing-sprite.png") 0 -152px;
+}
+
+.show-nav li.show-pmt {
+    background: url("https://dn-pragmaticly.qbox.me/assets/landing-sprite.png") 0 -202px;
+}
+
+.talk {
+    width: 100%;
+    margin-top: 70px;
+}
+
+.talk h1 {
+    font-size: 24px;
+    line-height: 36px;
+    color: #c5a0a0;
+    text-align: center;
+}
+
+.talk .seperator {
+    display: block;
+    height: 1px;
+    width: 95%;
+    margin: 10px auto 60px;
+    background: -webkit-linear-gradient(left, rgba(204, 204, 204, 0) 0%, #ccc 40%, #ccc 60%, rgba(204, 204, 204, 0) 100%);;
+}
+
+.customers ul {
+    float: left;
+    width: 370px;
+    margin-left: 70px;
+    list-style: none;
+}
+
+.customers ul.ul1 {
+    margin-left: 0;
+}
+
+.customers ul li {
+    display: block;
+    width: 288px;
+    padding: 25px 40px;
+    margin-bottom: 30px;
+    border: 1px solid #cdcdcd;
+}
+
+.customers ul li p {
+    color: #4d4d4d;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 9px;
+}
+
+.customers ul li .who {
+    width: 288px;
+    height: 44px;
+}
+
+.customers ul li .who>.avatar {
+    width: 36px;
+    height: 36px;
+    margin: 3px 15px 0 0;
+    float: left;
+}
+
+.customers ul li .who>.who-right {
+    float: right;
+    height: 44px;
+    width: 237px;
+}
+
+.who-right span {
+    font-size: 14px;
+    line-height: 22px;
+    color: #000000;
+    font-weight: bold;
+    display: block;
+}
+
+.who-right a {
+    font-size: 14px;
+    line-height: 22px;
+    color: #4bb4ba;
+    font-family: "Helvetica Neue", Helvetica, Arial, 'Hiragino Sans GB', STHeiti, sans-serif;
+}
+
+.try {
+    width: 1250px;
+    height: 50px;
+    margin: 60px auto;
+}
+
+.try h1 {
+    font-size: 32px;
+    line-height: 50px;
+    color: #666;
+    text-align: center;
+}
+
+.news {
+    background: #728389;
+    width: 100%;
+    padding-top: 80px;
+    font-size: 14px;
+    text-align: left;
+}
+
+.news .container {
+    width: 1250px;
+    margin: 0 auto;
+}
+
+.news  .container ul {
+    width: 609px;
+    float: left;
+    margin-left: 32px;
+    list-style-type: none;
+}
+
+.news .container ul.ul1 {
+    margin-left: 0;
+}
+
+.news .container ul li {
+    display: block;
+    width: 480px;
+    margin-bottom: 30px;
+}
+
+.news .container ul li p {
+    background: rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    color: #A2BCC5;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: "Helvetica Neue", Helvetica, Arial, 'Hiragino Sans GB', STHeiti, sans-serif;
+}
+
+.news .container ul li span.fn-top-arrow {
+    display: block;
+    margin-left: 30px;
+}
+
+.news .container ul li span.cite {
+    color: rgba(0, 0, 0, 0.2);
+    font-size: 20px;
+    margin-left: 20px;
+    line-height: 24px;
+}
+
+.login {
+    background: #a5cad6;
+    width: 100%;
+    color: #ffffff;
+}
+
+.login .container {
+    width: 1250px;
+    margin: 0 auto;
+}
+
+.login .container>div {
+    width: 609px;
+    float: left;
+    margin-left: 32px;
+}
+
+.login .container>.guarantee {
+    margin-left: 0;
+}
+
+.login .container>.guarantee {
+    width: 539px;
+    padding-right: 70px;
+}
+
+.guarantee>.cite {
+    margin-bottom: 20px;
+}
+
+.guarantee>.cite h4 {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 27px;
+    margin-bottom: 9px;
+}
+
+.guarantee>.cite p {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 9px;
+}
+
+.login>.container .form  {
+    width: 326px;
+    padding: 0 183px 0 100px;
+}
+
+.login>.container form {
+    background: #c2dfe6;
+    padding: 32px;
+}
+
+form .control-group{
+    width: 262px;
+    height: 57px;
+}
+form .control-group>input{
+    display: block;
+    margin-bottom: 15px;
+    height: 24px;
+    width: 240px;
+    padding: 8px 10px;
+    border: 1px solid  #cccccc;
+    background: #fff;
+    border-radius: 5px;
+}
+
+form .control-group>input:focus{
+    box-shadow: 1px 1px #ff0000;
+    opacity: 0.6;
+}
+.help-block{
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 10px;
+    padding-left: 6px;
+    color: #fff;
+}
+
+.help-block a{
+ color: #6592b0;
+}

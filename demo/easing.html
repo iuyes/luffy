@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+    <title></title>
+    <!-- seajs文件 -->
+    <script type="text/javascript" src="/js/luffy/seajs/2.1.1/sea.js" id="seajsnode"></script>
+    <!-- seajs配置文件 -->
+    <script type="text/javascript" src="/js/luffy/luffyconf.js"></script>
+    <!-- 当前页面模块的健康情况 -->
+    <script type="text/javascript" src="/js/luffy/seajs-health/0.1.0/seajs-health.js"></script>
+    <!-- seajs文本插件 can load .tpl .html .json 文本 -->
+    <script type="text/javascript" src="/js/luffy/seajs-text/1.0.2/seajs-text.js"></script>
+    <style type="text/css">
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: #008800;
+            opacity: 0.8;
+            position: absolute;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+<button id="btn">点击</button>
+<div class="box"></div>
+</body>
+<script type="text/javascript">
+    seajs.use('arale/easing/1.0.0/easing');
+    seajs.use('$',function($){
+        $("#btn").click(function () {
+            $('.box').animate({
+                width: 'toggle',
+                height: 'toggle'
+            },4000,'bounceIn',function(){
+                alert('自定义动画');
+            });
+        });
+    });
+</script>
+</html>

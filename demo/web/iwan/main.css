@@ -1,0 +1,85 @@
+body {
+    background: url("http://vs-static.baidu.com/game/asset/v22/index/img/banner-bg.png") repeat-x 0 -49px;
+}
+
+.wrap {
+    width: 1000px;
+    margin: 0 auto;
+    padding-top: 10px;
+    position: relative;
+}
+
+.ui-banner {
+    width: 1000px;
+    height: 240px;
+    position: relative;
+    overflow: hidden;
+}
+
+.wrap > span {
+    position: absolute;
+    z-index: 99;
+    top: 100px;
+    width: 47px;
+    height: 47px;
+    background: url("http://vs-static.baidu.com/game/asset/v22/index/img/banner-arrow.png?version=10120") no-repeat 0 0;
+    cursor: pointer;
+}
+
+span.prev {
+    left: -47px;
+    background: url("http://vs-static.baidu.com/game/asset/v22/index/img/banner-arrow.png?version=10120") no-repeat 0 -47px;
+}
+
+span.next {
+    right: -67px;
+}
+
+.ui-banner .ui-banner-content {
+    width: 1000px;
+    height: 240px;
+    position: relative;
+}
+
+.ui-banner-content-panel {
+    float: left;
+    margin-right: 20px;
+    width: 230px;
+    height: 240px;
+    border-radius: 5px;
+    -webkit-transition: all 0.8s ease;
+    -webkit-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    position: relative;
+    cursor: pointer;
+}
+.ui-banner-content-panel:hover{
+    -webkit-transform: rotateY(180deg);
+}
+
+.ui-banner-content-panel > div {
+    width: 230px;
+    height: 240px;
+    border-radius: 5px;
+    background: url("http://vs-static.baidu.com/game/asset/v22/index/img/transparent.gif");
+    box-shadow: 0 0 10px 5px rgba(11, 120, 247, 0.41);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.game-img {
+    -webkit-backface-visibility: hidden;
+}
+
+.game-play {
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: rotateY(180deg);
+}
+
+.ui-banner-content-panel img {
+    width: 230px;
+    height: 240px;
+    border-radius: 5px;
+}
+

@@ -1,0 +1,102 @@
+#header {
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 1px 0px #33a9d8;
+    -moz-box-shadow: 0px 1px 0px #33a9d8;
+    -o-box-shadow: 0px 1px 0px #33a9d8;
+    -ms-box-shadow: 0px 1px 0px #33a9d8;
+    box-shadow: 0px 1px 0px #33a9d8;
+
+}
+
+#header .wrapper {
+    width: 960px;
+    height: 70px;
+    margin: 0 auto;
+}
+
+#header h1 {
+    float: left;
+    width: 81px;
+    height: 38px;
+    margin-top: 16px;
+}
+
+#header h1 a {
+    display: block;
+    width: 81px;
+    height: 38px;
+    background: url("http://daily.zhihu.com/img/new_home_v2/top_logo.png") no-repeat 0 0;
+    text-indent: -9999px;
+}
+
+#header .header-about-us {
+    float: right;
+    height: 70px;
+}
+
+.header-about-us span {
+    float: left;
+    font-size: 14px;
+    color: #999;
+    line-height: 70px;
+}
+
+.ico {
+    background: url("http://daily.zhihu.com/img/new_home_v2/s.png") no-repeat 0 0;
+}
+
+.header-about-us a {
+    float: left;
+    margin-left: 15px;
+    width: 30px;
+    height: 30px;
+    margin-top: 20px;
+    text-indent: -9999px;
+}
+
+.header-about-us a.sina {
+    background-position: -265px -45px;
+}
+
+.header-about-us a.sina:hover {
+    background-position: -261px 0;;
+}
+
+.header-about-us a.qq {
+    background-position: -175px -85px;;
+}
+
+.header-about-us a.qq:hover {
+    background-position: -145px -85px;;
+}
+
+#banner {
+    width: 100%;
+    height: 560px;
+    margin-top: 70px;
+    background: url("http://daily.zhihu.com/img/new_home_v2/top_bg.png") no-repeat 0 0;
+}
+
+#banner .wrapper {
+    width: 960px;
+    margin: 0 auto;
+    height: 560px;
+}
+
+#banner > div {
+    float: left;
+    width: 480px;
+    height: 560px;
+}
+.banner-dayly{
+    padding: 102px 15px 80px 39px;
+    background: url("http://daily.zhihu.com/img/new_home_v2/logo_main.png") no-repeat 8px 72px;
+}
+.banner-sample{
+    padding-left: 15px;
+}

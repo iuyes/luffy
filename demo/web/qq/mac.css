@@ -1,0 +1,722 @@
+body {
+    font: 14px Lucida Sans Unicode, Myriad Pro, Hiragino Sans GB, Heiti SC, Microsoft YaHei, Verdana, SimHei;
+    background: url("http://im-img.qq.com/macqq/images/bodyBg.jpg?t=20120814") repeat 0 0;
+    color: #5A5A5A;
+}
+
+/*header*/
+header {
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    z-index: 9999;
+    background: -webkit-gradient(linear, left top, right top, from(#FBFBFB), to(#DADADA));
+    background: -webkit-linear-gradient(top, #FBFBFB, #DADADA);
+    background: -moz-linear-gradient(top, #FBFBFB, #DADADA);
+    background: -o-linear-gradient(top, #FBFBFB, #DADADA);
+    background: -ms-linear-gradient(top, #FBFBFB, #DADADA);
+    background: linear-gradient(top, #FBFBFB, #DADADA);
+    background-color: #FBFBFB;
+    box-shadow: 0 1px 1px #C3C4C6;
+}
+
+header .inner {
+    width: 960px;
+    height: 60px;
+    margin: 0 auto;
+}
+
+/*logo*/
+header .logo {
+    float: left;
+    width: 210px;
+    height: 60px;
+    background: url("http://im-img.qq.com/macqq/images/logo.png?t=20120814") no-repeat 0 0;
+    text-indent: -9999px;
+}
+
+/*nav*/
+header .nav {
+    float: right;
+    height: 32px;
+    margin-top: 14px;
+    width: 600px;
+}
+
+header .nav li {
+    float: left;
+    height: 32px;
+    width: 90px;
+    margin: 0 15px;
+}
+
+header .nav li a {
+    display: block;
+    height: 32px;
+    font-size: 18px;
+    line-height: 32px;
+    width: 90px;
+    color: #000;
+}
+
+header .nav li a.boke {
+    position: relative;
+}
+
+header .nav li a.active {
+    background: url("http://im-img.qq.com/macqq/images/icon.png?t=20130724") no-repeat 0 0;
+    color: #FFF;
+}
+
+header  .nav li a:hover {
+    color: #666;
+}
+
+header  .nav li a.boke span {
+    width: 29px;
+    height: 15px;
+    background: url("http://im-img.qq.com/macqq/images/new.png?t=20120814") no-repeat 0 0;
+    position: absolute;
+    top: 0;
+    right: -5px;
+}
+
+/*banner*/
+
+.banners {
+    width: 100%;
+    height: 460px;
+    overflow: hidden;
+}
+
+.banners .banners-content {
+    width: 100%;
+    height: 430px;
+    overflow: hidden;
+}
+
+.banners .banners-content li {
+    float: left;
+    width: 100%;
+    height: 430px;
+    background: url("http://im-img.qq.com/macqq/images/bannerBg1.jpg?t=20120814") repeat-x 0 0;
+}
+
+.banners .banners-nav {
+    width: 106px;
+    height: 30px;
+    margin: 0 auto;
+}
+
+.banners .banners-nav li {
+    border: 1px #EFEFEF solid;
+    float: left;
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    background-color: #CCC;
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+.banners .banners-nav li.active {
+    background-color: #808080;
+}
+
+.banners-content-inner {
+    width: 960px;
+    height: 460px;
+    margin: 0 auto;
+}
+
+.banners-content-download {
+    position: absolute;
+    width: 138px;
+    height: 41px;
+    top: 205px;
+    left: 7px;
+    background: url("http://im-img.qq.com/macqq/images/btn_download.png") no-repeat 0 -41px;
+    cursor: pointer;
+}
+
+.banners-content-download:hover {
+    background: url("http://im-img.qq.com/macqq/images/btn_download.png") no-repeat 0 0;
+}
+
+.banners-content-inner>a {
+    display: block;
+    width: 960px;
+    height: 460px;
+}
+
+.banners-content-inner>a>img {
+    display: block;
+    width: 960px;
+    height: 460px;
+}
+
+/*play*/
+.banners-content-inner .play {
+    cursor: pointer;
+    position: absolute;
+    width: 119px;
+    height: 125px;
+    top: 167px;
+    left: 422px;
+    background: url("http://im-img.qq.com/macqq/images/play.png?t=20120814") no-repeat 0 0;
+}
+
+.banners-content-inner .play:hover {
+    background: url("http://im-img.qq.com/macqq/images/play.png?t=20120814") no-repeat 0 -131px;
+}
+
+/*container*/
+.container {
+    width: 100%;
+}
+
+.box {
+    width: 960px;
+    height: 600px;
+    margin: 0 auto;
+}
+
+.boxl {
+    float: left;
+    width: 640px;
+}
+
+.boxr {
+    float: right;
+    width: 275px;
+}
+
+.boxl .boxl-title {
+    width: 640px;
+    height: 45px;
+    border-bottom: 1px solid #fff;
+}
+
+.boxl .boxl-title h2 {
+    color: #323232;
+    font-size: 32px;
+    height: 44px;
+    line-height: 44px;
+    border-bottom: 1px solid #BFBFBF;
+    text-align: left;
+}
+
+.boxl dl {
+    display: block;
+    width: 640px;
+    height: 82px;
+    margin: 25px 0;
+    clear: both;
+}
+
+.boxl dl dt {
+    float: left;
+    width: 92px;
+    height: 75px;
+    margin-right: 15px;
+    background: url("http://im-img.qq.com/macqq/images/icon.png?t=20130724") no-repeat 0 0;
+}
+
+.boxl dl dt.mac {
+    background-position: 0 -40px;
+}
+
+.boxl dl dt.im {
+    background-position: -98px -40px;
+}
+
+.boxl dl dt.rich {
+    background-position: -198px -40px;
+}
+
+.boxl dl dt.improve {
+    background-position: -290px -40px;
+}
+
+.boxl dl dd {
+    float: right;
+    width: 510px;
+    color: #5a5a5a;
+    text-align: left;
+    font-size: 14px;
+}
+
+.boxl dl dd>h3 {
+    color: #000;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.boxr .boxr-weibo {
+    width: 275px;
+    height: 26px;
+    margin-bottom: 10px;
+}
+
+.boxr .boxr-weibo a {
+    float: right;
+    width: 28px;
+    height: 25px;
+}
+
+.boxr .boxr-weibo a.sina {
+    background: url("http://im-img.qq.com/macqq/images/icon.png?t=20130724") no-repeat -169px 0;
+}
+
+.boxr .boxr-weibo a.sina:hover {
+    background: url("http://im-img.qq.com/macqq/images/icon.png?t=20130724") no-repeat -208px 0;
+}
+
+.boxr .boxr-weibo a.qq {
+    width: 24px;
+    background: url("http://im-img.qq.com/macqq/images/icon.png?t=20130724") no-repeat -100px 0;
+}
+
+.boxr .boxr-weibo a.qq:hover {
+    background: url("http://im-img.qq.com/macqq/images/icon.png?t=20130724") no-repeat -134px 0;;
+}
+
+.boxr .boxr-plugin {
+    width: 275px;
+    height: 54px;
+    margin-bottom: 20px;
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 0 3px 5px 0 #C3C4C6;
+}
+
+.boxr .boxr-plugin a {
+    position: absolute;
+    width: 246px;
+    height: 39px;
+    top: 11px;
+    left: 10px;
+    background: url("http://im-img.qq.com/macqq/images/icon.png?t=20130724") no-repeat -140px -516px;
+}
+
+.boxr .boxr-question {
+    width: 275px;
+    box-shadow: 0 3px 5px #C3C4C6;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.boxr .boxr-question .boxr-question-inner {
+    margin: 0 12px;
+    width: 251px;
+}
+
+.boxr .boxr-question .boxr-question-inner h3 {
+    height: 20px;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: left;
+}
+
+.boxr-question-inner-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url("http://im-img.qq.com/macqq/images/icon.png?t=20130724") no-repeat -247px 1px;
+    margin-right: 5px;
+}
+
+.boxr .boxr-question .boxr-question-inner ul {
+    width: 251px;
+    margin-top: 5px;
+}
+
+.boxr .boxr-question .boxr-question-inner ul li {
+    display: block;
+    width: 251px;
+    margin: 8px 0;
+    text-align: left;
+}
+
+.boxr .boxr-question .boxr-question-inner ul li a {
+    font-size: 12px;
+    color: #5B5B5B;
+    line-height: 15px;
+}
+
+.boxr .boxr-question .boxr-question-inner ul li a:hover {
+    text-decoration: underline;
+    color: #0884CD;
+}
+
+/*platform*/
+.boxr .boxr-platform {
+    width: 275px;
+    border-radius: 5px;
+    box-shadow: 0 3px 5px #C3C4C6;
+    margin-bottom: 20px;
+    padding: 10px 0;
+    position: relative;
+    height: 65px;
+}
+
+.boxr .boxr-platform a {
+    height: 58px;
+    position: absolute;
+    top: 16px;
+}
+
+.boxr .boxr-platform span {
+    width: 4px;
+    height: 65px;
+    position: absolute;
+    top: 10px;
+    background: url("http://im-img.qq.com/macqq/images/icon.png?t=20130724") no-repeat -290px -133px;
+}
+
+.boxr .boxr-platform span.line1 {
+    left: 91px;
+}
+
+.boxr .boxr-platform span.line2 {
+    left: 182px;
+}
+
+.boxr .boxr-platform a.macqq {
+    width: 42px;
+    background: url("http://im-img.qq.com/macqq/images/icon.png?t=20130724") no-repeat 0 -143px;
+    left: 25px;
+}
+
+.boxr .boxr-platform a.macqq:hover {
+    background: url("http://im-img.qq.com/macqq/images/icon.png?t=20130724") no-repeat -43px -143px;
+}
+
+.boxr .boxr-platform a.iphoneqq {
+    width: 54px;
+    background: url("http://im-img.qq.com/macqq/images/icon.png?t=20130724") no-repeat -85px -143px;
+    left: 111px;
+}
+
+.boxr .boxr-platform a.iphoneqq:hover {
+    background: url("http://im-img.qq.com/macqq/images/icon.png?t=20130724") no-repeat -139px -143px;
+}
+
+.boxr .boxr-platform a.ipadqq {
+    width: 40px;
+    background: url("http://im-img.qq.com/macqq/images/icon.png?t=20130724") no-repeat -195px -143px;
+    left: 211px;
+}
+
+.boxr .boxr-platform a.ipadqq:hover {
+    background: url("http://im-img.qq.com/macqq/images/icon.png?t=20130724") no-repeat -239px -143px;
+}
+
+.boxr .boxr-downappstore {
+    display: block;
+    width: 203px;
+    height: 61px;
+}
+
+.boxr .boxr-downappstore img {
+    display: block;
+    width: 203px;
+    height: 61px;
+}
+
+.box footer {
+    width: 960px;
+    height: 30px;
+    padding-top: 20px;
+    margin-top: 50px;
+    background: url("http://im-img.qq.com/macqq/images/subFooterBg.png?t=20120814") no-repeat center 0;
+}
+
+.box footer img {
+    display: block;
+    margin: 0 auto;
+    width: 339px;
+    height: 15px;
+}
+
+.download {
+    width: 100%;
+    padding-top: 60px;
+}
+
+.download .download-header {
+    width: 100%;
+    height: 461px;
+    background: url("http://im-img.qq.com/macqq/images/downloadBg.jpg?t=20120814") repeat-x 0 0;
+}
+
+.download .download-banner {
+    width: 960px;
+    height: 461px;
+    margin: 0 auto;
+    background: url("http://im-img.qq.com/macqq/images/downloadBanner.jpg?t=20130724") no-repeat 0 0;
+    position: relative;
+}
+
+.download-version {
+    width: 403px;
+    height: 22px;
+    position: absolute;
+    left: 276px;
+    bottom: 100px;
+    font-size: 12px;
+    text-shadow: 1px 1px 0 #000;
+    color: #8A8F94;
+}
+
+.download-version .download-btn {
+    display: inline-block;
+    width: 87px;
+    height: 22px;
+    background: url("http://im-img.qq.com/macqq/images/downloadnormal.png") no-repeat 0 0;
+    margin-right: 10px;
+    color: #8A8F94;
+}
+
+.download-version .download-btn:hover {
+    background: url("http://im-img.qq.com/macqq/images/downloadhover.png") no-repeat 0 0;
+}
+
+.download-version .version {
+    margin-left: 10px;
+    color: #8A8F94;
+}
+
+.download-version .version:hover {
+    text-decoration: underline;
+    text-decoration-color: #0884CD;
+}
+
+.download-drag {
+    width: 514px;
+    height: 106px;
+    position: absolute;
+    top: 196px;
+    left: 227px;
+}
+
+.download-drag .drag-start {
+    float: left;
+    width: 105px;
+    height: 106px;
+    background: url("http://im-img.qq.com/macqq/images/icon.png?t=20130724") no-repeat 0 -318px;
+    cursor: move;
+}
+
+.download-drag .drag-start:hover {
+    background: url("http://im-img.qq.com/macqq/images/icon.png?t=20130724") no-repeat -110px -318px
+}
+
+.download-drag .drag-end {
+    float: right;
+    width: 131px;
+    height: 97px;
+    background: url("http://im-img.qq.com/macqq/images/icon.png?t=20130724") no-repeat -219px -319px;
+}
+
+.download-new {
+    width: 960px;
+    height: 739px;
+    margin: 0 auto;
+}
+
+.download-new h2 {
+    font-size: 32px;
+    color: #4A4A4A;
+    line-height: 39px;
+}
+
+.download-new-intro {
+    width: 960px;
+    height: 600px;
+}
+
+.download-new-intro dl {
+    width: 270px;
+    height: 247px;
+    padding: 20px 35px 33px 15px;
+    float: left;
+}
+
+.download-new-intro dl dt {
+    width: 260px;
+    height: 140px;
+    border: 5px solid #fff;
+    border-radius: 5px;
+}
+
+.download-new-intro dl dt img {
+    display: block;
+    width: 260px;
+    height: 140px;
+}
+
+.download-new-intro dl dd {
+    padding: 0 5px;
+}
+
+.download-new-intro dl dd h3 {
+    font-size: 18px;
+    color: #1e1e1e;
+    line-height: 33px;
+    border-bottom: 1px dotted #b5b5b6;
+    text-align: left;
+    margin: 10px 0;
+}
+
+.download-new-intro dl dd p {
+    font-size: 14px;
+    color: #5a5a5a;
+    line-height: 20px;
+    text-align: left;
+}
+
+.download-new-intro footer {
+    margin-top: 50px;
+    width: 960px;
+    height: 30px;
+    padding-top: 20px;
+    background: url("http://im-img.qq.com/macqq/images/subFooterBg.png?t=20120814") no-repeat center 0;
+}
+
+.download-new-intro footer img {
+    width: 295px;
+    height: 17px;
+}
+
+.story {
+    width: 100%;
+    margin-top: 60px;
+}
+
+.story .story-header {
+    width: 100%;
+    height: 456px;
+    background: url("http://im-img.qq.com/macqq/images/storyBg.jpg?t=20120814") repeat-x 0 0;
+}
+
+.tips {
+    width: 100%;
+    position: fixed;
+    top: 60px;
+    background-color: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+}
+
+.tips h2 {
+    font-size: 13px;
+    line-height: 20px;
+    color: #333;
+}
+
+.tips h2>a {
+    color: #277ADA;
+}
+
+.tips h2 a:hover {
+    text-decoration: underline;
+}
+
+.tips>a {
+    font-size: 13px;
+    line-height: 20px;
+    color: #277ADA;
+}
+
+.tips>a:hover {
+    text-decoration: underline;
+}
+
+.story-header-banner {
+    width: 960px;
+    height: 456px;
+    margin: 0 auto;
+    background: url("http://im-img.qq.com/macqq/images/storyBanner.jpg?t=20120814") no-repeat 0 0;
+}
+
+.story-content {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.story-content h2 {
+    font-size: 32px;
+    text-align: left;
+    color: #4a4a4a;
+    margin-bottom: 10px;
+}
+
+.story-content p {
+    font-size: 14px;
+    line-height: 18px;
+    text-align: left;
+}
+
+.story-content dl {
+    width: 960px;
+    height: 287px;
+    margin-top: 50px;
+    background: url("http://im-img.qq.com/macqq/images/storyImg.jpg?t=20120814") no-repeat 0 0;
+}
+
+.story-content dl dt {
+    margin-left: 410px;
+    font-size: 24px;
+    text-align: left;
+    line-height: 28px;
+    padding-top: 20px;
+}
+
+.story-content dl dd {
+    margin-left: 410px;
+    width: 365px;
+}
+
+.story-content dl dd p {
+    line-height: 24px;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.story footer {
+    width: 960px;
+    height: 30px;
+    margin: 100px auto 0;
+    padding-top: 20px;
+    background: url("http://im-img.qq.com/macqq/images/subFooterBg.png?t=20120814") no-repeat center 0;
+}
+
+.story footer img {
+    width: 146px;
+    height: 13px;
+}
+
+.footer {
+    width: 100%;
+    height: 45px;
+    background: url("http://im-img.qq.com/macqq/images/footerBg.jpg?t=20120814") repeat-x 0 0;
+    padding: 12px 0;
+}
+
+.footer p {
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.footer p a{
+    color: #4A4A4A;
+}
+.footer p a:hover {
+    color: #277ADA;
+    text-decoration: underline;
+}

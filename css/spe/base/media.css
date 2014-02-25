@@ -1,0 +1,367 @@
+﻿/* media */
+/* 横屏 */
+@media screen and (orientation:landscape){
+
+}
+/* 竖屏 */
+@media screen and (orientation:portrait){
+
+}
+
+/*普通PC 窗口宽度<1440,设计宽度=1190 ui-grid-row=1200*/
+@media screen  and (max-width:1440px){
+    .ui-grid-row {
+        margin: 0 auto;
+        width: 1200px;
+        position: relative;
+        right: -5px;
+    }
+
+    .ui-grid-row:after {
+        clear: both;
+        display: block;
+        content: none;
+        height: 0;
+        font-size: 0;
+        visibility: hidden;
+    }
+
+    .ui-grid-1, .ui-grid-2, .ui-grid-3, .ui-grid-4, .ui-grid-5, .ui-grid-6, .ui-grid-7, .ui-grid-8, .ui-grid-9, .ui-grid-10, .ui-grid-11, .ui-grid-12 {
+        margin-right: 10px;
+        float: left;
+    }
+
+    .ui-grid-1 {
+        width: 90px;
+    }
+
+    .ui-grid-2 {
+        width: 190px;
+    }
+
+    .ui-grid-3 {
+        width: 290px;
+    }
+
+    .ui-grid-4 {
+        width: 390px;
+    }
+
+    .ui-grid-5 {
+        width: 490px;
+    }
+
+    .ui-grid-6 {
+        width: 590px;
+    }
+
+    .ui-grid-7 {
+        width: 690px;
+    }
+
+    .ui-grid-8 {
+        width: 790px;
+    }
+
+    .ui-grid-9 {
+        width: 890px;
+    }
+
+    .ui-grid-10 {
+        width: 990px;
+    }
+
+    .ui-grid-11 {
+        width: 1090px;
+    }
+
+    .ui-grid-12 {
+        width: 1190px;
+    }
+
+}
+
+
+
+/* 窗口宽度<960,设计宽度=761 container=768*/
+@media screen and (max-width:1024px){
+    .ui-grid-row{
+        margin: 0 auto;
+        width: 768px;
+        position: relative;
+        right: -3.5px;
+    }
+    .ui-grid-row:after{
+        clear: both;
+        display: block;
+        content: none;
+        height: 0;
+        font-size: 0;
+        visibility: hidden;
+    }
+    .ui-grid-1, .ui-grid-2, .ui-grid-3, .ui-grid-4, .ui-grid-5, .ui-grid-6, .ui-grid-7, .ui-grid-8, .ui-grid-9, .ui-grid-10, .ui-grid-11, .ui-grid-12 {
+        margin-right: 7px;
+        float: left;
+    }
+    .ui-grid-1 {
+        width: 57px;
+    }
+
+    .ui-grid-2 {
+        width: 121px;
+    }
+
+    .ui-grid-3 {
+        width: 185px;
+    }
+
+    .ui-grid-4 {
+        width: 249px;
+    }
+
+    .ui-grid-5 {
+        width: 313px;
+    }
+
+    .ui-grid-6 {
+        width: 377px;
+    }
+
+    .ui-grid-7 {
+        width: 441px;
+    }
+
+    .ui-grid-8 {
+        width: 505px;
+    }
+
+    .ui-grid-9 {
+        width: 569px;
+    }
+
+    .ui-grid-10 {
+        width: 633px;
+    }
+
+    .ui-grid-11 {
+        width: 697px;
+    }
+
+    .ui-grid-12 {
+        width: 761px;
+    }
+
+}
+/* 窗口宽度<768,设计宽度=640 container=648*/
+@media screen and (max-width:768px){
+    .ui-grid-row{
+        margin: 0 auto;
+        width: 648px;
+        position: relative;
+        right: -4px;
+    }
+    .ui-grid-row:after{
+        clear: both;
+        display: block;
+        content: none;
+        height: 0;
+        font-size: 0;
+        visibility: hidden;
+    }
+    .ui-grid-1, .ui-grid-2, .ui-grid-3, .ui-grid-4, .ui-grid-5, .ui-grid-6, .ui-grid-7, .ui-grid-8, .ui-grid-9, .ui-grid-10, .ui-grid-11, .ui-grid-12 {
+        margin-right: 7px;
+        float: left;
+    }
+    .ui-grid-1 {
+        width: 46px;
+    }
+
+    .ui-grid-2 {
+        width: 100px;
+    }
+
+    .ui-grid-3 {
+        width: 154px;
+    }
+
+    .ui-grid-4 {
+        width: 208px;
+    }
+
+    .ui-grid-5 {
+        width: 262px;
+    }
+
+    .ui-grid-6 {
+        width: 316px;
+    }
+
+    .ui-grid-7 {
+        width: 370px;
+    }
+
+    .ui-grid-8 {
+        width: 424px;
+    }
+
+    .ui-grid-9 {
+        width: 478px;
+    }
+
+    .ui-grid-10 {
+        width: 532px;
+    }
+
+    .ui-grid-11 {
+        width: 586px;
+    }
+
+    .ui-grid-12 {
+        width: 640px;
+    }
+}
+/* 窗口宽度<640,设计宽度=614 container=624  */
+@media screen and (max-width:640px){
+    .ui-grid-row{
+        margin: 0 auto;
+        width: 612px;
+        position: relative;
+        right: -6px;
+    }
+    .ui-grid-row:after{
+        clear: both;
+        display: block;
+        content: none;
+        height: 0;
+        font-size: 0;
+        visibility: hidden;
+    }
+    .ui-grid-1, .ui-grid-2, .ui-grid-3, .ui-grid-4, .ui-grid-5, .ui-grid-6, .ui-grid-7, .ui-grid-8, .ui-grid-9, .ui-grid-10, .ui-grid-11, .ui-grid-12 {
+        margin-right: 12px;
+        float: left;
+    }
+    .ui-grid-1 {
+        width: 42px;
+    }
+
+    .ui-grid-2 {
+        width: 94px;
+    }
+
+    .ui-grid-3 {
+        width: 146px;
+    }
+
+    .ui-grid-4 {
+        width: 198px;
+    }
+
+    .ui-grid-5 {
+        width: 250px;
+    }
+
+    .ui-grid-6 {
+        width: 302px;
+    }
+
+    .ui-grid-7 {
+        width: 354px;
+    }
+
+    .ui-grid-8 {
+        width: 406px;
+    }
+
+    .ui-grid-9 {
+        width: 458px;
+    }
+
+    .ui-grid-10 {
+        width: 510px;
+    }
+
+    .ui-grid-11 {
+        width: 562px;
+    }
+
+    .ui-grid-12 {
+        width: 614px;
+    }
+
+}
+/* 窗口宽度<480,设计宽度=448  container=456*/
+@media screen and (max-width:480px){
+    .ui-grid-row{
+        margin: 0 auto;
+        width: 456px;
+        position: relative;
+        right: -4px;
+    }
+    .ui-grid-row:after{
+        clear: both;
+        display: block;
+        content: none;
+        height: 0;
+        font-size: 0;
+        visibility: hidden;
+    }
+    .ui-grid-1, .ui-grid-2, .ui-grid-3, .ui-grid-4, .ui-grid-5, .ui-grid-6, .ui-grid-7, .ui-grid-8, .ui-grid-9, .ui-grid-10, .ui-grid-11, .ui-grid-12 {
+        margin-right: 12px;
+        float: left;
+    }
+    .ui-grid-1 {
+        width: 30px;
+    }
+
+    .ui-grid-2 {
+        width: 68px;
+    }
+
+    .ui-grid-3 {
+        width: 106px;
+    }
+
+    .ui-grid-4 {
+        width: 144px;
+    }
+
+    .ui-grid-5 {
+        width: 182px;
+    }
+
+    .ui-grid-6 {
+        width: 220px;
+    }
+
+    .ui-grid-7 {
+        width: 258px;
+    }
+
+    .ui-grid-8 {
+        width: 296px;
+    }
+
+    .ui-grid-9 {
+        width: 334px;
+    }
+
+    .ui-grid-10 {
+        width: 372px;
+    }
+
+    .ui-grid-11 {
+        width: 410px;
+    }
+
+    .ui-grid-12 {
+        width: 448px;
+    }
+}
+/* windows UI 贴靠 */
+@media screen and (-ms-view-state:snapped){
+
+}
+/* 打印 */
+@media print{
+
+}

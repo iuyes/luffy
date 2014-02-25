@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+    <title></title>
+    <!-- seajs文件 -->
+    <script type="text/javascript" src="/js/luffy/seajs/2.1.1/sea.js" id="seajsnode"></script>
+    <!-- seajs配置文件 -->
+    <script type="text/javascript" src="/js/luffy/luffyconf.js"></script>
+    <!-- 当前页面模块的健康情况 -->
+    <script type="text/javascript" src="/js/luffy/seajs-health/0.1.0/seajs-health.js"></script>
+    <!-- seajs文本插件 can load .tpl .html .json 文本 -->
+    <script type="text/javascript" src="/js/luffy/seajs-text/1.0.2/seajs-text.js"></script>
+    <style type="text/css">
+    </style>
+</head>
+<body>
+<input type="text" id="start"/> <input type="text" id="end"/>
+</body>
+<script type="text/javascript">
+    seajs.use('alice/base/1.0.1/base.css');
+    seajs.use('arale/calendar/0.9.0/calendar.css');
+
+    seajs.use('arale/calendar/0.9.0/calendar', function (Calendar) {
+        new Calendar({
+//             trigger:'#calendar',
+//             range: ['2013-09-11', null]
+            /*range:function(date){
+             if(date.day){
+             return date.day()!=2;
+             }
+             return true;
+             }*/
+            format: 'YYYY MM-DD HH:mm:ss',
+            hideOnSelect: false
+        });
+
+        var c1 = new Calendar({
+            trigger: '#start',
+            range: ['2013-09-01', '2013-10-30']
+        });
+
+        var c2 = new Calendar({
+            trigger: '#end',
+            range: ['2013-09-01', '2013-10-30']
+        });
+
+
+    });
+
+</script>
+</html>

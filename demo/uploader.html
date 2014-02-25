@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <script type="text/javascript" src="/js/luffy/seajs/2.1.1/sea.js" id="seajsnode"></script>
+  <!-- seajs配置文件 -->
+  <script type="text/javascript" src="/js/luffy/luffyconf.js"></script>
+  <!-- 当前页面模块的健康情况 -->
+  <script type="text/javascript" src="/js/luffy/seajs-health/0.1.0/seajs-health.js"></script>
+  <!-- seajs文本插件 can load .tpl .html .json 文本 -->
+  <script type="text/javascript" src="/js/luffy/seajs-text/1.0.2/seajs-text.js"></script>
+  <script type="text/javascript" src="/js/luffy/seajs-style/1.0.1/seajs-style.js"></script>
+  <style>
+    #uploader{
+      line-height: 30px;
+      font-size: 12px;
+    }
+    #uploader a{
+      text-decoration: none;
+    }
+    #uploadlist{
+      width: 360px;
+      background-color: #999;
+      list-style: none;
+      height: 220px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="uploader">
+  <a href="javascript:void(0)" id="fileuploader">文件上传</a>
+</div>
+<ul id="uploadlist">
+
+</ul>
+
+
+<script>
+  seajs.use('atom/uploader/uploader',function(Uploader){
+    var u = new Uploader({
+      runtimes: 'html5',
+      multiple: true,
+      element: '#uploader',
+      uploadButton: '#fileuploader',
+      fileTypes: '*.jpg;*.png;.pdf;.doc;.gif;.jpeg;.ppt;.xlsx',
+      fileSizeLimit: '3MB',
+      fileUploadLimit:6,
+      swfURL: '../src/swfuploader/uploader.swf'
+    }).render();
+
+  });
+</script>
+</body>
+</html>

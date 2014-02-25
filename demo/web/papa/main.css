@@ -1,0 +1,397 @@
+body {
+    font-family: "Helvetica Neue", "Hiragino Sans GB", "Segoe UI", "Microsoft Yahei", "微软雅黑", Tahoma, Arial, STHeiti, sans-serif;
+}
+
+.header {
+    width: 100%;
+    background-color: #d63921;
+}
+
+.header .header-holder {
+    width: 920px;
+    margin: 0 auto;
+}
+
+.header .header-holder h1.logo {
+    float: left;
+    margin-top: 40px;
+    width: 277px;
+    height: 240px;
+    background: url("http://s.ppsrc.com/w/img/app/intro/papa-sprites.$717.png") no-repeat 3px -963px;
+}
+
+.header .header-holder .header-nav {
+    float: right;
+    margin-top: 20px;
+    width: 208px;
+    height: 67px;
+}
+
+.header-nav a {
+    float: right;
+    height: 67px;
+    line-height: 67px;
+    margin-left: 40px;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.header-gallery {
+    float: right;
+    width: 577px;
+    height: 598px;
+    background: url("http://s.ppsrc.com/w/img/app/intro/gallery.$673.png") no-repeat 0 0;
+    margin-top: -18px;
+    margin-right: -34px;
+}
+
+.login {
+    float: left;
+    margin-top: 20px;
+    width: 360px;
+}
+
+.login a.login-web {
+    margin-left: 4px;
+    display: block;
+    width: 322px;
+    height: 102px;
+    background: url("http://s.ppsrc.com/w/img/app/intro/papa-sprites.$717.png") no-repeat 0 -1380px;
+    text-indent: -9999px;
+}
+
+.login .login-app {
+    margin-top: 20px;
+    width: 293px;
+    height: 184px;
+    position: relative;
+}
+
+.login-app .login-download {
+    width: 158px;
+    height: 184px;
+    float: left;
+}
+
+.login-app .login-qrcode {
+    float: right;
+    margin-top: 4px;
+    width: 104px;
+    height: 104px;
+    background: url("http://s.ppsrc.com/w/img/element/qr-33.$674.png") no-repeat 0 0;
+}
+
+.login-download a {
+    display: block;
+    width: 158px;
+    height: 56px;
+}
+
+.login-download a.login-download-iphone {
+    background: url("http://s.ppsrc.com/w/img/app/intro/papa-sprites.$717.png") no-repeat 4px -530px;
+}
+
+.login-download a.login-download-android {
+    background: url("http://s.ppsrc.com/w/img/app/intro/papa-sprites.$717.png") no-repeat 4px -734px;
+}
+
+.login-download a.login-download-iphone:hover {
+    background: url("http://s.ppsrc.com/w/img/app/intro/papa-sprites.$717.png") no-repeat 0 -632px;
+}
+
+.login-download a.login-download-android:hover {
+    background: url("http://s.ppsrc.com/w/img/app/intro/papa-sprites.$717.png") no-repeat 0 -836px;
+}
+
+.login-download-list {
+    position: absolute;
+    left: 4px;
+    top: 112px;
+    border: 2px solid #fff;
+    width: 146px;
+    height: 101px;
+    list-style: none;
+}
+
+.login-download-list li {
+    display: block;
+    width: 146px;
+    height: 50px;
+    color: #fff;
+    font-size: 16px;
+    line-height: 50px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.login-download-list li.login-download-local {
+    border-bottom: 1px solid #fff;
+}
+
+.nav {
+    width: 100%;
+    height: 97px;
+    background: url("http://s.ppsrc.com/w/img/app/intro/line-sprites.$685.png") repeat-x 0 0;
+    padding: 7px 0;
+    margin-top: -7px;
+}
+
+.nav .nav-wrapper {
+    width: 922px;
+    height: 97px;
+    margin: 0 auto;
+    border-left: 1px solid #e8e8e8;
+    border-right: 1px solid #e8e8e8;
+}
+
+.nav .nav-wrapper li {
+    float: left;
+    width: 306px;
+    height: 97px;
+    font-size: 16px;
+    color: #6b6f7b;
+    line-height: 97px;
+    text-indent: 30px;
+    cursor: pointer;
+}
+
+.nav .nav-wrapper li:hover {
+    color: #d73a21;
+}
+
+.nav .nav-wrapper li.intro {
+    background: url("http://s.ppsrc.com/w/img/app/intro/papa-sprites.$717.png") no-repeat 106px -44px;
+}
+
+.nav .nav-wrapper li.intro:hover {
+    background: url("http://s.ppsrc.com/w/img/app/intro/papa-sprites.$717.png") no-repeat 106px 34px;
+}
+
+.nav .nav-wrapper li.stars {
+    background: url("http://s.ppsrc.com/w/img/app/intro/papa-sprites.$717.png") no-repeat 106px -200px;
+    border-left: 1px solid #e8e8e8;
+    border-right: 1px solid #e8e8e8;
+}
+
+.nav .nav-wrapper li.stars:hover {
+    background: url("http://s.ppsrc.com/w/img/app/intro/papa-sprites.$717.png") no-repeat 106px -122px;
+}
+
+.nav .nav-wrapper li.choice {
+    background: url("http://s.ppsrc.com/w/img/app/intro/papa-sprites.$717.png") no-repeat 106px -357px;
+}
+
+.nav .nav-wrapper li.choice:hover {
+    background: url("http://s.ppsrc.com/w/img/app/intro/papa-sprites.$717.png") no-repeat 106px -279px;
+}
+
+.post-info {
+    width: 900px;
+    margin: 0 auto;
+    padding-top: 414px;
+    background: url("http://s.ppsrc.com/w/img/app/intro/intro-v3.$673.jpg") no-repeat 0 94px;
+}
+
+.post-info li {
+    float: left;
+    padding: 0 40px;
+    width: 220px;
+    text-align: center;
+}
+
+.post-info li h4 {
+    font-size: 17px;
+}
+
+.post-info li p {
+    margin-top: 30px;
+    font-size: 13px;
+    line-height: 24px;
+}
+
+.seprate {
+    width: 920px;
+    height: 1px;
+    margin: 100px auto;
+    background: url('http://s.ppsrc.com/w/img/app/intro/line-sprites.$685.png') repeat-x 0 -161px;
+    border: 0;
+}
+
+.post-usage {
+    width: 362px;
+    height: 246px;
+    margin: 0 auto;
+    padding-left: 558px;
+    background: url("http://s.ppsrc.com/w/img/app/intro/star-v3.$722.jpg") no-repeat 6px 0;
+    position: relative;
+}
+
+.post-usage h4 {
+    font-size: 34px;
+    margin-top: 58px;
+    margin-bottom: 18px;
+    text-align: left;
+}
+
+.post-usage p {
+    font-size: 13px;
+    line-height: 24px;
+    text-align: left;
+}
+
+.post-usage .play-star {
+    font-size: 13px;
+    color: #bbb;
+    position: absolute;
+    left: 104px;
+    bottom: -34px;
+}
+
+.choiceness {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.choiceness h4 {
+    font-size: 34px;
+    height: 45px;
+    line-height: 45px;
+}
+
+.choiceness ul {
+    margin-top: 30px;
+}
+
+.choiceness ul li {
+    float: left;
+    width: 212px;
+    height: 212px;
+    margin: 12px 14px;
+}
+
+.choiceness a {
+    display: block;
+    width: 212px;
+    height: 212px;
+    position: relative;
+}
+
+.choiceness a img {
+    width: 212px;
+    height: 212px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    -ms-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.choiceness a .love {
+    position: absolute;
+    width: 60px;
+    height: 16px;
+    left: 12px;
+    bottom: 12px;
+    background: url("http://s.ppsrc.com/w/img/app/intro/papa-sprites.$717.png") no-repeat 0 -468px;
+    line-height: 16px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.choiceness a .user-avater {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    width: 32px;
+    height: 32px;
+}
+
+.overlay {
+    position: absolute;
+    width: 212px;
+    height: 212px;
+    background-color: #000000;
+    opacity: 0.7;
+    top: 0;
+    left: 0;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    -ms-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.overlay h4 {
+    height: 30px;
+    margin: 20px 5px 10px;
+    line-height: 30px;
+    font-size: 16px;
+    color: #fff;
+}
+
+.overlay span {
+    font-size: 13px;
+    color: #fff;
+    line-height: 24px;
+}
+
+.overlay .name {
+    float: left;
+    margin-left: 25px;
+}
+
+.overlay .update {
+    float: right;
+    margin-right: 25px;
+}
+
+.overlay .usernum {
+    margin: 10px 25px;
+    text-align: left;
+    height: 20px;
+    font-size: 12px;
+    line-height: 20px;
+    color: #fff;
+    vertical-align: top;
+}
+
+.overlay .usernum .ico-statplay {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-top: 2px;
+    background: url("http://static.youku.com/index/img/2013/video/yk.8.png") no-repeat -30px 0;
+}
+
+.more {
+    margin: 50px auto;
+    height: 24px;
+}
+
+.more span {
+    font-size: 14px;
+    line-height: 24px;
+    color: #bbb;
+    cursor: pointer;
+}
+
+.footer {
+    width: 960px;
+    height: 40px;
+    padding-top: 10px;
+    margin: -95px auto 0;
+}
+.footer p{
+    line-height: 20px;
+    font-size: 12px;
+    color: #bbb;
+}
+
+.fixnav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}

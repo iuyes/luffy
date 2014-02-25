@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+    <title></title>
+    <!-- seajs文件 -->
+    <script type="text/javascript" src="/js/luffy/seajs/2.1.1/sea.js" id="seajsnode"></script>
+    <!-- seajs配置文件 -->
+    <script type="text/javascript" src="/js/luffy/luffyconf.js"></script>
+    <!-- 当前页面模块的健康情况 -->
+    <script type="text/javascript" src="/js/luffy/seajs-health/0.1.0/seajs-health.js"></script>
+    <!-- seajs文本插件 can load .tpl .html .json 文本 -->
+    <script type="text/javascript" src="/js/luffy/seajs-text/1.0.2/seajs-text.js"></script>
+    <style type="text/css">
+    </style>
+</head>
+<body>
+<button id="btn" data-clipboard-text="Copy Me!" title="Click to copy me.">COPY</button>
+</body>
+<script type="text/javascript" src="/js/ZeroClipboard.min.js"></script>
+<script type="text/javascript">
+    seajs.use('alice/base/1.0.1/base.css');
+
+
+    seajs.use(['$', 'gallery/zeroclipboard/1.1.7/zeroclipboard'], function ($, ZeroClipboard) {
+        var clip = new ZeroClipboard($("#btn"), {
+            moviePath: "/js/sea-modules/gallery/zeroclipboard/1.1.7/ZeroClipboard.swf"
+        });
+
+        clip.on('load', function (client) {
+            alert("movie is loaded");
+        });
+
+        clip.on('complete', function (client, args) {
+            this.style.display = 'none'; // "this" is the element that was clicked
+            alert("Copied text to clipboard: " + args.text);
+        });
+    });
+</script>
+</html>

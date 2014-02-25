@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script type="text/javascript" src="/js/luffy/seajs/2.1.1/sea.js" id="seajsnode"></script>
+    <!-- seajs配置文件 -->
+    <script type="text/javascript" src="/js/luffy/luffyconf.js"></script>
+    <!-- 当前页面模块的健康情况 -->
+    <script type="text/javascript" src="/js/luffy/seajs-health/0.1.0/seajs-health.js"></script>
+    <!-- seajs文本插件 can load .tpl .html .json 文本 -->
+    <script type="text/javascript" src="/js/luffy/seajs-text/1.0.2/seajs-text.js"></script>
+    <script type="text/javascript" src="/js/luffy/seajs-style/1.0.1/seajs-style.js"></script>
+    <!--样式-->
+    <link rel="stylesheet" href="/js/sea-modules/playman/shincss/base.css"/>
+    <style type="text/css">
+        .active{
+            font-weight: bold;
+        }
+        .ui-accordion{
+            width: 300px;
+            border: 1px solid #1e1e1e;
+        }
+        .ui-accordion .ui-accordion-trigger{
+            width: 300px;
+            height: 30px;
+            border-bottom:1px solid #1e1e1e ;
+        }
+        .ui-accordion-trigger h3{
+            font-size: 16px;
+            color: #ffd7af;
+            line-height: 30px;
+        }
+        .ui-accordion-panel{
+            width: 300px;
+            height: 168px;
+            border-bottom: 1px solid #1e1e1e;
+            font-size: 14px;
+            color: #d9d9d9;
+            line-height: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="ui-grid-row">
+    <div class="ui-grid-3"></div>
+    <div class="ui-grid-6">
+        <div class="ui-accordion">
+            <div class="ui-accordion-trigger active" data-role="trigger"><h3>标题A</h3></div>
+            <div class="ui-accordion-panel" data-role="panel">
+                <ul>
+                    <li>内容A</li>
+                    <li>内容A</li>
+                    <li>内容A</li>
+                </ul>
+            </div>
+            <div class="ui-accordion-trigger" data-role="trigger"><h3>标题B</h3></div>
+            <div class="ui-accordion-panel fn-dn" data-role="panel">
+                <ul>
+                    <li>内容B</li>
+                    <li>内容B</li>
+                    <li>内容B</li>
+                </ul>
+            </div>
+            <div class="ui-accordion-trigger" data-role="trigger"><h3>标题C</h3></div>
+            <div class="ui-accordion-panel fn-dn" data-role="panel">
+                <ul>
+                    <li>内容C</li>
+                    <li>内容C</li>
+                    <li>内容C</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="ui-grid-3"></div>
+</div>
+
+
+
+</body>
+<script type="text/javascript">
+    seajs.use(['accordion', '$'], function(Accordion, $) {
+        accordion = new Accordion({
+            element: '.ui-accordion',
+            multiple: false,
+            triggerType:'hover',
+            activeTriggerClass:'active'
+        }).render();
+    });
+</script>
+</html>

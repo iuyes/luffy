@@ -1,0 +1,792 @@
+body {
+  font-family: "helvetica neue", arial, sans-serif;
+  font-size: 14px;
+  color: #444;
+  background-color: #efefef;
+}
+
+header {
+  width: 100%;
+  height: 42px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 0 0 4px rgba(0, 0, 0, .2);
+  background-color: #fff;
+}
+
+header > .inner {
+  width: 1244px;
+  height: 42px;
+  margin: 0 auto;
+}
+
+.header-nav {
+  float: left;
+  height: 42px;
+}
+
+.header-nav-menu {
+  float: left;
+  margin-right: 10px;
+  border-left: 1px solid #f5f5f5;
+  border-right: 1px solid #f5f5f5;
+  position: relative;
+}
+
+.header-nav-menu > a {
+  display: block;
+  width: 56px;
+  height: 42px;
+  position: relative;
+}
+
+.header-nav-menu-icon {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  left: 50%;
+  top: 50%;
+  margin-top: -8px;
+  margin-left: -8px;
+  background: url("http://huaban.com/img/menu_sprite.png?new.png") no-repeat 0 0;
+}
+
+.header-nav-menu .arrow {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 8px;
+  height: 8px;
+  background: url("http://huaban.com/img/menu_sprite.png?new.png") no-repeat 0 -50px;
+}
+
+.header-nav form {
+  float: left;
+  margin-top: 6px;
+  position: relative;
+}
+
+.header-nav form input {
+  padding: 5px 8px;
+  border: 1px solid #ddd;
+  background: #fafafa;
+  width: 120px;
+  font-size: 14px;
+  line-height: 16px;
+  border-radius: 3px;
+}
+
+.header-nav form .go {
+  position: absolute;
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: url("http://huaban.com/img/menu_sprite.png?new.png") no-repeat 0 -100px;
+  cursor: pointer;
+  right: 6px;
+  top: 4px;
+}
+
+.header-nav form .go:hover {
+  background-position: -50px -100px;
+}
+
+.logo {
+  float: left;
+  width: 74px;
+  height: 42px;
+  margin-left: 374px;
+}
+
+.logo img {
+  margin-top: 9px;
+}
+
+.header-nav-login {
+  float: right;
+  height: 42px;
+  border-left: 1px solid #f5f5f5;
+  border-right: 1px solid #f5f5f5;
+}
+
+.btn {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 28px;
+  padding: 0 12px;
+  border-radius: 2px;
+  border: 1px solid #d9d9d9;
+  background: linear-gradient(#FAFAFA, #F2F2F2);
+  cursor: pointer;
+  text-decoration: none;
+  color: #444;
+  white-space: nowrap;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+  white-space: nowrap;
+}
+
+.login {
+  margin-top: 6px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.signin {
+  margin-top: 6px;
+  margin-right: 10px;
+}
+
+.header-nav-menu-list {
+  width: 721px;
+  position: absolute;
+  top: 56px;
+  left: -1px;
+  border-radius: 3px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, .2);
+  background-color: #fff;
+  z-index: 999;
+}
+
+.header-nav-menu-list-left {
+  float: left;
+  padding: 30px 20px 0 30px;
+  width: 120px;
+}
+
+.header-nav-menu-list-right {
+  float: left;
+  padding: 30px 20px 0 30px;
+  width: 500px;
+  font-size: 14px;
+  border-left: 1px solid #ededed;
+}
+
+.link {
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #222;
+  padding-left: 34px;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  background: url("http://huaban.com/img/menu_sprite.png?new.png") no-repeat 0 -250px;
+}
+
+.fllow {
+  background-position: 0 -990px;
+}
+
+.white-line {
+  border-bottom: 1px solid #ededed;
+}
+
+.group {
+  margin-bottom: 15px;
+  padding-left: 34px;
+  padding-bottom: 1px;
+}
+
+.header-nav-menu-list-left .group > a {
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 15px;
+  color: #444;
+  font-size: 14px;
+}
+
+.shiji {
+  background-position: 0 -350px;
+}
+
+.mobile {
+  background-position: 0 -400px;
+}
+
+.header-nav-menu-list-right .row-1 {
+  float: left;
+  width: 150px;
+}
+
+.header-nav-menu-list-right .row-2 {
+  float: left;
+  width: 180px;
+}
+
+.header-nav-menu-list-right .row-3 {
+  float: left;
+  width: 170px;
+}
+
+.design {
+  background-position: 0 -1090px;
+  position: relative;
+}
+
+.design-icon {
+  position: absolute;
+  width: 18px;
+  height: 16px;
+  left: 105px;
+  top: 4px;
+}
+
+.header-nav-menu-list-right .group > a {
+  display: block;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+.header-nav-menu-list-bar {
+  height: 50px;
+  border-top: 1px solid #ededed;
+  padding: 0 10px;
+  background-color: #fafafa;
+  line-height: 50px;
+}
+
+.btn i {
+  display: inline-block;
+  height: 14px;
+  width: 12px;
+  background: url("http://huaban.com/img/menu_sprite.png?new.png") no-repeat 0 -450px;
+  margin-right: 2px;
+  vertical-align: middle;
+}
+
+.btn-width-icon {
+  padding: 0 10px;
+}
+
+.header-nav-menu-list-bar .somelinks {
+  position: absolute;
+  height: 50px;
+  bottom: 0;
+  right: 10px;
+}
+
+.somelinks a {
+  color: #777;
+  margin-right: 6px;
+}
+
+.top-promotion {
+  position: relative;
+  width: 100%;
+}
+
+.top-promotion > a {
+  display: block;
+  height: 30px;
+  width: 100%;
+  background: url("http://hbimg2.b0.upaiyun.com/img/promotion/c95b3d175f6330afece2ced5bfe92c9cf70b5186c1d6") no-repeat center center;
+}
+
+.top-promotion .close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  background: url("http://huaban.com/img/notification_close.gif") no-repeat 0 0;
+  cursor: pointer;
+}
+
+.up-arrow {
+  position: absolute;
+  width: 18px;
+  height: 10px;
+  left: 19px;
+  top: -10px;
+  background: url("http://huaban.com/img/menu_arrow.png") no-repeat 0 0;
+}
+
+.notification {
+  position: fixed;
+  top: 42px;
+  left: 50%;
+  margin-left: -80px;
+  padding: 8px 35px;
+  background: rgba(0, 0, 0, .6);
+  box-shadow: 0 1px 2px rgba(34, 25, 25, .4);
+  border-radius: 0 0 5px 5px;
+  font-size: 15px;
+  z-index: 999999;
+}
+
+.notification a {
+  color: #fff;
+}
+
+.wrapper {
+  width: 1244px;
+  margin: 0 auto;
+}
+
+.connect-intro {
+  padding: 25px 40px;
+  width: 820px;
+  font-size: 14px;
+  height: 58px;
+  background-color: #fff9e2;
+  margin: auto;
+  background: url("http://huaban.com/img/tips_bg.gif") repeat;
+  box-shadow: inset 0 -1px 0 #fff, 0 1px 6px rgba(0, 0, 0, .3);
+  border-bottom: 2px solid #efebda;
+  border-radius: 0 0 5px 5px;
+  margin-top: 42px;
+}
+
+.know-huaban {
+  float: left;
+  height: 58px;
+  width: 510px;
+}
+
+.know-huaban .play-video {
+  float: left;
+  width: 78px;
+  height: 58px;
+  background: url("http://huaban.com/img/login_tips_video_cover.png") no-repeat 0 0;
+  margin-right: 10px;
+}
+
+.know-huaban .play-video:hover {
+  background-position: 0 -70px;
+}
+
+.know-huaban h2 {
+  font-size: 22px;
+  line-height: 26px;
+  color: #444;
+  font-weight: 700;
+}
+
+.know-huaban .know-huaban-link {
+  color: #9E7E6B;
+  display: block;
+  margin-top: 10px;
+}
+
+.connect-intro-unauth {
+  float: right;
+  width: 310px;
+  height: 62px;
+  font-size: 0;
+}
+
+.connect-intro-unauth-sinaqq {
+  height: 34px;
+}
+
+.connect-intro-unauth-sinaqq > a {
+  display: inline-block;
+  padding-left: 37px;
+  width: 103px;
+  height: 34px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  margin-left: 15px;
+  line-height: 34px;
+  background: url("http://huaban.com/img/login_tips_btn_sprite.png") no-repeat 0 0;
+}
+
+.connect-intro-unauth-sinaqq > a.sina:hover {
+  background-position: 0 -40px;
+}
+
+.connect-intro-unauth-sinaqq > a.qq {
+  background-position: -150px 0;
+}
+
+.connect-intro-unauth-sinaqq > a.qq:hover {
+  background-position: -150px -40px;
+}
+
+.connect-intro-unauth-others {
+  line-height: 18px;
+  margin-top: 10px;
+  color: #777;
+  font-size: 14px;
+  text-align: right;
+}
+
+.login-btn {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-left: 10px;
+  background: url("http://huaban.com/img/login_tips_btn_sprite.png") no-repeat;
+  vertical-align: top;
+}
+
+.connect-intro-unauth-others .renren {
+  background-position: -30px -130px;
+}
+
+.connect-intro-unauth-others .renren:hover {
+  background-position: -30px -160px;
+}
+
+.connect-intro-unauth-others .douban {
+  background-position: 0 -130px;
+}
+
+.connect-intro-unauth-others .douban:hover {
+  background-position: 0 -160px;
+}
+
+.elevator {
+  position: fixed;
+  width: 60px;
+  height: 100px;
+  right: 15px;
+  bottom: 10px;
+  z-index: 9999;
+}
+
+.elevator .gotop {
+  display: block;
+  width: 60px;
+  height: 50px;
+  margin-bottom: 10px;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+  background: url("http://huaban.com/img/icon_top.png") no-repeat center center;
+  background-color: rgba(0, 0, 0, .6);
+}
+
+.gotop:hover {
+  background-color: rgba(0, 0, 0, .7);
+}
+
+.qrbtn {
+  display: block;
+  width: 60px;
+  height: 40px;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+  background: url("http://huaban.com/img/icon_code.png") no-repeat center center;
+  background-color: rgba(0, 0, 0, .6);
+}
+
+.qrbtn:hover {
+  background-color: rgba(0, 0, 0, .7);
+}
+
+.qr {
+  width: 170px;
+  height: 200px;
+  background-color: #fff;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, .1);
+  position: absolute;
+  bottom: 0;
+  left: -180px;
+  border-radius: 2px;
+  text-align: center;
+}
+
+.qr-img {
+  display: block;
+  margin: 10px;
+}
+
+.qr-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.qr-txt {
+  font-size: 14px;
+  text-align: center;
+}
+
+.modal {
+  border-radius: 2px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, .2);
+  background-color: #fff;
+  z-index: 999999;
+}
+
+.modal .modal-header {
+  position: relative;
+  padding: 8px 31px;
+  background-color: #FAFAFA;
+  border-bottom: 1px solid #EBEBEB;
+}
+
+.modal-header h2 {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 30px;
+  text-align: left;
+}
+
+.modal-close {
+  position: absolute;
+  width: 46px;
+  height: 46px;
+  top: 0;
+  right: 0;
+  font-size: 50px;
+  color: #777;
+  text-align: center;
+  line-height: 46px;
+}
+
+.modal-close:hover {
+  background-color: #F2F2F2;
+}
+
+.modal-body {
+  padding: 10px;
+}
+
+.caiji-nav {
+  padding: 20px 0 27px;
+}
+
+.caiji-nav-title {
+  font-size: 1.8em;
+  line-height: 1em;
+  font-weight: 300;
+  color: #211922;
+}
+
+.caiji-nav .btn {
+  color: #333;
+}
+
+.caiji-nav .btn:hover {
+  color: #9A0000;
+}
+
+.caiji-nav .btn i {
+  margin-right: 4px;
+}
+
+#waterfall {
+  margin-top: 15px;
+  position: relative;
+}
+
+#waterfall .pin {
+  width: 240px;
+  background-color: #fff;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, .2);
+}
+
+
+.pin-img {
+  display: block;
+  width: 240px;
+}
+
+.pin-img img {
+  width: 240px;
+}
+
+.pin-title {
+  padding: 10px 16px;
+  overflow: hidden;
+  line-height: 1.35em;
+  font-size: 14px;
+}
+
+.pin-author {
+  border-top: 1px solid #ededed;
+}
+
+.pin-author-img {
+  float: left;
+  padding: 16px;
+  width: 34px;
+  height: 34px;
+  border-right: 1px solid #ededed;
+}
+
+.pin-author-img img {
+  width: 34px;
+  height: 34px;
+}
+
+.pin-author p {
+  float: left;
+  padding: 16px 0 0 16px;
+  font-size: 14px;
+  color: #777;
+}
+
+.pin-author p .author, .pin-author p .place {
+  color: #9E7E6B;
+}
+
+.modal.loginin {
+  position: fixed;
+  top: 42px;
+  left: 50%;
+  width: 826px;
+  margin-left: -425px;
+  background-color: #fff9e2;
+  background: url("http://huaban.com/img/tips_bg.gif") repeat;
+  border-bottom: 2px solid #efebda;
+  border-radius: 0 0 5px 5px;
+}
+
+.modal.loginin .modal-header > h2 {
+  text-align: center;
+}
+
+.loginin-connect {
+  width: 245px;
+  height: 180px;
+  float: left;
+  padding: 10px 80px;
+  border-right: 1px solid #ededed;
+}
+
+.loginin-form {
+  float: left;
+  padding: 10px 90px;
+  width: 220px;
+  height: 180px;
+}
+
+.loginin-form h5 {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.loginin-form input {
+  display: block;
+  width: 220px;
+  padding-left: 38px;
+  line-height: 36px;
+  color: #666;
+  font-size: 14px;
+  text-align: left;
+  font-weight: 700;
+  border: 1px solid #fff;
+  box-shadow: inset 0 1px 4px rgba(125, 125, 125, .65);
+  margin-bottom: 10px;
+}
+
+.loginin-form input:focus {
+  outline: none;
+  border-color: #ff9080;
+  box-shadow: inset 0 1px 4px rgba(125, 125, 125, .65), 0 0 14px rgba(235, 82, 82, .45);
+}
+
+.loginin-form input[name='name'] {
+  background: url("http://huaban.com/img/login/login_bg.png") no-repeat 0 -5px;
+}
+
+.loginin-form input[name='pwd'] {
+  background: url("http://huaban.com/img/login/login_bg.png") no-repeat 0 -40px;
+}
+
+.loginin-connect h5 {
+  margin-bottom: 15px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #444;
+}
+
+.loginin-connect p {
+  margin-top: 20px;
+  font-size: 12px;
+  color: #999;
+}
+
+.loginin-connect-icons {
+  width: 246px;
+  font-size: 0;
+}
+
+.loginin-connect-icons > a {
+  display: inline-block;
+  width: 114px;
+  height: 36px;
+  margin-right: 9px;
+  margin-bottom: 5px;
+  background: url("http://huaban.com/img/login/btn_sprite.png") no-repeat 0 0;
+}
+
+.loginin-connect-icons > .sina {
+  background-position: -456px 0;
+}
+
+.loginin-connect-icons > .sina:hover {
+  background-position: -456px -40px;
+}
+
+.loginin-connect-icons > .douban {
+  background-position: -228px 0;
+}
+
+.loginin-connect-icons > .douban:hover {
+  background-position: -228px -40px;
+}
+
+.loginin-connect-icons > .renren {
+  background-position: 0 0;
+}
+
+.loginin-connect-icons > .renren:hover {
+  background-position: 0 -40px;
+}
+
+.loginin-connect-icons > .qq {
+  background-position: -342px 0;
+}
+
+.loginin-connect-icons > .qq:hover {
+  background-position: -342px -40px;
+}
+
+.logininbtn {
+  background: #E53E49;
+  background: linear-gradient(#E53E49, #D43636);
+  color: #fff;
+  line-height: 40px;
+  padding: 0 20px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.logininbtn:hover {
+  background: linear-gradient(#F45D68, #E54646);
+  border: 1px solid #C90000;
+}
+
+.loginin-form form > a {
+  font-size: 14px;
+  color: #444;
+  float: right;
+}
+
+.division {
+  width: 1px;
+  background-color: #444;
+}
+
+.share {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
+.like {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}

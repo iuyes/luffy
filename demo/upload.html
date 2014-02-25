@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+    <title></title>
+    <!-- seajs文件 -->
+    <script type="text/javascript" src="/js/luffy/seajs/2.1.1/sea.js" id="seajsnode"></script>
+    <!-- seajs配置文件 -->
+    <script type="text/javascript" src="/js/luffy/luffyconf.js"></script>
+    <!-- 当前页面模块的健康情况 -->
+    <script type="text/javascript" src="/js/luffy/seajs-health/0.1.0/seajs-health.js"></script>
+    <!-- seajs文本插件 can load .tpl .html .json 文本 -->
+    <script type="text/javascript" src="/js/luffy/seajs-text/1.0.2/seajs-text.js"></script>
+    <!--seajs样式插件-->
+    <script type="text/javascript" src="/js/luffy/seajs-style/1.0.1/seajs-style.js."></script>
+</head>
+<body>
+<a href="#" id="upload">上传</a> <label id="filename" for=""></label>
+<br>
+<a href="#" id="sub">确定</a>
+
+</body>
+<script type="text/javascript">
+    seajs.use(['arale/upload/1.0.1/upload', '$'], function (Upload, $) {
+        var uploader1 = new Upload({
+            trigger: '#upload',
+            name: 'girl',
+            action: '/html/upload.php',
+        }).change(function (filename) {
+                    $("#filename").html(filename);
+                });
+
+        uploader1.success(function(res){
+            alert(res);
+        });
+        $("sub").click(function () {
+            uploader1.submit();
+            return false;
+        });
+    });
+</script>
+</html>

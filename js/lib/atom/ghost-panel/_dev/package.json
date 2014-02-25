@@ -1,0 +1,16 @@
+{
+    "family": "icbu",
+    "name": "ghost-panel",
+    "version": "1.0.4",
+    "keywords": ["widget"],
+    "description": "固定在特定位置上，幽灵一样跟随页面的面板。",
+    "homepage": "http://docs.alif2e.com/icbu/ghost-panel/",
+    "author": "吴钊",
+    "bugs": {
+        "url": "https://github.com/atom-js/ghost-panel/issues/new"
+    },
+    "spm": {
+       "output": ["ghost-panel.js"]
+    },
+    "tests": ["ghost-panel"]
+}

@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>花瓣网</title>
+
+  <script type="text/javascript" src="/js/luffy/seajs/2.1.1/sea.js" id="seajsnode"></script>
+  <!-- seajs配置文件 -->
+  <script type="text/javascript" src="/js/luffy/luffyconf.js"></script>
+  <!-- 当前页面模块的健康情况 -->
+  <script type="text/javascript" src="/js/luffy/seajs-health/0.1.0/seajs-health.js"></script>
+  <!-- seajs文本插件 can load .tpl .html .json 文本 -->
+  <script type="text/javascript" src="/js/luffy/seajs-text/1.0.2/seajs-text.js"></script>
+  <!--seajs样式插件-->
+  <script type="text/javascript" src="/js/luffy/seajs-style/1.0.1/seajs-style.js"></script>
+  <!--样式-->
+  <link rel="stylesheet" href="/js/sea-modules/playman/shincss/base.css"/>
+  <link rel="stylesheet" href="/js/sea-modules/playman/shincss/function.css"/>
+  <link rel="stylesheet" href="/js/sea-modules/playman/shincss/grid.css"/>
+  <link rel="stylesheet" href="/js/sea-modules/playman/shincss/iconfont.css"/>
+  <link rel="stylesheet" href="/js/sea-modules/playman/shincss/iconfont-diao.css"/>
+  <link rel="stylesheet" href="/js/sea-modules/playman/shincss/animate.css"/>
+  <link rel="stylesheet" href="main.css"/>
+
+  <link rel="apple-touch-icon" href="http://huaban.com/img/apple-touch-icon-iphone.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="http://huaban.com/img/apple-touch-icon-ipad.png">
+
+  <!--[if IE]>
+  <script type="text/javascript" src="/js/libs/html5shiv.js"></script>
+  <![endif]-->
+
+</head>
+<body>
+<div class="top-promotion">
+  <a href=""></a>
+  <span class="close"></span>
+</div>
+<header>
+  <div class="inner fn-clear">
+    <div class="header-nav fn-clear">
+      <div class="header-nav-menu">
+        <a href="#" class="menu">
+          <div class="header-nav-menu-icon"></div>
+          <div class="arrow"></div>
+        </a>
+
+        <div class="header-nav-menu-list fn-dn">
+          <div class="inner fn-clear">
+            <div class="header-nav-menu-list-left">
+              <a href="#" class="link fllow">关注</a>
+              <a class="link selection white-line" href="#">精选</a>
+
+              <div class="group">
+                <a href="#">周刊</a>
+                <a href="#">访谈</a>
+              </div>
+              <a href="#" class="link shiji white-line">花瓣市集</a>
+
+              <div class="group">
+                <a href="#">精选</a>
+                <a href="#">女人</a>
+                <a href="#">男人</a>
+                <a href="#">家具</a>
+                <a href="#">科技</a>
+                <a href="#">文娱</a>
+              </div>
+              <a href="#" class="link mobile">移动应用</a>
+            </div>
+            <div class="header-nav-menu-list-right fn-clear">
+              <div class="row-1">
+                <a href="#" class="link design white-line">花瓣设计 <span class="design-icon"></span></a>
+
+                <div class="group">
+                  <a href="">平面设计</a>
+                  <a href="#">UI设计</a>
+                  <a href="#">插画</a>
+                </div>
+                <a href="#" class="link new white-line">最新</a>
+
+                <div class="group">
+                  <a href="#">视频</a>
+                </div>
+                <div class="group">
+                  <a href="">家居/装饰</a>
+                  <a href="#">旅行/攻略</a>
+                  <a href="">美食/菜谱</a>
+                  <a href="#">手工/布艺</a>
+                  <a href="#">潮品/单品</a>
+                </div>
+              </div>
+              <div class="row-2">
+                <div class="group">
+                  <a href="">造型/美妆/纹身</a>
+                  <a href="">造型/美妆/纹身</a>
+                  <a href="">造型/美妆/纹身</a>
+                  <a href="">造型/美妆/纹身</a>
+                  <a href="">造型/美妆/纹身</a>
+                </div>
+                <div class="group">
+                  <a href="">造型/美妆/纹身</a>
+                  <a href="">造型/美妆/纹身</a>
+                  <a href="">造型/美妆/纹身</a>
+                </div>
+                <div class="group">
+                  <a href="">造型/美妆/纹身</a>
+                  <a href="">造型/美妆/纹身</a>
+                  <a href="">造型/美妆/纹身</a>
+                  <a href="">造型/美妆/纹身</a>
+                </div>
+
+              </div>
+              <div class="row-3">
+                <div class="group">
+                  <a href="">造型/美妆/纹身</a>
+                  <a href="">造型/美妆/纹身</a>
+                  <a href="">造型/美妆/纹身</a>
+                  <a href="">造型/美妆/纹身</a>
+                </div>
+                <div class="group">
+                  <a href="">汽车</a>
+                  <a href="">运动</a>
+                  <a href="">造型/美妆/纹身</a>
+                </div>
+                <div class="group">
+                  <a href="">造型/美妆/纹身</a>
+                  <a href="">搭配</a>
+                  <a href="">男士风尚</a>
+                  <a href="">造型/美妆/纹身</a>
+                  <a href="">造型/美妆/纹身</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="header-nav-menu-list-bar">
+            <a href="#" class="btn btn-width-icon"><i class="pin"></i>固定到左侧</a>
+
+            <div class="somelinks">
+              <a href="#">花瓣采集工具</a>
+              <a href="#">关于我们</a>
+              <a href="">用户反馈</a>
+              <a href="#">联系我们</a>
+            </div>
+          </div>
+          <div class="up-arrow"></div>
+        </div>
+      </div>
+      <form action="">
+        <input type="text" placeholder="搜索你喜欢的"/>
+        <a href="" class="go"></a>
+      </form>
+    </div>
+    <a href="#" class="logo">
+      <img src="http://huaban.com/img/logo_38.png" alt=""/>
+    </a>
+
+    <div class="header-nav-login">
+      <a href="#" class="btn login" id="login">登录</a>
+      <a href="#" class="btn signin" id="sign">注册</a>
+    </div>
+  </div>
+
+  <div class="notification" style="position: absolute;">
+    <a href="#">100+条新采集</a>
+  </div>
+</header>
+
+<section class="connect">
+  <div class="wrapper">
+    <div class="connect-intro fn-clear">
+      <div class="know-huaban">
+        <a href="javascript:void (0);" class="play-video" id="playvideo"></a>
+
+        <h2>花瓣，收集与分享你喜欢的一切</h2>
+        <a href="#" class="know-huaban-link">了解花瓣</a>
+      </div>
+      <div class="connect-intro-unauth">
+        <div class="connect-intro-unauth-sinaqq">
+          <a href="#" class="sina">微博账号登录</a>
+          <a href="#" class="qq">QQ账号登录</a>
+        </div>
+        <div class="connect-intro-unauth-others">
+          <span>其他账号登录</span>
+          <a href="" class="login-btn renren"></a>
+          <a href="#" class="login-btn douban"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="caiji">
+  <div class="wrapper">
+    <div class="caiji-nav">
+      <span class="caiji-nav-title">最新采集</span>
+      <span class="btn"><i class="fa fa-user"></i>采集</span><span class="btn"><i
+        class="fa fa-user"></i>画板</span><span
+        class="btn"><i class="fa fa-user"></i>推荐用户</span>
+    </div>
+    <div id="waterfall" class="fn-clear">
+      <div class="pin">
+        <a href="#" class="pin-img">
+          <img src="http://whj.com/web/huaban/img/1.jpg"
+               alt=""/>
+        </a>
+
+        <p class="pin-title">天真无邪，当娃娃们穿上动物装，萌爆了</p>
+
+        <div class="pin-author fn-clear">
+          <a href="#" class="pin-author-img">
+            <img src="http://whj.com/web/huaban/img/author.jpg"
+                 alt=""/>
+          </a>
+
+          <p><span class="author">波波-尼莫</span>采集到<span class="place">BOY</span></p>
+        </div>
+      </div>
+
+      <div class="pin">
+        <a href="#" class="pin-img">
+          <img src="http://whj.com/web/huaban/img/2.jpg"
+               alt=""/>
+        </a>
+
+        <p class="pin-title">天真无邪，当娃娃们穿上动物装，萌爆了</p>
+
+        <div class="pin-author fn-clear">
+          <a href="#" class="pin-author-img">
+            <img src="http://whj.com/web/huaban/img/author.jpg"
+                 alt=""/>
+          </a>
+
+          <p><span class="author">波波-尼莫</span>采集到<span class="place">BOY</span></p>
+        </div>
+      </div>
+
+      <div class="pin">
+        <a href="#" class="pin-img">
+          <img src="http://whj.com/web/huaban/img/3.jpg"
+               alt=""/>
+        </a>
+
+        <p class="pin-title">天真无邪，当娃娃们穿上动物装，萌爆了</p>
+
+        <div class="pin-author fn-clear">
+          <a href="#" class="pin-author-img">
+            <img src="http://whj.com/web/huaban/img/author.jpg"
+                 alt=""/>
+          </a>
+
+          <p><span class="author">波波-尼莫</span>采集到<span class="place">BOY</span></p>
+        </div>
+        <a href="" class="btn share fn-dn"><i class="fa fa-share"></i><span class="division"></span>转采</a>
+        <a href="" class="btn like fn-dn"><i class="fa fa-thumbs-0-up"></i>赞</a>
+      </div>
+      <div class="pin">
+        <a href="#" class="pin-img">
+          <img src="http://whj.com/web/huaban/img/1.jpg"
+               alt=""/>
+        </a>
+
+        <p class="pin-title">天真无邪，当娃娃们穿上动物装，萌爆了</p>
+
+        <div class="pin-author fn-clear">
+          <a href="#" class="pin-author-img">
+            <img src="http://whj.com/web/huaban/img/author.jpg"
+                 alt=""/>
+          </a>
+
+          <p><span class="author">波波-尼莫</span>采集到<span class="place">BOY</span></p>
+        </div>
+      </div>
+
+      <div class="pin">
+        <a href="#" class="pin-img">
+          <img src="http://whj.com/web/huaban/img/2.jpg"
+               alt=""/>
+        </a>
+
+        <p class="pin-title">天真无邪，当娃娃们穿上动物装，萌爆了</p>
+
+        <div class="pin-author fn-clear">
+          <a href="#" class="pin-author-img">
+            <img src="http://whj.com/web/huaban/img/author.jpg"
+                 alt=""/>
+          </a>
+
+          <p><span class="author">波波-尼莫</span>采集到<span class="place">BOY</span></p>
+        </div>
+      </div>
+
+      <div class="pin">
+        <a href="#" class="pin-img">
+          <img src="http://whj.com/web/huaban/img/3.jpg"
+               alt=""/>
+        </a>
+
+        <p class="pin-title">天真无邪，当娃娃们穿上动物装，萌爆了</p>
+
+        <div class="pin-author fn-clear">
+          <a href="#" class="pin-author-img">
+            <img src="http://whj.com/web/huaban/img/author.jpg"
+                 alt=""/>
+          </a>
+
+          <p><span class="author">波波-尼莫</span>采集到<span class="place">BOY</span></p>
+        </div>
+      </div>
+      <div class="pin">
+        <a href="#" class="pin-img">
+          <img src="http://whj.com/web/huaban/img/1.jpg"
+               alt=""/>
+        </a>
+
+        <p class="pin-title">天真无邪，当娃娃们穿上动物装，萌爆了</p>
+
+        <div class="pin-author fn-clear">
+          <a href="#" class="pin-author-img">
+            <img src="http://whj.com/web/huaban/img/author.jpg"
+                 alt=""/>
+          </a>
+
+          <p><span class="author">波波-尼莫</span>采集到<span class="place">BOY</span></p>
+        </div>
+      </div>
+      <div class="pin">
+        <a href="#" class="pin-img">
+          <img src="http://whj.com/web/huaban/img/1.jpg"
+               alt=""/>
+        </a>
+
+        <p class="pin-title">天真无邪，当娃娃们穿上动物装，萌爆了</p>
+
+        <div class="pin-author fn-clear">
+          <a href="#" class="pin-author-img">
+            <img src="http://whj.com/web/huaban/img/author.jpg"
+                 alt=""/>
+          </a>
+
+          <p><span class="author">波波-尼莫</span>采集到<span class="place">BOY</span></p>
+        </div>
+      </div>
+
+      <div class="pin">
+        <a href="#" class="pin-img">
+          <img src="http://whj.com/web/huaban/img/2.jpg"
+               alt=""/>
+        </a>
+
+        <p class="pin-title">天真无邪，当娃娃们穿上动物装，萌爆了</p>
+
+        <div class="pin-author fn-clear">
+          <a href="#" class="pin-author-img">
+            <img src="http://whj.com/web/huaban/img/author.jpg"
+                 alt=""/>
+          </a>
+
+          <p><span class="author">波波-尼莫</span>采集到<span class="place">BOY</span></p>
+        </div>
+      </div>
+
+      <div class="pin">
+        <a href="#" class="pin-img">
+          <img src="http://whj.com/web/huaban/img/3.jpg"
+               alt=""/>
+        </a>
+
+        <p class="pin-title">天真无邪，当娃娃们穿上动物装，萌爆了</p>
+
+        <div class="pin-author fn-clear">
+          <a href="#" class="pin-author-img">
+            <img src="http://whj.com/web/huaban/img/author.jpg"
+                 alt=""/>
+          </a>
+
+          <p><span class="author">波波-尼莫</span>采集到<span class="place">BOY</span></p>
+        </div>
+      </div>
+      <div class="pin">
+        <a href="#" class="pin-img">
+          <img src="http://whj.com/web/huaban/img/1.jpg"
+               alt=""/>
+        </a>
+
+        <p class="pin-title">天真无邪，当娃娃们穿上动物装，萌爆了</p>
+
+        <div class="pin-author fn-clear">
+          <a href="#" class="pin-author-img">
+            <img src="http://whj.com/web/huaban/img/author.jpg"
+                 alt=""/>
+          </a>
+
+          <p><span class="author">波波-尼莫</span>采集到<span class="place">BOY</span></p>
+        </div>
+      </div>
+      <div class="pin">
+        <a href="#" class="pin-img">
+          <img src="http://whj.com/web/huaban/img/1.jpg"
+               alt=""/>
+        </a>
+
+        <p class="pin-title">天真无邪，当娃娃们穿上动物装，萌爆了</p>
+
+        <div class="pin-author fn-clear">
+          <a href="#" class="pin-author-img">
+            <img src="http://whj.com/web/huaban/img/author.jpg"
+                 alt=""/>
+          </a>
+
+          <p><span class="author">波波-尼莫</span>采集到<span class="place">BOY</span></p>
+        </div>
+      </div>
+
+      <div class="pin">
+        <a href="#" class="pin-img">
+          <img src="http://whj.com/web/huaban/img/2.jpg"
+               alt=""/>
+        </a>
+
+        <p class="pin-title">天真无邪，当娃娃们穿上动物装，萌爆了</p>
+
+        <div class="pin-author fn-clear">
+          <a href="#" class="pin-author-img">
+            <img src="http://whj.com/web/huaban/img/author.jpg"
+                 alt=""/>
+          </a>
+
+          <p><span class="author">波波-尼莫</span>采集到<span class="place">BOY</span></p>
+        </div>
+      </div>
+
+      <div class="pin">
+        <a href="#" class="pin-img">
+          <img src="http://whj.com/web/huaban/img/3.jpg"
+               alt=""/>
+        </a>
+
+        <p class="pin-title">天真无邪，当娃娃们穿上动物装，萌爆了</p>
+
+        <div class="pin-author fn-clear">
+          <a href="#" class="pin-author-img">
+            <img src="http://whj.com/web/huaban/img/author.jpg"
+                 alt=""/>
+          </a>
+
+          <p><span class="author">波波-尼莫</span>采集到<span class="place">BOY</span></p>
+        </div>
+      </div>
+      <div class="pin">
+        <a href="#" class="pin-img">
+          <img src="http://whj.com/web/huaban/img/1.jpg"
+               alt=""/>
+        </a>
+
+        <p class="pin-title">天真无邪，当娃娃们穿上动物装，萌爆了</p>
+
+        <div class="pin-author fn-clear">
+          <a href="#" class="pin-author-img">
+            <img src="http://whj.com/web/huaban/img/author.jpg"
+                 alt=""/>
+          </a>
+
+          <p><span class="author">波波-尼莫</span>采集到<span class="place">BOY</span></p>
+        </div>
+      </div>
+      <div class="pin">
+        <a href="#" class="pin-img">
+          <img src="http://whj.com/web/huaban/img/1.jpg"
+               alt=""/>
+        </a>
+
+        <p class="pin-title">天真无邪，当娃娃们穿上动物装，萌爆了</p>
+
+        <div class="pin-author fn-clear">
+          <a href="#" class="pin-author-img">
+            <img src="http://whj.com/web/huaban/img/author.jpg"
+                 alt=""/>
+          </a>
+
+          <p><span class="author">波波-尼莫</span>采集到<span class="place">BOY</span></p>
+        </div>
+      </div>
+
+      <div class="pin">
+        <a href="#" class="pin-img">
+          <img src="http://whj.com/web/huaban/img/2.jpg"
+               alt=""/>
+        </a>
+
+        <p class="pin-title">天真无邪，当娃娃们穿上动物装，萌爆了</p>
+
+        <div class="pin-author fn-clear">
+          <a href="#" class="pin-author-img">
+            <img src="http://whj.com/web/huaban/img/author.jpg"
+                 alt=""/>
+          </a>
+
+          <p><span class="author">波波-尼莫</span>采集到<span class="place">BOY</span></p>
+        </div>
+      </div>
+
+      <div class="pin">
+        <a href="#" class="pin-img">
+          <img src="http://whj.com/web/huaban/img/3.jpg"
+               alt=""/>
+        </a>
+
+        <p class="pin-title">天真无邪，当娃娃们穿上动物装，萌爆了</p>
+
+        <div class="pin-author fn-clear">
+          <a href="#" class="pin-author-img">
+            <img src="http://whj.com/web/huaban/img/author.jpg"
+                 alt=""/>
+          </a>
+
+          <p><span class="author">波波-尼莫</span>采集到<span class="place">BOY</span></p>
+        </div>
+      </div>
+      <div class="pin">
+        <a href="#" class="pin-img">
+          <img src="http://whj.com/web/huaban/img/1.jpg"
+               alt=""/>
+        </a>
+
+        <p class="pin-title">天真无邪，当娃娃们穿上动物装，萌爆了</p>
+
+        <div class="pin-author fn-clear">
+          <a href="#" class="pin-author-img">
+            <img src="http://whj.com/web/huaban/img/author.jpg"
+                 alt=""/>
+          </a>
+
+          <p><span class="author">波波-尼莫</span>采集到<span class="place">BOY</span></p>
+        </div>
+      </div>
+      <div class="pin">
+        <a href="#" class="pin-img">
+          <img src="http://whj.com/web/huaban/img/1.jpg"
+               alt=""/>
+        </a>
+
+        <p class="pin-title">天真无邪，当娃娃们穿上动物装，萌爆了</p>
+
+        <div class="pin-author fn-clear">
+          <a href="#" class="pin-author-img">
+            <img src="http://whj.com/web/huaban/img/author.jpg"
+                 alt=""/>
+          </a>
+
+          <p><span class="author">波波-尼莫</span>采集到<span class="place">BOY</span></p>
+        </div>
+      </div>
+
+      <div class="pin">
+        <a href="#" class="pin-img">
+          <img src="http://whj.com/web/huaban/img/2.jpg"
+               alt=""/>
+        </a>
+
+        <p class="pin-title">天真无邪，当娃娃们穿上动物装，萌爆了</p>
+
+        <div class="pin-author fn-clear">
+          <a href="#" class="pin-author-img">
+            <img src="http://whj.com/web/huaban/img/author.jpg"
+                 alt=""/>
+          </a>
+
+          <p><span class="author">波波-尼莫</span>采集到<span class="place">BOY</span></p>
+        </div>
+      </div>
+
+      <div class="pin">
+        <a href="#" class="pin-img">
+          <img src="http://whj.com/web/huaban/img/3.jpg"
+               alt=""/>
+        </a>
+
+        <p class="pin-title">天真无邪，当娃娃们穿上动物装，萌爆了</p>
+
+        <div class="pin-author fn-clear">
+          <a href="#" class="pin-author-img">
+            <img src="http://whj.com/web/huaban/img/author.jpg"
+                 alt=""/>
+          </a>
+
+          <p><span class="author">波波-尼莫</span>采集到<span class="place">BOY</span></p>
+        </div>
+      </div>
+      <div class="pin">
+        <a href="#" class="pin-img">
+          <img src="http://whj.com/web/huaban/img/1.jpg"
+               alt=""/>
+        </a>
+
+        <p class="pin-title">天真无邪，当娃娃们穿上动物装，萌爆了</p>
+
+        <div class="pin-author fn-clear">
+          <a href="#" class="pin-author-img">
+            <img src="http://whj.com/web/huaban/img/author.jpg"
+                 alt=""/>
+          </a>
+
+          <p><span class="author">波波-尼莫</span>采集到<span class="place">BOY</span></p>
+        </div>
+      </div>
+
+      <div class="pin">
+        <a href="#" class="pin-img">
+          <img src="http://whj.com/web/huaban/img/2.jpg"
+               alt=""/>
+        </a>
+
+        <p class="pin-title">天真无邪，当娃娃们穿上动物装，萌爆了</p>
+
+        <div class="pin-author fn-clear">
+          <a href="#" class="pin-author-img">
+            <img src="http://whj.com/web/huaban/img/author.jpg"
+                 alt=""/>
+          </a>
+
+          <p><span class="author">波波-尼莫</span>采集到<span class="place">BOY</span></p>
+        </div>
+      </div>
+
+      <div class="pin">
+        <a href="#" class="pin-img">
+          <img src="http://whj.com/web/huaban/img/3.jpg"
+               alt=""/>
+        </a>
+
+        <p class="pin-title">天真无邪，当娃娃们穿上动物装，萌爆了</p>
+
+        <div class="pin-author fn-clear">
+          <a href="#" class="pin-author-img">
+            <img src="http://whj.com/web/huaban/img/author.jpg"
+                 alt=""/>
+          </a>
+
+          <p><span class="author">波波-尼莫</span>采集到<span class="place">BOY</span></p>
+        </div>
+      </div>
+
+    </div>
+    <div id="loading"></div>
+  </div>
+</section>
+
+
+<div class="elevator">
+  <a href="#" class="gotop"></a>
+  <a href="#" class="qrbtn"></a>
+
+  <div class="qr fn-dn">
+    <a class="qr-img">
+      <img src="http://huaban.com/img/weixin_code.png" alt=""/>
+    </a>
+    <span class="qr-txt">加花瓣为微信好友</span>
+  </div>
+</div>
+
+
+<!--视频播放-->
+<div class="modal fn-dn video" id="huabanvideo">
+  <div class="modal-header">
+    <h2>了解花瓣</h2>
+    <a href="javascript:void (0);" class="modal-close">×</a>
+  </div>
+  <div class="modal-body">
+    <embed src="http://player.youku.com/player.php/sid/XMzIxMjU2OTY4/v.swf" allowFullScreen="true" quality="high"
+           width="480" height="400" align="middle" allowScriptAccess="always"
+           type="application/x-shockwave-flash"></embed>
+  </div>
+</div>
+
+
+<div class="modal loginin fn-dn">
+  <div class="modal-header">
+    <h2>登录花瓣</h2>
+    <a href="javascript:void(0);" class="modal-close">×</a>
+  </div>
+  <div class="modal-body fn-clear">
+    <div class="loginin-connect">
+      <h5>使用合作网站账号登录</h5>
+
+      <div class="loginin-connect-icons">
+        <a href="#" class="sina"></a>
+        <a href="#" class="douban"></a>
+        <a href="#" class="renren"></a>
+        <a href="#" class="qq"></a>
+      </div>
+      <p>未注册过花瓣也可以直接登录哦</p>
+    </div>
+    <div class="loginin-form">
+      <h5>使用注册邮箱登录</h5>
+
+      <form action="">
+        <input type="text" name="name" placeholder="花瓣注册邮箱"/>
+        <input type="password" name="pwd" placeholder="密码"/>
+        <span class="btn logininbtn">登录</span>
+        <a href="">忘记了密码?</a>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+</body>
+
+<script>
+  seajs.use(['$', 'mask', 'position', 'playman/jqex/jqWookmark', 'playman/jqex/jqWheel'], function ($, Mask, Position) {
+    $(function () {
+      $(".header-nav-menu").mouseover(function () {
+        $(".header-nav-menu-list").show();
+      });
+
+      $(".header-nav-menu").mouseout(function () {
+        $(".header-nav-menu-list").hide();
+      });
+
+      $(".top-promotion>.close").click(function () {
+        $(".top-promotion").hide();
+        $("header").css('top', 0);
+      });
+
+      $(".qrbtn").hover(function () {
+        $(".qr").show();
+      }, function () {
+        $(".qr").hide();
+      });
+
+      $("#playvideo").click(function () {
+        Mask.set('backgroundColor', '#fff').set('opacity', '0.8').show();
+        $("#huabanvideo").show();
+      });
+
+      $(".modal-close").click(function () {
+        $(".modal").hide();
+        Mask.hide();
+      });
+
+
+      if ($(document).scrollTop > 0) {
+        $(".notification").attr('position', 'fixed');
+        $("header").css('top', 0);
+      }
+
+
+      $("body").bind('mousewheel', function (event, delta, deltx, delty) {
+        if ($(document).scrollTop > 0) {
+          $(".notification").attr('position', 'fixed');
+          $("header").css('top', 0);
+        }
+      });
+
+
+      Position.center('.modal.video');
+
+      $("#login").click(function () {
+        $(".modal.loginin").slideDown();
+      });
+
+      $(".pin").mouseover(function () {
+        $(this).children(".share").show();
+        $(this).children(".like").show();
+      });
+      $(".pin").mouseout(function () {
+        $(this).children(".share").hide();
+        $(this).children(".like").hide();
+      });
+
+      $(".pin").wookmark({
+        autoResize: true,
+        container: $("#waterfall"),
+        itemWidth: 240,
+        offset:10,
+        outerOffset:2
+      });
+
+
+    });
+
+  });
+</script>
+</html>

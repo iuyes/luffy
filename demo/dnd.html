@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+  <title></title>
+  <!-- seajs文件 -->
+  <script type="text/javascript" src="/js/luffy/seajs/2.1.1/sea.js" id="seajsnode"></script>
+  <!-- seajs配置文件 -->
+  <script type="text/javascript" src="/js/luffy/luffyconf.js"></script>
+  <!-- 当前页面模块的健康情况 -->
+  <script type="text/javascript" src="/js/luffy/seajs-health/0.1.0/seajs-health.js"></script>
+  <!-- seajs文本插件 can load .tpl .html .json 文本 -->
+  <script type="text/javascript" src="/js/luffy/seajs-text/1.0.2/seajs-text.js"></script>
+  <style type="text/css">
+    .container {
+      width: 990px;
+      margin: 0 auto;
+      background-color: #39b3d7;
+      height: 600px;
+      position: relative;
+    }
+
+    .box {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background-color: #000000;
+      top: 250px;
+      left: 445px;
+      cursor: move;
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+
+
+</body>
+<script type="text/javascript">
+  seajs.use('alice/base/1.0.1/base.css');
+
+  seajs.use(['$', 'arale/dnd/1.0.0/dnd'], function ($, Dnd) {
+    var dnd1 = new Dnd('.box', {containment: 'body'});
+  });
+
+</script>
+</html>

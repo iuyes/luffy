@@ -1,0 +1,16 @@
+{
+    "family": "icbu",
+    "name": "uploader",
+    "version": "0.9.1",
+    "keywords": ["widget"],
+    "description": "文件上传",
+    "homepage": "http://docs.alif2e.com/icbu/uploader/",
+    "author": "peng.hep@alibaba-inc.com",
+    "bugs": {
+        "url": ""
+    },
+    "spm": {
+       "output": ["uploader.js", "file-uploader.js"]
+    },
+    "tests": ["uploader"]
+}

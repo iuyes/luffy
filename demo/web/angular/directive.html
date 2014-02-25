@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html ng-app="HideAnkSeek">
+<head>
+  <title></title>
+  <script type="text/javascript" src="/js/luffy/seajs/2.1.1/sea.js" id="seajsnode"></script>
+  <!-- seajs配置文件 -->
+  <script type="text/javascript" src="/js/luffy/luffyconf.js"></script>
+  <!-- 当前页面模块的健康情况 -->
+  <script type="text/javascript" src="/js/luffy/seajs-health/0.1.0/seajs-health.js"></script>
+  <!-- seajs文本插件 can load .tpl .html .json 文本 -->
+  <script type="text/javascript" src="/js/luffy/seajs-text/1.0.2/seajs-text.js"></script>
+  <script type="text/javascript" src="/js/luffy/seajs-style/1.0.1/seajs-style.js"></script>
+  <link rel="stylesheet" href="/js/sea-modules/playman/shincss/base.css"/>
+  <script src="apple.js"></script>
+  <style>
+    .box{
+      width: 100px;
+      height: 100px;
+      background-color: #008800;
+    }
+  </style>
+</head>
+<body>
+<div class="box" wildcat>
+
+</div>
+
+</body>
+<script>
+  seajs.use(['angular/angularjs/1.1.5/angular'], function (Angualr) {
+    Angualr.module('HideAnkSeek',[]).directive('wildcat', function ($document) {
+      var marTop = 400, marLeft = 300;
+      var msg = ['哈哈', '追我啊', '嘿嘿', '累了吧'];
+      return function (scope, element, attr) {
+        element.css({
+          position: 'absolute',
+          border: '1px solid #ededed'
+        });
+        element.bind('mouseenter',function (event) {
+          element.css({
+            left: parseInt(Math.random() * 10000 % marLeft) + "px",
+            top: parseInt(Math.random() * 10000 % marTop) + "px"
+          }).text(msg[0]);
+        }).bind('click', function (event) {
+              element.text('被你逮住了');
+              element.unbind('mouseenter');
+            });
+      }
+
+    });
+  });
+</script>
+</html>

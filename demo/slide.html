@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+<title></title>
+<!-- seajs文件 -->
+<script type="text/javascript" src="/js/luffy/seajs/2.1.1/sea.js" id="seajsnode"></script>
+<!-- seajs配置文件 -->
+<script type="text/javascript" src="/js/luffy/luffyconf.js"></script>
+<!-- 当前页面模块的健康情况 -->
+<script type="text/javascript" src="/js/luffy/seajs-health/0.1.0/seajs-health.js"></script>
+<!-- seajs文本插件 can load .tpl .html .json 文本 -->
+<script type="text/javascript" src="/js/luffy/seajs-text/1.0.2/seajs-text.js"></script>
+<style type="text/css">
+
+#slide-demo-1 {
+    position: relative;
+    width: 740px;
+    height: 200px;
+    overflow: hidden;
+}
+
+#slide-demo-1 .ui-switchable-content {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#slide-demo-1 .ui-switchable-content .ui-switchable-panel {
+    position: relative;
+    width: 740px;
+    height: 200px;
+    overflow: hidden;
+}
+
+#slide-demo-1 .ui-switchable-content .ui-switchable-panel img {
+    margin-left: -660px;
+}
+
+#slide-demo-1 .ui-switchable-nav {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    margin: 0;
+    padding: 0;
+    z-index: 99;
+    font-size: 12px;
+}
+
+#slide-demo-1 .ui-switchable-nav .ui-switchable-trigger {
+    float: left;
+    width: 15px;
+    height: 15px;
+    line-height: 17px;
+    margin-left: 5px;
+    background-color: #FFF;
+    opacity: .5;
+    filter: alpha(opacity=50);
+    text-align: center;
+    color: black;
+    cursor: pointer;
+    list-style: none;
+}
+
+#slide-demo-1 .ui-switchable-nav .ui-switchable-active {
+    color: #FFF;
+    background-color: #419641;
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+}
+
+#slide-demo-2 {
+    position: relative;
+    width: 740px;
+    height: 200px;
+    overflow: hidden;
+}
+
+#slide-demo-2 .ui-switchable-content {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#slide-demo-2 .ui-switchable-content .ui-switchable-panel {
+    position: relative;
+    width: 740px;
+    height: 200px;
+    overflow: hidden;
+}
+
+#slide-demo-2 .ui-switchable-content .ui-switchable-panel img {
+    margin-left: -660px;
+}
+
+#slide-demo-2 .ui-switchable-nav {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 740px;
+    margin: 0;
+    padding: 0;
+    z-index: 99;
+    text-align: center;
+}
+
+#slide-demo-2 .ui-switchable-nav .ui-switchable-trigger {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    margin-left: 5px;
+    font-size: 18px;
+    line-height: 1.5;
+    opacity: .5;
+    filter: alpha(opacity=50);
+    color: white;
+    cursor: pointer;
+    list-style: none;
+}
+
+#slide-demo-2 .ui-switchable-nav .ui-switchable-active {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+#slide-demo-3 {
+    position: relative;
+    width: 600px;
+    height: 30px;
+    padding: 0 60px 0 20px;
+    line-height: 30px;
+    overflow: hidden;
+    background: #eaeaea;
+    font-size: 12px;
+}
+
+#slide-demo-3 .ui-switchable-content {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#slide-demo-3 .nav {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    margin: 0;
+}
+
+#slide-demo-3 .nav a {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    width: 12px;
+    height: 12px;
+    line-height: 10px;
+    font-size: 16px;
+    text-align: center;
+    border: 1px solid #cdcdcd;
+    color: #999;
+    background: white;
+}
+
+#slide-demo-3 .nav a:hover {
+    color: #f50;
+}
+
+#slide-demo-3 .nav #prev {
+    border-right: none;
+}
+
+#slide-demo-3 .nav #next {
+    border-left: none;
+}
+
+#slide-demo-4 {
+    position: relative;
+    width: 500px;
+    height: 200px;
+    overflow: hidden;
+}
+
+#slide-demo-4 .ui-switchable-content {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#slide-demo-4 .ui-switchable-content .ui-switchable-panel {
+    position: relative;
+    width: 100%;
+    height: 169px;
+    overflow: hidden;
+}
+
+#slide-demo-4 .ui-switchable-content .ui-switchable-panel img {
+    margin-left: -660px;
+}
+
+#slide-demo-4 .ui-switchable-nav {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 10000px;
+    margin: 0;
+    padding: 0;
+    z-index: 99;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#slide-demo-4 .ui-switchable-nav .ui-switchable-trigger {
+    position: relative;
+    float: left;
+    width: 167px;
+    height: 30px;
+    line-height: 30px;
+    border-right: 1px solid white;
+    cursor: pointer;
+    list-style: none;
+    background: #c7c7c7;
+    color: white;
+}
+
+#slide-demo-4 .ui-switchable-nav .ui-switchable-active {
+    background: #f60;
+}
+
+#slide-demo-4 .ui-switchable-nav .ui-switchable-trigger .arrow {
+    position: absolute;
+    left: 50%;
+    top: -8px;
+    margin-left: -8px;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    visibility: hidden;
+}
+
+#slide-demo-4 .ui-switchable-nav .ui-switchable-active .arrow {
+    visibility: visible;
+    color: #f60;
+}
+</style>
+</head>
+<body>
+<div class="ui-grid-row">
+
+    <div id="slide-demo-1" class="slide-demo">
+        <ul class="ui-switchable-content" data-role="content">
+            <li class="ui-switchable-panel"><a href="#"><img src="https://placeimg.com/2500/400/tech"/></a></li>
+            <li class="hidden ui-switchable-panel"><a href="#"><img src="https://placeimg.com/2500/400/tech"/></a>
+            </li>
+            <li class="hidden ui-switchable-panel"><a href="#"><img src="https://placeimg.com/2500/400/tech"/></a>
+            </li>
+        </ul>
+    </div>
+
+
+    <div id="slide-demo-2" class="slide-demo">
+        <ul data-role="content" class="ui-switchable-content">
+            <li class="hidden ui-switchable-panel"><a href="#"><img
+                    src="http://aralejs.org/switchable/examples/assets/slide_2.jpg"/></a></li>
+            <li class="ui-switchable-panel"><a href="#"><img
+                    src="http://aralejs.org/switchable/examples/assets/slide_2.jpg"/></a></li>
+            <li class="hidden ui-switchable-panel"><a href="#"><img src="https://placeimg.com/2500/400/tech"/></a></li>
+        </ul>
+        <ul data-role="nav" class="ui-switchable-nav">
+            <li class="ui-switchable-trigger">●</li>
+            <li class="ui-switchable-trigger ui-switchable-active">●</li>
+            <li class="ui-switchable-trigger">●</li>
+        </ul>
+    </div>
+
+
+    <div id="slide-demo-3" class="slide-demo">
+        <ul data-role="content" class="ui-switchable-content">
+            <li class="ui-switchable-panel"><strong>公告1: </strong>Arale 立足于支付宝的前端需求和国内前端社区，基于 Sea.js 和 CMD
+                规范，致力发展小而美的前端模块架构，建立了一套从编码测试到部署的开发体系， 是一个开放、简单、易用的前端解决方案。
+            </li>
+            <li class="hidden ui-switchable-panel"><strong>公告2: </strong>Arale 立足于支付宝的前端需求和国内前端社区，基于 Sea.js 和 CMD
+                规范，致力发展小而美的前端模块架构，建立了一套从编码测试到部署的开发体系， 是一个开放、简单、易用的前端解决方案。
+            </li>
+            <li class="hidden ui-switchable-panel"><strong>公告3: </strong>Arale 立足于支付宝的前端需求和国内前端社区，基于 Sea.js 和 CMD
+                规范，致力发展小而美的前端模块架构，建立了一套从编码测试到部署的开发体系， 是一个开放、简单、易用的前端解决方案。
+            </li>
+        </ul>
+        <p class="nav">
+            <a id="prev" href="#">‹</a>
+            <a id="next" href="#">›</a>
+        </p>
+    </div>
+
+
+    <div id="slide-demo-4" class="slide-demo">
+        <ul data-role="content" class="ui-switchable-content">
+            <li class="hidden ui-switchable-panel"><a href="#"><img src="https://placeimg.com/2500/400/any"/></a></li>
+            <li class="ui-switchable-panel"><a href="#"><img src="https://placeimg.com/2500/400/any"/></a></li>
+            <li class="hidden ui-switchable-panel"><a href="#"><img src="https://placeimg.com/2500/400/any"/></a></li>
+        </ul>
+        <ul data-role="nav" class="ui-switchable-nav">
+            <li class="ui-switchable-trigger"><span>缩略/标题一</span><b class="arrow">◆</b></li>
+            <li class="ui-switchable-trigger ui-switchable-active"><span>缩略/标题二</span><b class="arrow">◆</b></li>
+            <li class="ui-switchable-trigger"><span>缩略/标题三</span><b class="arrow">◆</b></li>
+        </ul>
+    </div>
+
+
+</div>
+</body>
+<script type="text/javascript">
+    seajs.use(['play/shincss/base.css', 'play/shincss/grid.css', 'play/shincss/functions.css']);
+    seajs.use(['$', 'arale/switchable/1.0.0/slide'], function ($, Slide) {
+        new Slide({
+            element: '#slide-demo-1',
+            effect: 'scrollx',
+            interval: 3000
+        }).render();
+
+        new Slide({
+            element: '#slide-demo-2',
+            effect: 'fade',
+            activeIndex: 1
+        }).render();
+
+
+        var slide3 = new Slide({
+            element: '#slide-demo-3',
+            effect: 'scrollx',
+            hasTriggers: false
+        }).render();
+
+        $("#prev").click(function () {
+            slide3.prev();
+        });
+
+        $("#next").click(function () {
+            slide3.next();
+        });
+
+
+        new Slide({
+            element: '#slide-demo-4',
+            effect: 'fade',
+            activeIndex: 1
+        });
+
+
+    });
+</script>
+</html>
+

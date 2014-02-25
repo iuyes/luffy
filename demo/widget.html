@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script type="text/javascript" src="/js/luffy/seajs/2.1.1/sea.js" id="seajsnode"></script>
+    <!-- seajs配置文件 -->
+    <script type="text/javascript" src="/js/luffy/luffyconf.js"></script>
+    <!-- 当前页面模块的健康情况 -->
+    <script type="text/javascript" src="/js/luffy/seajs-health/0.1.0/seajs-health.js"></script>
+    <!-- seajs文本插件 can load .tpl .html .json 文本 -->
+    <script type="text/javascript" src="/js/luffy/seajs-text/1.0.2/seajs-text.js"></script>
+    <!--seajs样式插件-->
+    <script type="text/javascript" src="/js/luffy/seajs-style/1.0.1/seajs-style.js."></script>
+    <style type="text/css">
+        #example1 {
+            width: 300px;
+            height: 200px;
+            border: 1px solid #444444;
+            float: left;
+        }
+
+        #example2 {
+            float: left;
+            width: 300px;
+            height: 200px;
+            border: 1px solid #444444;
+            margin-left: 100px;
+        }
+
+        #example3 {
+            clear: both;
+            width: 300px;
+            height: 300px;
+            border: 1px solid #FFE5CA;
+            margin-top: 10px;
+            padding: 10px;
+        }
+
+        #example4 {
+            width: 300px;
+            border: 1px solid #FFCC98;
+            margin-top: 10px;
+            padding: 10px;
+        }
+
+        #example4  h3 {
+            height: 30px;
+            line-height: 30px;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        #example4 ul {
+            border-top: 1px solid #FF6700;
+            list-style: none;
+        }
+
+        #example4 ul li {
+            font-size: 12px;
+            line-height: 20px;
+            height: 20px;
+            background-color: #FFCC98;
+            border: 1px dashed #9acfea;
+        }
+    </style>
+</head>
+<body>
+
+<div id="example1" data-widget="arale/widget/1.1.1/widget" data-data="{'name':'whj','age':24}">this is div 1</div>
+<div id="example2" data-widget="arale/widget/1.1.1/widget">this is div 2</div>
+
+
+<div id="example3">
+</div>
+
+<div id="example4">
+</div>
+
+
+</body>
+
+<script type="text/x-handlebars-template" id="template-a">
+    <h3>{{title}}</h3>
+    <ul>
+        {{#each list}}
+        <li>{{item}}</li>
+        {{/each}}
+    </ul>
+</script>
+
+<script type="text/javascript">
+    seajs.use(['arale/widget/1.1.1/widget', '$', 'play/widget/temwidget', 'playman/widget/1.0.0/defaultwidget'], function (Widget, $, Temwidget, Defaultwidget) {
+        //data-api自动渲染
+        Widget.autoRenderAll(function () {
+            var obj1 = Widget.query('#example1');
+            obj1.element.html('这是自动渲染的div1');
+            var obj2 = Widget.query('#example2');
+            obj2.element.html('这是自动渲染的div2');
+        });
+
+        //传入模版和数据html字符串
+        new Temwidget({
+            template: '<h3>{{title}}</h3><ul>{{#each list}}<li>{{item}}</li>{{/each}}</ul>',
+            model: {
+                "title": "this is a demo",
+                "list": [
+                    {"item": "list1"},
+                    {"item": "list2"}
+                ]
+            },
+            parentNode: '#example3'
+        }).render();
+
+
+        //   .传入模版通过script
+        new Temwidget({
+            template: $("#template-a").html(),
+            model: {
+                "title": "this is a demo",
+                "list": [
+                    {"item": "list1"},
+                    {"item": "list2"}
+                ]
+            },
+            parentNode: '#example4'
+        }).render();
+
+
+        //组件有默认模版和数据
+        new Defaultwidget({
+               model:{
+                title:'浙江杭州',
+                content:'人间天堂'
+               }
+        }).render();
+
+
+    });
+</script>
+</html>

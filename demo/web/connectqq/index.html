@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script type="text/javascript" src="/js/luffy/seajs/2.1.1/sea.js" id="seajsnode"></script>
+    <!-- seajs配置文件 -->
+    <script type="text/javascript" src="/js/luffy/luffyconf.js"></script>
+    <!-- 当前页面模块的健康情况 -->
+    <script type="text/javascript" src="/js/luffy/seajs-health/0.1.0/seajs-health.js"></script>
+    <!-- seajs文本插件 can load .tpl .html .json 文本 -->
+    <script type="text/javascript" src="/js/luffy/seajs-text/1.0.2/seajs-text.js"></script>
+    <script type="text/javascript" src="/js/luffy/seajs-style/1.0.1/seajs-style.js"></script>
+    <!--样式-->
+    <link rel="stylesheet" href="/js/sea-modules/playman/shincss/base.css"/>
+    <link rel="stylesheet" href="/js/sea-modules/playman/shincss/function.css"/>
+    <link rel="stylesheet" href="/js/sea-modules/playman/shincss/grid.css"/>
+    <link rel="stylesheet" href="/js/sea-modules/playman/shincss/iconfont.css"/>
+    <link rel="stylesheet" href="/js/sea-modules/playman/shincss/iconfont-diao.css"/>
+    <link rel="stylesheet" href="/js/sea-modules/playman/shincss/animate.css"/>
+    <link rel="stylesheet" href="main.css"/>
+</head>
+<body>
+<div class="slide">
+    <div class="slide-wrapper">
+        <a href="#" class="prev"></a>
+        <ul class="slide-wrapper-content" data-role="content">
+            <li data-role="panel">
+                <a href=""><img src="http://pub.idqqimg.com/qconn/site/images/opencontest_banner.jpg" alt=""/></a>
+            </li>
+            <li data-role="panel">
+                <a href=""><img src="http://pub.idqqimg.com/pc/misc/connect/files/8a0b8bcb3f5b3a6c013f5b4f004c0001.png"
+                                alt=""/></a>
+            </li>
+            <li data-role="panel">
+                <a href=""><img src="http://pub.idqqimg.com/qconn/site/images/banner-sdk.jpg?1379898409437" alt=""/></a>
+            </li>
+            <li data-role="panel">
+                <a href=""><img
+                        src="http://pub.idqqimg.com/pc/misc/connect/files/20130911/8a098a6741063d6401410d553dda0011.jpg"
+                        alt=""/></a>
+            </li>
+        </ul>
+        <ul class="slide-wrapper-nav fn-hide" data-role="nav">
+            <li data-role="tigger"></li>
+            <li data-role="tigger"></li>
+            <li data-role="tigger"></li>
+            <li data-role="tigger"></li>
+        </ul>
+        <a href="#" class="next"></a>
+    </div>
+</div>
+</body>
+<script type="text/javascript">
+    seajs.use('arale/switchable/1.0.0/carousel', function (Carousel) {
+        new Carousel({
+            element: '.slide-wrapper',
+            panels: '.slide-wrapper-content li',
+            prevBtn:'a.prev',
+            nextBtn:'a.next',
+            steps:1,
+            viewSize:[1000],
+            autoplay:true,
+            circular:true,
+            interval:4000,
+            triggers:'.slide-wrapper-nav li',
+            easing:'elasticBoth'
+        });
+    });
+</script>
+</html>

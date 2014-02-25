@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <title></title>
+    <meta charset="utf-8"/>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width"/>
+    <script type="text/javascript" src="/js/luffy/seajs/2.1.1/sea.js" id="seajsnode"></script>
+    <!-- seajs配置文件 -->
+    <script type="text/javascript" src="/js/luffy/luffyconf.js"></script>
+    <!-- 当前页面模块的健康情况 -->
+    <script type="text/javascript" src="/js/luffy/seajs-health/0.1.0/seajs-health.js"></script>
+    <!-- seajs文本插件 can load .tpl .html .json 文本 -->
+    <script type="text/javascript" src="/js/luffy/seajs-text/1.0.2/seajs-text.js"></script>
+    <!--seajsjs模块中使用样式插件-->
+    <script type="text/javascript" src="/js/luffy/seajs-style/1.0.1/seajs-style.js"></script>
+    <!--icon-->
+    <link rel="bookmark" href="http://im.qq.com/macqq/favicon.ico"/>
+    <link rel="Shortcut Icon" href="http://im.qq.com/macqq/favicon.ico"/>
+    <!--样式-->
+    <link rel="stylesheet" href="/js/sea-modules/playman/shincss/base.css"/>
+    <link rel="stylesheet" href="/js/sea-modules/playman/shincss/function.css"/>
+    <link rel="stylesheet" href="/js/sea-modules/playman/shincss/grid.css"/>
+    <link rel="stylesheet" href="/js/sea-modules/playman/shincss/iconfont.css"/>
+    <link rel="stylesheet" href="/js/sea-modules/playman/shincss/iconfont-diao.css"/>
+    <link rel="stylesheet" href="/js/sea-modules/playman/shincss/animate.css"/>
+    <link rel="stylesheet" href="main.css"/>
+</head>
+<body>
+<div class="wrap">
+    <span class="prev" data-role="prev"></span>
+
+    <div class="ui-banner" id="index_banner">
+        <ul class="ui-banner-content" data-role="content">
+            <li class="ui-banner-content-panel" data-role="panel">
+                <div class="game-img">
+                    <img src="tech.jpg" alt=""/>
+                </div>
+                <div class="game-play">
+                    <img src="any.jpg" alt=""/>
+                </div>
+            </li>
+            <li class="ui-banner-content-panel" data-role="panel">
+                <div class="game-img">
+                    <img src="tech.jpg" alt=""/>
+                </div>
+                <div class="game-play">
+                    <img src="any.jpg" alt=""/>
+                </div>
+            </li>
+            <li class="ui-banner-content-panel" data-role="panel">
+                <div class="game-img">
+                    <img src="tech.jpg" alt=""/>
+                </div>
+                <div class="game-play">
+                    <img src="any.jpg" alt=""/>
+                </div>
+            </li>
+            <li class="ui-banner-content-panel" data-role="panel">
+                <div class="game-img">
+                    <img src="tech.jpg" alt=""/>
+                </div>
+                <div class="game-play">
+                    <img src="any.jpg" alt=""/>
+                </div>
+            </li>
+            <li class="ui-banner-content-panel" data-role="panel">
+                <div class="game-img">
+                    <img src="tech.jpg" alt=""/>
+                </div>
+                <div class="game-play">
+                    <img src="any.jpg" alt=""/>
+                </div>
+            </li>
+            <li class="ui-banner-content-panel" data-role="panel">
+                <div class="game-img">
+                    <img src="tech.jpg" alt=""/>
+                </div>
+                <div class="game-play">
+                    <img src="any.jpg" alt=""/>
+                </div>
+            </li>
+            <li class="ui-banner-content-panel" data-role="panel">
+                <div class="game-img">
+                    <img src="tech.jpg" alt=""/>
+                </div>
+                <div class="game-play">
+                    <img src="any.jpg" alt=""/>
+                </div>
+            </li>
+            <li class="ui-banner-content-panel" data-role="panel">
+                <div class="game-img">
+                    <img src="tech.jpg" alt=""/>
+                </div>
+                <div class="game-play">
+                    <img src="any.jpg" alt=""/>
+                </div>
+            </li>
+            <li class="ui-banner-content-panel" data-role="panel">
+                <div class="game-img">
+                    <img src="tech.jpg" alt=""/>
+                </div>
+                <div class="game-play">
+                    <img src="any.jpg" alt=""/>
+                </div>
+            </li>
+            <li class="ui-banner-content-panel" data-role="panel">
+                <div class="game-img">
+                    <img src="tech.jpg" alt=""/>
+                </div>
+                <div class="game-play">
+                    <img src="any.jpg" alt=""/>
+                </div>
+            </li>
+            <li class="ui-banner-content-panel" data-role="panel">
+                <div class="game-img">
+                    <img src="tech.jpg" alt=""/>
+                </div>
+                <div class="game-play">
+                    <img src="any.jpg" alt=""/>
+                </div>
+            </li>
+            <li class="ui-banner-content-panel" data-role="panel">
+                <div class="game-img">
+                    <img src="tech.jpg" alt=""/>
+                </div>
+                <div class="game-play">
+                    <img src="any.jpg" alt=""/>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <span class="next" data-role="next"></span>
+
+
+</div>
+</body>
+<script>
+    seajs.use(['carousel', '$', 'arale/detector/1.3.0/detector'], function (Carousel, $, Detector) {
+        $(function () {
+            var carousel1 = new Carousel({
+                element: '#index_banner',
+                hasTriggers: false,
+                panels: '.ui-banner-content-panel',
+                step: 4,
+                viewSize: [1000],
+                autoplay: true,
+                circular: true,
+                effect: 'scrollx',
+                interval: 6000,
+                classPrefix: '',
+                prevBtn: '.prev',
+                nextBtn: '.next'
+            }).render();
+
+
+            <!--不支持css3-->
+            if (Detector.engine.name!=='webkit') {
+                $(".game-play").hide();
+                $(".ui-banner-content-panel").hover(function () {
+                    $(this).children(".game-img").hide();
+                    $(this).children(".game-play").show();
+                }, function () {
+                    $(this).children(".game-play").hide();
+                    $(this).children(".game-img").show();
+                });
+            }
+
+        });
+
+
+    });
+</script>
+</html>

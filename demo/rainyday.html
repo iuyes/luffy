@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <!-- seajs文件 -->
+    <script type="text/javascript" src="/js/luffy/seajs/2.1.1/sea.js" id="seajsnode"></script>
+    <!-- seajs配置文件 -->
+    <script type="text/javascript" src="/js/luffy/luffyconf.js"></script>
+    <!-- 当前页面模块的健康情况 -->
+    <script type="text/javascript" src="/js/luffy/seajs-health/0.1.0/seajs-health.js"></script>
+    <!-- seajs文本插件 can load .tpl .html .json 文本 -->
+    <script type="text/javascript" src="/js/luffy/seajs-text/1.0.2/seajs-text.js"></script>
+
+    <style>
+
+        body {
+            overflow: hidden;
+        }
+
+        #parent {
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        #parent img {
+            width: 100%;
+            height: 100%;
+        }
+
+    </style>
+
+</head>
+<body>
+<div id="parent">
+    <img id="background" src="/img/df2.jpg"/>
+</div>
+</body>
+<script>
+    seajs.use(['$', 'playman/shinjs/rainyday'], function ($, RainyDay) {
+        $(function () {
+            var demo = new RainyDay({
+                element: 'background',
+                blur: 10,
+                opacity: 1,
+                fps: 30
+            });
+            demo.trail = demo.TRAIL_DROPS;
+            demo.rain([
+                [3, 2, 2]
+            ], 100);
+        });
+    });
+</script>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+    <title></title>
+    <!-- seajs文件 -->
+    <script type="text/javascript" src="/js/luffy/seajs/2.1.1/sea.js" id="seajsnode"></script>
+    <!-- seajs配置文件 -->
+    <script type="text/javascript" src="/js/luffy/luffyconf.js"></script>
+    <!-- 当前页面模块的健康情况 -->
+    <script type="text/javascript" src="/js/luffy/seajs-health/0.1.0/seajs-health.js"></script>
+    <!-- seajs文本插件 can load .tpl .html .json 文本 -->
+    <script type="text/javascript" src="/js/luffy/seajs-text/1.0.2/seajs-text.js"></script>
+    <style type="text/css">
+    </style>
+</head>
+<body>
+<button id="btn">点击</button>
+</body>
+<script type="text/javascript">
+    seajs.use('alice/base/1.0.1/base.css');
+    <!--遮罩层-->
+    seajs.use(['$', 'arale/overlay/1.1.3/mask'], function ($, Mask) {
+        $("#btn").click(function () {
+            Mask.show();
+            $(document).keyup(function (e) {
+                if (e.keyCode == 27) {
+                    Mask.hide();
+                }
+                if (e.keyCode == 77) {
+                    Mask.set({backgroundColor: 'red', opacity: 0.2});
+                }
+            });
+        });
+
+
+    });
+</script>
+</html>

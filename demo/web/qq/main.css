@@ -1,0 +1,447 @@
+.header {
+    width: 100%;
+    heigt: 42px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    z-index: 9999;
+}
+
+.header .logo {
+    float: left;
+    height: 45px;
+    width: 178px;
+    margin-left: 10px;
+    margin-top: -1px;
+    background: url("http://im-img.qq.com/qq/2013/img/logo.png") no-repeat 0 -45px;
+    text-indent: -9999px;
+}
+
+.header .header-nav {
+    float: right;
+    margin-right: 10px;
+    height: 18px;
+    margin-top: 11px;
+}
+
+.header-nav a {
+    color: #bbb;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.slide {
+    width: 100%;
+    height: 419px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slide .slide-content {
+    height: 419px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slide .slide-content li {
+    float: left;
+    width: 100%;
+    height: 419px;
+}
+
+.slide .slide-nav {
+    width: 100%;
+    height: 89px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.slide .slide-nav li {
+    float: left;
+    height: 89px;
+    width: 16%;
+    cursor: pointer;
+    background: url("http://im-img.qq.com/qq/2013/img/nav-bg-line.png") no-repeat right center;
+    background-color: #fff;
+    opacity: 0.8;
+}
+
+.slide .slide-nav li.cantact, .slide .slide-nav li.discuss, .slide .slide-nav li.line, .slide .slide-nav li.performance {
+    width: 17%;
+}
+
+.slide .slide-nav li.active {
+    background: url("http://im-img.qq.com/qq/2013/img/nav-bg-hover.png") no-repeat center center;
+}
+
+.slide .slide-nav li span {
+    display: block;
+    width: 64px;
+    height: 62px;
+    margin-top: 13px;
+    margin-left: 90px;
+}
+
+.slide .slide-nav li.line span {
+    background: url("http://im-img.qq.com/qq/2013/img/nav-wenzi.png?t=20130731") no-repeat 0 0;
+}
+
+.slide .slide-nav li.line.active span {
+    background: url("http://im-img.qq.com/qq/2013/img/nav-wenzi.png?t=20130731") no-repeat 0 -63px;
+}
+
+.slide .slide-nav li.file span {
+    background: url("http://im-img.qq.com/qq/2013/img/nav-wenzi.png?t=20130731") no-repeat -65px 0;
+}
+
+.slide .slide-nav li.file.active span {
+    background: url("http://im-img.qq.com/qq/2013/img/nav-wenzi.png?t=20130731") no-repeat -65px -63px;
+}
+
+.slide .slide-nav li.discuss span {
+    background: url("http://im-img.qq.com/qq/2013/img/nav-wenzi.png?t=20130731") no-repeat -130px 0;
+}
+
+.slide .slide-nav li.discuss.active span {
+    background: url("http://im-img.qq.com/qq/2013/img/nav-wenzi.png?t=20130731") no-repeat -130px -63px;
+}
+
+.slide .slide-nav li.performance span {
+    width: 42px;
+    background: url("http://im-img.qq.com/qq/2013/img/nav-wenzi.png?t=20130731") no-repeat -197px 0;
+}
+
+.slide .slide-nav li.performance.active span {
+    background: url("http://im-img.qq.com/qq/2013/img/nav-wenzi.png?t=20130731") no-repeat -197px -63px;
+}
+
+.slide .slide-nav li.video span {
+    background: url("http://im-img.qq.com/qq/2013/img/nav-wenzi.png?t=20130731") no-repeat -260px 0;
+}
+
+.slide .slide-nav li.video.active span {
+    background: url("http://im-img.qq.com/qq/2013/img/nav-wenzi.png?t=20130731") no-repeat -260px -63px;
+}
+
+.slide .slide-nav li.contact span {
+    background: url("http://im-img.qq.com/qq/2013/img/nav-wenzi.png?t=20130731") no-repeat -325px 0;
+}
+
+.slide .slide-nav li.contact.active span {
+    background: url("http://im-img.qq.com/qq/2013/img/nav-wenzi.png?t=20130731") no-repeat -325px -63px;
+}
+
+.container {
+    width: 100%;
+    background: url("http://im-img.qq.com/qq/2013/img/normalBg.jpg") repeat;
+}
+
+.container .inner {
+    width: 970px;
+    margin: 0 auto;
+    height: 342px;
+}
+
+.passfile .filepic {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    float: right;
+    width: 490px;
+    height: 296px;
+    background: url("http://im-img.qq.com/qq/2013/img/mod_08.jpg") no-repeat 50px 0;
+}
+
+.passfile .fileinfo {
+    float: left;
+    width: 400px;
+    height: 187px;
+    margin-left: 80px;
+    text-align: left;
+    margin-top: 80px;
+    margin-bottom: 60px;
+}
+
+.passfile .fileinfo h2 {
+    font-size: 36px;
+    margin-bottom: 27px;
+    line-height: 48px;
+    color: #575656;
+}
+
+.passfile .fileinfo p {
+    font-size: 14px;
+    line-height: 28px;
+    text-align: left;
+}
+
+.transpondfile {
+    background: url("http://im-img.qq.com/qq/2013/img/line.jpg") no-repeat center top;
+}
+
+.transpondfile .filepic {
+    float: left;
+    width: 480px;
+    height: 309px;
+    background: url("http://im-img.qq.com/qq/2013/img/mod_09.jpg") no-repeat -20px 0;
+    margin-top: 30px;
+}
+
+.transpondfile .fileinfo {
+    float: right;
+    width: 480px;
+    height: 159px;
+    text-align: left;
+    margin-top: 70px;
+}
+
+.transpondfile .fileinfo h2 {
+    font-size: 36px;
+    margin-bottom: 27px;
+    line-height: 48px;
+    color: #575656;
+}
+
+.transpondfile .fileinfo p {
+    font-size: 14px;
+    line-height: 28px;
+    color: #575656;
+}
+
+.transpondfile .fileinfo p a {
+    font-size: 16px;
+    color: #1E5494;
+    line-height: 28px;
+}
+
+.totop {
+    width: 62px;
+    height: 63px;
+    position: fixed;
+    right: 20px;
+    bottom: 100px;
+    background: url("http://im-img.qq.com/qq/2013/img/gotop.png") 0 0;
+    cursor: pointer;
+}
+
+.totop:hover {
+    background: url("http://im-img.qq.com/qq/2013/img/gotop.png") 0 -64px;
+}
+
+.hope {
+    width: 100%;
+    height: 963px;
+    background: url("http://im-img.qq.com/qq/2013/img/bigBlueBg.jpg") no-repeat center center;
+}
+
+.hope .inner {
+    width: 1220px;
+    margin: 0 auto;
+}
+
+.hope .letter {
+    width: 457px;
+    height: 778px;
+    float: left;
+    margin-top: 90px;
+    background: url("http://im-img.qq.com/qq/2013/img/letter.png") no-repeat 0 0;
+}
+
+.hope .letter a.share-weibo {
+    display: block;
+    width: 224px;
+    height: 47px;
+    margin-top: 632px;
+    margin-left: 234px;
+    text-indent: -9999px;
+    background: url("http://im-img.qq.com/qq/2013/img/shareBtn.png") no-repeat 0 0;
+}
+
+.hope .letter a.share-weibo:hover {
+    background: url("http://im-img.qq.com/qq/2013/img/shareBtn.png") no-repeat 0 -48px;
+}
+
+.hope .letter a.share-others {
+    display: block;
+    width: 224px;
+    height: 47px;
+    margin-top: 3px;
+    margin-left: 234px;
+    text-indent: -9999px;
+    background: url("http://im-img.qq.com/qq/2013/img/shareBtn.png") no-repeat 0 -96px;
+}
+
+.hope .letter a.share-others:hover {
+    background: url("http://im-img.qq.com/qq/2013/img/shareBtn.png") no-repeat 0 -144px;
+}
+
+.hope .about-us {
+    position: relative;
+    float: right;
+    width: 676px;
+    height: 696px;
+    margin-top: 178px;
+    background: url("http://im-img.qq.com/qq/2013/img/people.png") no-repeat 0 0;
+}
+
+.footer {
+    margin-top: -1px;
+    width: 100%;
+    height: 95px;
+    background: url("http://im-img.qq.com/qq/2013/img/line_03.jpg") no-repeat 0 0;
+}
+
+.footer .wrapper {
+    width: 960px;
+    margin: 0 auto;
+    padding-top: 20px;
+    height: 75px;
+}
+
+.footer .wrapper p {
+    font-size: 12px;
+    color: #fff;
+    line-height: 24px;
+}
+
+.footer .wrapper p.copy {
+    font-size: 14px;
+    line-height: 28px;
+}
+
+.about-us a {
+    position: absolute;
+    display: block;
+}
+
+.about-us a span {
+    position: absolute;
+    display: block;
+    width: 150px;
+    height: 121px;
+}
+
+.peopleShow-1 {
+    width: 136px;
+    height: 172px;
+    top: 287px;
+    left: 268px;
+}
+
+.peopleShow-2 {
+    width: 136px;
+    height: 212px;
+    top: 144px;
+    left: 498px;
+}
+
+.peopleShow-3 {
+    width: 108px;
+    height: 212px;
+    top: 260px;
+    left: 402px;
+}
+
+.peopleShow-4 {
+    width: 87px;
+    height: 123px;
+    top: 144px;
+    left: 282px;
+}
+
+.peopleShow-5 {
+    width: 99px;
+    height: 120px;
+    top: 130px;
+    left: 372px;
+}
+
+.peopleShow-6 {
+    width: 93px;
+    height: 149px;
+    top: 160px;
+    left: 187px;
+}
+
+.peopleShow-7 {
+    width: 136px;
+    height: 212px;
+    top: 295px;
+    left: 115px;
+}
+.peopleShow-8{
+    width: 104px;
+    height: 200px;
+    top: 142px;
+    left: 75px;
+}
+
+.peopleShow-1 span{
+    top: -46px;
+    left: 94px;
+}
+.peopleShow-1:hover span{
+    background: url("http://im-img.qq.com/qq/2013/img/peopleName.png?t=20130731") no-repeat 0 0;
+}
+
+.peopleShow-2 span{
+    top: 0;
+    left: 94px;
+}
+.peopleShow-2:hover span{
+    background: url("http://im-img.qq.com/qq/2013/img/peopleName.png?t=20130731") no-repeat 0 -122px;
+}
+.peopleShow-3 span{
+    top: -25px;
+    left: 93px;
+}
+
+.peopleShow-3:hover span{
+    background: url("http://im-img.qq.com/qq/2013/img/peopleName.png?t=20130731") no-repeat 0 -244px;
+}
+.peopleShow-4 span{
+    top: -43px;
+    left: 78px;
+}
+.peopleShow-4:hover span{
+    background: url("http://im-img.qq.com/qq/2013/img/peopleName.png?t=20130731") no-repeat 0 -366px;
+}
+.peopleShow-5 span{
+    top: 0;
+    left: 59px;
+}
+.peopleShow-5:hover span{
+    background: url("http://im-img.qq.com/qq/2013/img/peopleName.png?t=20130731") no-repeat 0 -488px;
+}
+.peopleShow-6 span{
+    top: -29px;
+    left: 84px;
+}
+.peopleShow-6:hover span{
+    background: url("http://im-img.qq.com/qq/2013/img/peopleName.png?t=20130731") no-repeat 0 -610px;
+}
+.peopleShow-7 span{
+    top: 0;
+    left: 114px;
+}
+.peopleShow-7:hover span{
+    background: url("http://im-img.qq.com/qq/2013/img/peopleName.png?t=20130731") no-repeat 0 -732px;
+}
+.peopleShow-8 span{
+    top: 0;
+    left: 91px;
+}
+.peopleShow-8:hover span{
+    background: url("http://im-img.qq.com/qq/2013/img/peopleName.png?t=20130731") no-repeat 0 -854px;
+}
+.peopletxt{
+    position: absolute;
+    right: 0;
+    bottom: -10px;
+    background-color: #7EB2DA;
+    color: #fff;
+    border-radius: 4px;
+    padding: 6px 10px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+
+}

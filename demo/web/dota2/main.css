@@ -1,0 +1,163 @@
+.lunbo {
+    width: 570px;
+    height: 280px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.lunbo-content {
+    list-style-type: none;
+    width: 570px;
+    overflow: hidden;
+}
+
+.lunbo-content li {
+    float: left;
+    width: 570px;
+    height: 280px;
+}
+
+.lunbo-nav {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    list-style: none;
+}
+
+.lunbo-nav li {
+    cursor: pointer;
+    float: left;
+    width: 12px;
+    height: 12px;
+    margin-right: 4px;
+    background: url("http://www.dota2.com.cn/images/main1307/lunbo_nav01.png") 0 0 no-repeat;
+}
+
+.lunbo-nav li.active {
+    background: url("http://www.dota2.com.cn/images/main1307/lunbo_nav02.png") 0 0 no-repeat;
+}
+
+#dota2-tab {
+    width: 600px;
+    margin: 40px auto;
+}
+
+.ui-tabs {
+    width: 600px;
+    background: url("http://www.dota2.com.cn/images/main1307/img04.jpg") no-repeat -40px 0;
+}
+
+.ui-tabs-nav {
+    width: 580px;
+    height: 46px;
+    padding: 10px;
+}
+
+.ui-tabs-nav li {
+    float: left;
+    width: 113px;
+    height: 46px;
+    padding-right: 1px;
+    background: url("http://www.dota2.com.cn/images/main1307/news_nav.jpg") no-repeat 0 0;
+    font-size: 14px;
+    color: #636363;
+    line-height: 46px;
+    cursor: pointer;
+}
+.ui-tabs-nav li.active{
+    color: #C2C2C2;
+    background: url("http://www.dota2.com.cn/images/main1307/news_nav.jpg") no-repeat 0 -46px;
+}
+
+.ui-tabs-news {
+    margin-top: 10px;
+    padding: 0 15px;
+    background: url("http://www.dota2.com.cn/images/main1307/news.jpg") no-repeat 0 0;
+    width: 570px;
+    height: 432px;
+    position: relative;
+}
+
+.ui-tabs-news-header {
+    padding-top: 20px;
+    height: 60px;
+}
+
+.ui-tabs-news-header h2 a {
+    font-size: 20px;
+    color: #9c743b;
+    line-height: 40px;
+}
+
+.ui-tabs-news-header p a {
+    font-size: 14px;
+    color: #7d7d7d;
+    line-height: 20px;
+    margin-right: 10px;
+}
+
+.ui-tabs-news-header p a:hover {
+    color: #ccc;
+}
+
+.ui-tabs-news-content {
+    width: 570px;
+    height: 280px;
+    padding-top: 35px;
+    position: relative;
+}
+
+.ui-tabs-news-content>li {
+    display: block;
+    width: 570px;
+    height: 280px;
+}
+
+.ui-tabs-news-content>li>ul {
+    width: 570px;
+    height: 280px;
+    overflow: hidden;
+}
+
+.ui-tabs-news-content>li>ul>li {
+    display: block;
+    width: 570px;
+    height: 28px;
+    clear: both;
+}
+
+.ui-tabs-news-content>li>ul>li a {
+    float: left;
+    font-size: 14px;
+    line-height: 28px;
+    color: #898989;
+    padding-left: 15px;
+    background: url("http://www.dota2.com.cn/images/main1307/lingxing.jpg") no-repeat 0 10px;
+}
+
+.ui-tabs-news-content>li>ul>li span {
+    float: right;
+    font-size: 14px;
+    line-height: 28px;
+    color: #898989;
+}
+
+.ui-tabs-news-content>li>ul>li:hover {
+    color: #ccc;
+}
+
+.ui-tabs-more {
+    position: absolute;
+    width: 72px;
+    height: 22px;
+    font-size: 12px;
+    color: #555;
+    line-height: 22px;
+    bottom: 10px;
+    left: 290px;
+}
+
+.ui-tabs-more:hover {
+    color: #ccc;
+}

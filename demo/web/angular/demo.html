@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+  <title></title>
+  <script type="text/javascript" src="/js/luffy/seajs/2.1.1/sea.js" id="seajsnode"></script>
+  <!-- seajs配置文件 -->
+  <script type="text/javascript" src="/js/luffy/luffyconf.js"></script>
+  <!-- 当前页面模块的健康情况 -->
+  <script type="text/javascript" src="/js/luffy/seajs-health/0.1.0/seajs-health.js"></script>
+  <!-- seajs文本插件 can load .tpl .html .json 文本 -->
+  <script type="text/javascript" src="/js/luffy/seajs-text/1.0.2/seajs-text.js"></script>
+  <script type="text/javascript" src="/js/luffy/seajs-style/1.0.1/seajs-style.js"></script>
+  <link rel="stylesheet" href="/js/sea-modules/playman/shincss/base.css"/>
+  <link rel="stylesheet" href="todo.css"/>
+  <script src="todo.js"></script>
+</head>
+<body>
+
+<div ng-controller="TodoCtrl">
+  <h1>TODO</h1>
+  {{remaining()}} of {{todos.length}} <a href="" ng-click="archive()">[归档]</a>
+  <ul>
+    <li ng-repeat="todo in todos">
+      <input type="checkbox" ng-model="todo.done"/>
+       <span class="done-{{todo.done}}">{{todo.text}}</span>
+    </li>
+  </ul>
+
+  <form ng-submit="addTodo()">
+    <input type="text" placeholder="输入要完成的工作" ng-model="todoText"/>
+    <input type="submit" value="add"/>
+  </form>
+</div>
+
+</body>
+<script>
+  seajs.use(['angular/angularjs/1.1.5/angular']);
+</script>
+</html>

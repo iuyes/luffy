@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <script type="text/javascript" src="/js/luffy/seajs/2.1.1/sea.js" id="seajsnode"></script>
+  <!-- seajs配置文件 -->
+  <script type="text/javascript" src="/js/luffy/luffyconf.js"></script>
+  <!-- 当前页面模块的健康情况 -->
+  <script type="text/javascript" src="/js/luffy/seajs-health/0.1.0/seajs-health.js"></script>
+  <!-- seajs文本插件 can load .tpl .html .json 文本 -->
+  <script type="text/javascript" src="/js/luffy/seajs-text/1.0.2/seajs-text.js"></script>
+  <script type="text/javascript" src="/js/luffy/seajs-style/1.0.1/seajs-style.js"></script>
+  <link rel="stylesheet" href="/js/sea-modules/playman/shincss/base.css"/>
+  <script src="apple.js"></script>
+</head>
+<body>
+
+<div ng-app>
+ 单价: <input type="number" name="price" ng-model="price" ng-init="price=299"/>
+  <br/>
+  数量: <input type="number" name="number" ng-model="number" ng-init="number=1"/>
+  <br/>
+  总价: {{price*number}}
+</div>
+
+</body>
+<script>
+  seajs.use(['angular/angularjs/1.1.5/angular']);
+</script>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+    <title></title>
+    <!-- seajs文件 -->
+    <script type="text/javascript" src="/js/luffy/seajs/2.1.1/sea.js" id="seajsnode"></script>
+    <!-- seajs配置文件 -->
+    <script type="text/javascript" src="/js/luffy/luffyconf.js"></script>
+    <!-- 当前页面模块的健康情况 -->
+    <script type="text/javascript" src="/js/luffy/seajs-health/0.1.0/seajs-health.js"></script>
+    <!-- seajs文本插件 can load .tpl .html .json 文本 -->
+    <script type="text/javascript" src="/js/luffy/seajs-text/1.0.2/seajs-text.js"></script>
+    <style type="text/css">
+    </style>
+</head>
+<body>
+</body>
+<script type="text/javascript">
+    seajs.use('alice/base/1.0.1/base.css');
+    seajs.use(['$', 'gallery/jsuri/1.2.2/jsuri'], function ($, Jsuri) {
+        var uri = new Jsuri('http://user:pass@www.test.com:81/index.html?q=books#fragment&age=4');
+        console.log(uri.protocol());
+        console.log(uri.host());
+        console.log(uri.port());
+        console.log(uri.path());
+        console.log(uri.query());
+        console.log(uri.anchor());
+        console.log(new Jsuri(uri.query()).getQueryParamValue('q'));   //得是对象才有get方法 uri.query()是字符串没有方法
+
+    });
+
+</script>
+</html>

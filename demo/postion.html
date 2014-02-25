@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+    <title></title>
+    <!-- seajs文件 -->
+    <script type="text/javascript" src="/js/luffy/seajs/2.1.1/sea.js" id="seajsnode"></script>
+    <!-- seajs配置文件 -->
+    <script type="text/javascript" src="/js/luffy/luffyconf.js"></script>
+    <!-- 当前页面模块的健康情况 -->
+    <script type="text/javascript" src="/js/luffy/seajs-health/0.1.0/seajs-health.js"></script>
+    <!-- seajs文本插件 can load .tpl .html .json 文本 -->
+    <script type="text/javascript" src="/js/luffy/seajs-text/1.0.2/seajs-text.js"></script>
+    <style type="text/css">
+        .box {
+            width: 50px;
+            height: 50px;
+            background-color: #000000;
+            border-radius: 10px;
+        }
+
+        .pin {
+            width: 100px;
+            height: 100px;
+            background-color: #6addd3;
+        }
+
+        .base {
+            width: 200px;
+            height: 200px;
+            background-color: #ffc891;
+        }
+
+        .pin2 {
+            background-color: #3a87ad;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+
+<div class="pin">
+
+</div>
+<div class="base">
+
+</div>
+
+<div class="box">
+
+</div>
+
+<div class="pin2">
+
+</div>
+</body>
+<script type="text/javascript">
+    seajs.use('playman/shincss/1.0.0/base.css');
+    seajs.use(['$', 'arale/position/1.0.1/position'], function ($, Position) {
+//        .默认是对象的左上角
+        $(function () {
+            var stop = false;
+            $(".box").hover(function () {
+                stop = true;
+            }, function () {
+                stop = false;
+            });
+
+            var stop1 = true;
+            $(document).click(function () {
+                if (stop1 == true) {
+                    stop1 = false;
+                }
+                else {
+                    stop1 = true;
+                }
+            });
+
+            setInterval(function () {
+                if (stop) {
+                    return;
+                }
+//                Math.random() 0~1  Math.floor <=
+                var x = Math.floor(Math.random() * 100);
+                var y = Math.floor(Math.random() * 100);
+                Position.pin(
+                        {element: $(".box"), x: 'center', y: 'center'},
+                        {element: Position.VIEWPORT, x: x + '%', y: y + '%'}
+                );
+            }, 50);
+
+
+            setInterval(function () {
+                if (stop1) {
+                    return;
+                }
+                var x = Math.floor(Math.random() * 100);
+                var y = Math.floor(Math.random() * 100);
+                Position.pin({
+                    element: $(".pin2"), x: 'center', y: 'center'
+                }, {
+                    element: Position.VIEWPORT, x: x + '%', y: y + '%'
+                });
+            }, 50);
+
+            Position.center('.base');
+
+            Position.pin('.pin', {element: '.base', x: 'right', y: 'center'}
+            );
+
+        });
+    });
+
+
+</script>
+</html>

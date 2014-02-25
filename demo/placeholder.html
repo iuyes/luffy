@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+    <title></title>
+    <!-- seajs文件 -->
+    <script type="text/javascript" src="/js/luffy/seajs/2.1.1/sea.js" id="seajsnode"></script>
+    <!-- seajs配置文件 -->
+    <script type="text/javascript" src="/js/luffy/luffyconf.js"></script>
+    <!-- 当前页面模块的健康情况 -->
+    <script type="text/javascript" src="/js/luffy/seajs-health/0.1.0/seajs-health.js"></script>
+    <!-- seajs文本插件 can load .tpl .html .json 文本 -->
+    <script type="text/javascript" src="/js/luffy/seajs-text/1.0.2/seajs-text.js"></script>
+</head>
+<body>
+<button id="btn">按钮</button>
+<div id="inputContent">
+    <input type="text" placeholder="name"/>
+</div>
+
+</body>
+<script type="text/javascript">
+    seajs.use('gallery/placeholders/2.1.0/placeholders');
+    seajs.use('$',function  ($) {
+        $(function () {
+            $("#btn").on('click',function(){
+                $("#inputContent").toggle();
+            })
+        });
+    })
+</script>
+</html>

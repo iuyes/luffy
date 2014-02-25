@@ -1,0 +1,211 @@
+body {
+    font-family: Microsoft YaHei, "微软雅黑", Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #666;
+    background: #F4F4F4;
+}
+
+header {
+    height: 71px;
+    width: 100%;
+    border-top: 3px solid #277BDA;
+    background-color: #fff;
+}
+
+header section.wrapper {
+    width: 980px;
+    height: 71px;
+    margin: 0 auto;
+}
+
+header section.wrapper .logo {
+    float: left;
+    width: 178px;
+    height: 54px;
+    margin-top: 8px;
+    background: url("http://3gimg.qq.com/web/web_mobilenew/2012/images/logo.jpg") no-repeat 0 0;
+    text-indent: -9999px;
+}
+
+header .topnav {
+    float: right;
+    height: 71px;
+    margin-right: 10px;
+}
+
+header .topnav ul {
+    height: 71px;
+}
+
+header .topnav ul li {
+    float: left;
+    height: 71px;
+}
+
+header .topnav ul li a {
+    display: block;
+    height: 69px;
+    border-bottom: 2px solid #FFF;
+    padding-left: 24px;
+    padding-right: 24px;
+    font-size: 15px;
+    color: #666;
+    line-height: 69px;
+}
+
+header .topnav ul li a:hover {
+    border-bottom: 2px solid #277ADA;
+}
+
+header .topnav ul li a.active {
+    font-weight: bold;
+    border-bottom: 2px solid #277ADA;
+}
+
+.banner {
+    width: 100%;
+    height: 650px;
+    background: url("http://mobile.qq.com/images/banner.jpg") no-repeat center center;
+}
+
+.banner .banner-wrapper {
+    width: 980px;
+    height: 650px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.banner .download-btn {
+    position: absolute;
+    width: 310px;
+    height: 70px;
+    background: url("http://mobile.qq.com/images/sprite-bg.jpg") no-repeat 0 -540px;
+    text-indent: -9999px;
+    top: 436px;
+    right: 72px;
+}
+
+.banner .download-btn:hover {
+    background: url("http://mobile.qq.com/images/sprite-bg.jpg") no-repeat 0px -610px;
+}
+
+.banner .download-list {
+    position: absolute;
+    width: 289px;
+    height: 49px;
+    right: 72px;
+    top: 520px;
+}
+
+.banner .download-list li {
+    float: left;
+    width: 49px;
+    height: 49px;
+    margin-right: 31px;
+    cursor: pointer;
+}
+
+.banner .download-list li.hd {
+    margin-right: 0;
+    background: url("http://mobile.qq.com/images/sprite-bg.jpg") no-repeat -237px -388px;
+}
+.banner .download-list li.hd:hover {
+    background: url("http://mobile.qq.com/images/sprite-bg.jpg") no-repeat -237px -455px;
+}
+.banner .download-list li.hd.active {
+    background: url("http://mobile.qq.com/images/sprite-bg.jpg") no-repeat -237px -455px;
+}
+
+.banner .download-list li.ios {
+    background: url("http://mobile.qq.com/images/sprite-bg.jpg") no-repeat 0px -388px;
+}
+.banner .download-list li.ios:hover {
+    background: url("http://mobile.qq.com/images/sprite-bg.jpg") no-repeat 0px -455px;
+}
+.banner .download-list li.ios.active {
+    background: url("http://mobile.qq.com/images/sprite-bg.jpg") no-repeat 0px -455px;
+}
+
+.banner .download-list li.android {
+    background: url("http://mobile.qq.com/images/sprite-bg.jpg") no-repeat -79px -388px;
+}
+
+.banner .download-list li.android:hover {
+    background: url("http://mobile.qq.com/images/sprite-bg.jpg") no-repeat -79px -455px;
+}
+.banner .download-list li.android.active {
+    background: url("http://mobile.qq.com/images/sprite-bg.jpg") no-repeat -79px -455px;
+}
+
+.banner .download-list li.wp {
+    background: url("http://mobile.qq.com/images/sprite-bg.jpg") no-repeat -158px -388px;
+}
+.banner .download-list li.wp:hover {
+    background: url("http://mobile.qq.com/images/sprite-bg.jpg") no-repeat -158px -455px;
+}
+.banner .download-list li.wp.active {
+    background: url("http://mobile.qq.com/images/sprite-bg.jpg") no-repeat -158px -455px;
+}
+
+
+.container{
+    width: 980px;
+    height: 160px;
+    margin: 40px auto 0;
+}
+.container ul{
+    width: 980px;
+    height: 160px;
+}
+.container ul li{
+    float: left;
+    width: 237px;
+    height: 160px;
+    margin-right:10px;
+}
+.container ul li.school{
+    margin-right: 0;
+}
+.container ul li a{
+    display: block;
+    width: 237px;
+    height: 160px;
+}
+.container ul li a.iphone{
+    background: url("http://mobile.qq.com/images/sub-menu2.jpg") no-repeat 0 0;
+}
+.container ul li a.iphone:hover{
+    background: url("http://mobile.qq.com/images/sub-menu2.jpg") no-repeat 0px -168px;
+}
+.container ul li a.android{
+     background: url("http://mobile.qq.com/images/sub-menu2.jpg") no-repeat -247px 0;
+ }
+.container ul li a.android:hover{
+    background: url("http://mobile.qq.com/images/sub-menu2.jpg") no-repeat -247px -168px;
+}
+.container ul li a.wphone{
+    background: url("http://mobile.qq.com/images/sub-menu2.jpg") no-repeat -494px 0;
+}
+.container ul li a.wphone:hover{
+    background: url("http://mobile.qq.com/images/sub-menu2.jpg") no-repeat -494px -168px;
+}
+.container ul li a.last{
+    background: url("http://mobile.qq.com/images/sub-menu2.jpg") no-repeat -741px 0;
+}
+.container ul li a.last:hover{
+    background: url("http://mobile.qq.com/images/sub-menu2.jpg") no-repeat -741px -168px;
+}
+
+.footer{
+    width: 980px;
+    height:93px;
+    margin: 18px auto 0;
+    padding-top: 12px;
+    background: url("http://mobile.qq.com/images/line.jpg") no-repeat 0 0;
+}
+
+.footer p{
+    font-size: 12px;
+    color: #C3C3C3;
+    line-height: 18px;
+}

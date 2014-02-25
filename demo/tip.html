@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script type="text/javascript" src="/js/luffy/seajs/2.1.1/sea.js" id="seajsnode"></script>
+    <!-- seajs配置文件 -->
+    <script type="text/javascript" src="/js/luffy/luffyconf.js"></script>
+    <!-- 当前页面模块的健康情况 -->
+    <script type="text/javascript" src="/js/luffy/seajs-health/0.1.0/seajs-health.js"></script>
+    <!-- seajs文本插件 can load .tpl .html .json 文本 -->
+    <script type="text/javascript" src="/js/luffy/seajs-text/1.0.2/seajs-text.js"></script>
+    <script type="text/javascript" src="/js/luffy/seajs-style/1.0.1/seajs-style.js"></script>
+    <style type="text/css">
+        .ui-tip {
+            width: 100px;
+            min-height: 30px;
+            background-color: #FF6700;
+            opacity: 0.7;
+            border: 1px solid #fb8318;
+            font-size: 16px;
+            line-height: 30px;
+            color: #000000;
+    </style>
+</head>
+<body>
+
+<button id="tip1" class="ui-button ui-button-morange">点击</button>
+<br>
+
+<button id="tip2" class="ui-button ui-button-morange">点击</button>
+<br>
+
+<button id="tip3" class="ui-button ui-button-morange">点击</button>
+
+</body>
+<script type="text/javascript">
+    seajs.use('alice/one/1.1.0/one.css');
+    seajs.use('arale/tip/1.2.0/tip', function (Tip) {
+        new Tip({
+            trigger: '#tip1',
+            content: '<div style="padding:10px">我是内容 我是内容</div>',
+            arrowPosition: 10
+        });
+
+        new Tip({
+            trigger: '#tip2',
+            content: '<div style="padding: 10px">这是tip2</div>',
+            effect: 'fade',
+            arrowPosition: 10
+        });
+
+        new Tip({
+            trigger: '#tip3',
+            template: '<div class="ui-tip"></div>',
+            content: '<div style="padding: 1px">这是一个自己定义的tip</div>',
+            arrowPosition:10
+        });
+
+    });
+</script>
+</html>

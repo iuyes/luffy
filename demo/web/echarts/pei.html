@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <script type="text/javascript" src="/js/luffy/seajs/2.1.1/sea.js" id="seajsnode"></script>
+  <!-- seajs配置文件 -->
+  <script type="text/javascript" src="/js/luffy/luffyconf.js"></script>
+  <!-- 当前页面模块的健康情况 -->
+  <script type="text/javascript" src="/js/luffy/seajs-health/0.1.0/seajs-health.js"></script>
+  <!-- seajs文本插件 can load .tpl .html .json 文本 -->
+  <script type="text/javascript" src="/js/luffy/seajs-text/1.0.2/seajs-text.js"></script>
+  <script type="text/javascript" src="/js/luffy/seajs-style/1.0.1/seajs-style.js"></script>
+</head>
+<body>
+<div id="pie" style="width: 800px;height: 400px;margin: 100px auto">
+
+</div>
+</body>
+<script>
+  seajs.use(['$', 'echarts/echarts'], function ($, Echarts) {
+    seajs.use('echarts/chart/pie');
+    $(function(){
+
+      var mycharts = Echarts.init(document.getElementById('pie'));
+      option = {
+        title : {
+          text: '某站点用户访问来源',
+          subtext: '纯属虚构',
+          x:'center'
+        },
+        tooltip : {
+          trigger: 'item',
+          formatter: "{a} <br/>{b} : {c} ({d}%)"
+        },
+        legend: {
+          orient : 'vertical',
+          x : 'left'
+        },
+        toolbox: {
+          show : true,
+          feature : {
+            mark : true,
+            dataView : {readOnly: false},
+            restore : true,
+            saveAsImage : true
+          }
+        },
+        calculable : false,
+        series : [
+          {
+            name:'访问来源',
+            type:'pie',
+            selectedMode:'single',
+            radius : [0, 70],
+            itemStyle:{
+              normal:{
+                    label:{
+                      position:'inner'
+                    },
+                labelLine:{
+                  show:false
+                }
+              }
+            },
+            data:[
+              {value:335, name:'直接访问'},
+              {value:310, name:'邮件营销'},
+              {value:1548, name:'搜索引擎'}
+            ]
+          },{
+            name:'访问来源',
+            type:'pie',
+            radius : [100, 140],
+            data:[
+              {value:335, name:'直达'},
+              {value:310, name:'邮件营销'},
+              {value:234, name:'联盟广告'},
+              {value:135, name:'视频广告'},
+              {value:1048, name:'百度'},
+              {value:251, name:'谷歌'},
+              {value:147, name:'必应'},
+              {value:102, name:'其他'}
+            ]
+          }
+        ]
+      };
+
+      mycharts.setOption(option);
+
+    });
+
+  });
+</script>
+</html>

@@ -1,0 +1,16 @@
+{
+    "family": "icbu",
+    "name": "validator",
+    "version": "1.0.1",
+    "keywords": ["widget"],
+    "description": "封装了ICBU dpl的带UI的校验框架",
+    "homepage": "http://docs.alif2e.com/icbu/validator/",
+    "author": "章小新",
+    "bugs": {
+        "url": "https://github.com/atom-js/validator/issues/new"
+    },
+    "spm": {
+       "output": ["validator.js"]
+    },
+    "tests": ["validator"]
+}

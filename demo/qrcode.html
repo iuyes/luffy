@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <!-- seajs文件 -->
+    <script type="text/javascript" src="/js/luffy/seajs/2.1.1/sea.js" id="seajsnode"></script>
+    <!-- seajs配置文件 -->
+    <script type="text/javascript" src="/js/luffy/luffyconf.js"></script>
+    <!-- 当前页面模块的健康情况 -->
+    <script type="text/javascript" src="/js/luffy/seajs-health/0.1.0/seajs-health.js"></script>
+    <!-- seajs文本插件 can load .tpl .html .json 文本 -->
+    <script type="text/javascript" src="/js/luffy/seajs-text/1.0.2/seajs-text.js"></script>
+</head>
+<body>
+
+<div id="qrcode"></div>
+
+</body>
+<script>
+    seajs.use(['$','arale/qrcode/1.0.3/qrcode'],function($,Qrcode){
+        var qrcode1= new Qrcode({
+               text:'http://playman.me'
+        });
+
+        $("#qrcode").append(qrcode1);
+
+    });
+</script>
+</html>

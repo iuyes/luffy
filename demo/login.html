@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+    <title></title>
+    <!-- seajs文件 -->
+    <script type="text/javascript" src="/js/luffy/seajs/2.1.1/sea.js" id="seajsnode"></script>
+    <!-- seajs配置文件 -->
+    <script type="text/javascript" src="/js/luffy/luffyconf.js"></script>
+    <!-- 当前页面模块的健康情况 -->
+    <script type="text/javascript" src="/js/luffy/seajs-health/0.1.0/seajs-health.js"></script>
+    <!-- seajs文本插件 can load .tpl .html .json 文本 -->
+    <script type="text/javascript" src="/js/luffy/seajs-text/1.0.2/seajs-text.js"></script>
+    <link rel="stylesheet" href="/js/sea-modules/play/shincss/base.css"/>
+    <link rel="stylesheet" href="/js/sea-modules/play/shincss/function.css"/>
+    <link rel="stylesheet" href="/js/sea-modules/play/shincss/global.css"/>
+</head>
+<body>
+
+<div class="dialog fn-db" id="info">
+    <a href="javascript:void()" class="dialog-close">×</a>
+    <div class="dialog-info">输入个人信息，打开后门门锁</div>
+    <h2>后门</h2>
+    <form action="#">
+        <input type="text" placeholder="姓名" class="dialog-input"/>
+        <input type="email" placeholder="邮箱地址" class="dialog-input"/>
+        <input type="submit" value="打开" class="dialog-submit"/>
+    </form>
+</div>
+
+</body>
+<script type="text/javascript">
+    seajs.use(['arale/cookie/1.0.2/cookie','$'], function (Cookie,$) {
+        $(function(){
+            Cookie.set('islogin',true);
+            if(!Cookie.get('islogin')){
+                 $("#info").removeClass("fn-db");
+            }
+
+            $(".dialog-close").click(function(){
+                $(this).parent(".dialog").hide();
+            });
+        });
+    });
+</script>
+</html>

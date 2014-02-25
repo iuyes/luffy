@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+    <title></title>
+    <!-- seajs文件 -->
+    <script type="text/javascript" src="/js/luffy/seajs/2.1.1/sea.js" id="seajsnode"></script>
+    <!-- seajs配置文件 -->
+    <script type="text/javascript" src="/js/luffy/luffyconf.js"></script>
+    <!-- 当前页面模块的健康情况 -->
+    <script type="text/javascript" src="/js/luffy/seajs-health/0.1.0/seajs-health.js"></script>
+    <!-- seajs文本插件 can load .tpl .html .json 文本 -->
+    <script type="text/javascript" src="/js/luffy/seajs-text/1.0.2/seajs-text.js"></script>
+    <style type="text/css">
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: #ffc891;
+        }
+
+    </style>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+    seajs.use('playman/shincss/1.0.0/base.css');
+    seajs.use(['$', 'playman/shinjs/1.0.0/poverlay', 'position','overlay'], function ($, Poverlay, Position,Overlay) {
+        var o1 = new Poverlay({
+            template:'<div class="box"></div>',
+            align: {
+                baseElement: Position.VIEWPORT,
+                baseXY: ['50%', '50%'],
+                selfXY: ['50%', '50%']
+            }
+        }).show();
+
+        var o2=new Overlay({
+           template:'<div class="box"></div>',
+            align:{
+                baseElement:Position.VIEWPORT,
+                baseXY:[0,0],
+                selfXY:[0,0]
+            }
+        }).show();
+
+        o1.set('style',{
+            width:500,
+            backgroundColor:'#000000'
+        });
+
+
+    });
+</script>
+</html>
