@@ -79,7 +79,7 @@ function stopEvent(e) {
   e = e || window.event;
   if (window.event) {
     // IE
-    e.cancelBubble();
+    e.cancleBubble=true;
   }
   else {
     e.stopPropagation();
@@ -298,13 +298,9 @@ function normalizeValue(val) {
  */
 function addEventHandler(ele, type, func) {
   if (ele.addEventListener)
-    ele.addEventListener(type, function () {
-      func.apply(ele, arguments);
-    }, false);
+    ele.addEventListener(type, func, false);
   else if (ele.attachEvent)
-    ele.attachEvent("on" + type, function () {
-      func.apply(this, arguments);
-    });
+    ele.attachEvent("on" + type, func);
   else ele["on" + type] = func;
 }
 
@@ -317,14 +313,10 @@ function addEventHandler(ele, type, func) {
  */
 function removeEventHandler(ele, type, func) {
   if (ele.removeEventListener) {
-    ele.removeEventListener(type, function () {
-      func.apply(ele, arguments);
-    }, false);
+    ele.removeEventListener(type, func, false);
   }
   else if (ele.detachEvent) {
-    ele.detachEvent("on" + type, function () {
-      func.apply(this, arguments);
-    });
+    ele.detachEvent("on" + type, func);
   }
   else {
     delete  ele["on" + type];
@@ -332,57 +324,7 @@ function removeEventHandler(ele, type, func) {
 }
 
 
-/**
- * 获取浏览器信息
- * @returns {类型:版本}
- */
-function getBrowser() {
-  var Sys = {};
-  var ua = navigator.userAgent.toLowerCase();
-  var s;
-  +
-      (s = ua.match(/msie ([\d.]+)/)) ? Sys.ie = s[1] :
-      (s = ua.match(/firefox\/([\d.]+)/)) ? Sys.firefox = s[1] :
-          (s = ua.match(/chrome\/([\d.]+)/)) ? Sys.chrome = s[1] :
-              (s = ua.match(/opera.([\d.]+)/)) ? Sys.opera = s[1] :
-                  (s = ua.match(/version\/([\d.]+).*safari/)) ? Sys.safari = s[1] : 0;
-  return Sys;
-}
 
-
-/**
- * DOM加载完成后执行fnc而不必等图片等加载完成
- * @param fnc
- */
-function onDOMReady(f) {
-
-  if (win.jQuery) {
-    // 如果页面上存在 jQuery，使用 jQuery 的方法
-    jQuery(doc).ready(f);
-
-  } else {
-
-    // 判断页面是否已经加载完成
-    if (doc.readyState === "complete") {
-      // 如果页面已经加载完成，直接执行函数 f
-      f();
-
-    } else {
-      // 使用 window 的 onload 事件
-      addEventListener(win, "load", f);
-    }
-
-  }
-}
-
-/**
- * 兼容性写法
- * @param element
- * @returns {string|innerText|*|textContent}
- */
-function getInnerText(element) {
-  return element.innerText || element.textContent;
-}
 
 /**
  *
@@ -675,3 +617,11 @@ function createElement() {
   iframe.setAttribute('frameborder', '0', 0);
   return iframe;
 }
+
+// 检测是否是空对象{}
+  function isEmptyObj (obj) {
+    for(var i in obj){
+      return false;
+    }
+    return true;
+  }

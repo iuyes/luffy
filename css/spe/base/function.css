@@ -1,5 +1,3 @@
-/*! define playman/shincss/1.0.0/function-debug.css */
-
 /* 让内容以 content-box 显示 */
 .fn-border-box {
   -webkit-box-sizing: content-box;
@@ -345,5 +343,5 @@
   border: none \9;
   height: 15px \9;
   width: 7px \9;
-  background: #fff url(http://i02.i.aliimg.com/simg/sprites/app/balloon-arrow-old.png?t=71b1e83b_0) no-repeat -8px 0 \9;
+  background: #fff url(http://i02.i.aliimg.com/simg/sprites/app/balloon-arrow-old.png) no-repeat -8px 0 \9;
 }
