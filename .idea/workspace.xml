@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ad157cbd-08dc-4fff-94a6-2ca551c31f0c" name="Default" comment="">
+      <change type="DELETED" beforePath="E:\luffy\js\biz\common\shin.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/confirm.html" afterPath="$PROJECT_DIR$/demo/confirm.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/test.html" afterPath="$PROJECT_DIR$/demo/test.html" />
+    </list>
+    <ignored path="luffy.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="DebuggerManager">
+    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </breakpoint_any>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <breakpoint_rules />
+    <ui_properties />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="luffy" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf />
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/demo/confirm.html" />
+        <option value="$PROJECT_DIR$/js/luffy/luffyconf.js" />
+        <option value="$PROJECT_DIR$/demo/test.html" />
+        <option value="$PROJECT_DIR$/js/luffy/seajs/2.1.1/sea-debug.js" />
+        <option value="$PROJECT_DIR$/js/biz/common/utils.js" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <OptionsSetting value="true" id="Undo Check Out" />
+    <OptionsSetting value="true" id="Get Latest Version" />
+    <ConfirmationsSetting value="1" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="luffy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="luffy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="luffy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="E:/work/style-aisc" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="FullScreen" value="false" />
+    <property name="options.lastSelected" value="preferences.pluginManager" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+      <method />
+    </configuration>
+    <list size="0" />
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ad157cbd-08dc-4fff-94a6-2ca551c31f0c" name="Default" comment="" />
+      <created>1394185105234</created>
+      <updated>1394185105234</updated>
+      <workItem from="1394415930152" duration="6213000" />
+      <workItem from="1394588107814" duration="594000" />
+      <workItem from="1394984320100" duration="22000" />
+      <workItem from="1394984356702" duration="22000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="6851000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="1" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19619326" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USERS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/css/spe/base/media.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="195" column="20" selection-start="3224" selection-end="3224" vertical-scroll-proportion="0.0" vertical-offset="4290" max-vertical-offset="8184">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/spe/base/media.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="195" column="20" selection-start="3224" selection-end="3224" vertical-scroll-proportion="0.0" vertical-offset="3510" max-vertical-offset="6696">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/biz/common/utils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="89" column="11" selection-start="1444" selection-end="1444" vertical-scroll-proportion="0.0" vertical-offset="2136" max-vertical-offset="16488" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="6" selection-start="253" selection-end="253" vertical-scroll-proportion="0.0" vertical-offset="192" max-vertical-offset="480" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/biz/common/utils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="80" column="3" selection-start="1347" selection-end="1347" vertical-scroll-proportion="0.0" vertical-offset="1920" max-vertical-offset="16488" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="6" selection-start="253" selection-end="253" vertical-scroll-proportion="0.0" vertical-offset="192" max-vertical-offset="480" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/biz/common/utils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="82" column="3" selection-start="1382" selection-end="1382" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="16512" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="9" selection-start="320" selection-end="320" vertical-scroll-proportion="0.0" vertical-offset="312" max-vertical-offset="600" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/biz/common/utils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="342" column="43" selection-start="6616" selection-end="6616" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="16560" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/luffy/seajs/2.1.1/sea-debug.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="38" selection-start="1120" selection-end="1120" vertical-scroll-proportion="0.0" vertical-offset="1296" max-vertical-offset="22176" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/confirm.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="6" selection-start="1170" selection-end="1170" vertical-scroll-proportion="0.33217993" vertical-offset="648" max-vertical-offset="2400" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/luffy/seajs/2.1.1/sea.js.map">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="0" selection-start="17140" selection-end="17140" vertical-scroll-proportion="0.3562152" vertical-offset="0" max-vertical-offset="539" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/luffy/luffyconf.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="71" column="18" selection-start="2470" selection-end="2470" vertical-scroll-proportion="0.44107744" vertical-offset="1298" max-vertical-offset="2256" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/luffy/seajs/2.1.1/sea-debug.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="93" column="14" selection-start="1890" selection-end="1890" vertical-scroll-proportion="0.61616164" vertical-offset="1866" max-vertical-offset="22176" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/biz/common/utils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="109" column="5" selection-start="1831" selection-end="1831" vertical-scroll-proportion="0.71169686" vertical-offset="2136" max-vertical-offset="16488" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="6" selection-start="253" selection-end="253" vertical-scroll-proportion="0.33217993" vertical-offset="0" max-vertical-offset="578" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/spe/base/media.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="86" column="37" selection-start="1341" selection-end="1341" vertical-scroll-proportion="1.0510708" vertical-offset="1254" max-vertical-offset="8184">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
+

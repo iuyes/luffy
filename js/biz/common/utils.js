@@ -78,7 +78,6 @@ if (!Array.delrepeat) {
 function stopEvent(e) {
   e = e || window.event;
   if (window.event) {
-    // IE
     e.cancleBubble=true;
   }
   else {
@@ -92,8 +91,11 @@ function stopEvent(e) {
  */
 function stopDefault(e) {
   var e = e || window.event;
-  e.preventDefault();
-  window.event.returnValue = false;
+  if(e&e.preventDefault){
+    e.preventDefault();
+  }else{
+    e.returnValue = false;
+  }  
 }
 
 
@@ -242,13 +244,18 @@ function loadscript(url, callback) {
  * @param callback
  */
 function loadImage(url, callback) {
-  var img = new Image(); //创建一个Image对象，实现图片的预下载
-  img.onload = function () {
-    img.onload = null;
-    callback(img);
-  }
-  img.src = url;
-}
+    var img = new Image(); //创建一个Image对象，实现图片的预下载
+    img.src = url;
+    if (img.complete) { // 如果图片已经存在于浏览器缓存，直接调用回调函数
+     document.getElementById("allpic").appendChild(img);
+        callback();
+        return; // 直接返回，不用再处理onload事件
+     }
+     img.onload = function () { //图片下载完毕时异步调用callback函数。
+      document.getElementById("allpic").appendChild(img);
+         callback();//将回调函数的this替换为Image对象
+     };
+};
 
 
 /**
@@ -473,7 +480,6 @@ function triggerClick(ele) {
   if (ele.click) {
     ele.click();
   } else {
-//    适用与webkit浏览器
     var evt = document.createEvent('Event');
     evt.initEvent('click', true, true);
     ele.dispatchEvent(evt);
@@ -497,55 +503,6 @@ function merge(one, two) {
   return ret;
 }
 
-
-/**
- *
- * @param url
- * @param width
- * @param height
- * @returns {string}
- */
-var agt = navigator.userAgent.toLowerCase();
-var is_ie = ((agt.indexOf('msie') != -1) && (agt.indexOf('opera') == -1));
-function player_rm(url, width, height) {
-  if (is_ie) {
-    return "<object classid=\"CLSID:CFCDAA03-8BE4-11cf-B84B-0020AFBBCCFA\" width=\"" + width + "\" height=\"" + height + "\"><param name=\"src\" value=\"" + url + "\" /><param name=\"controls\" value=\"Imagewindow\" /><param name=\"console\" value=\"clip1\" /><param name=\"autostart\" value=\"true\" /></object><br /><object classid=\"CLSID:CFCDAA03-8BE4-11cf-B84B-0020AFBBCCFA\" width=\"" + width + "\" height=\"44\"><param name=\"src\" value=\"" + url + "\" /><param name=\"controls\" value=\"ControlPanel,StatusBar\" /><param name=\"console\" value=\"clip1\" /><param name=\"autostart\" value=\"true\" /></object>";
-  } else if (agt.indexOf('firefox') != -1) {
-    return "<object data=\"" + url + "\" type=\"audio/x-pn-realaudio-plugin\" width=\"" + width + "\" height=\"" + height + "\" autostart=\"true\" console=\"clip1\" controls=\"Imagewindow\"><embed src=\"" + url + "\" type=\"audio/x-pn-realaudio-plugin\" autostart=\"true\" console=\"clip1\" controls=\"Imagewindow\" width=\"" + width + "\" height=\"" + height + "\"></embed></object><br /><object data=\"" + url + "\" type=\"audio/x-pn-realaudio-plugin\" width=\"" + width + "\" height=\"44\" autostart=\"true\" console=\"clip1\" controls=\"ControlPanel,StatusBar\"><embed src=\"" + url + "\" type=\"audio/x-pn-realaudio-plugin\" autostart=\"true\" console=\"clip1\" controls=\"ControlPanel,StatusBar\" width=\"" + width + "\" height=\"44\"></embed></object>";
-  } else if (agt.indexOf('safari') != -1) {
-    return "<object type=\"audio/x-pn-realaudio-plugin\" width=\"" + width + "\" height=\"" + height + "\"><param name=\"src\" value=\"" + url + "\" /><param name=\"controls\" value=\"Imagewindow\" /><param name=\"console\" value=\"clip1\" /><param name=\"autostart\" value=\"true\" /></object><br /><object type=\"audio/x-pn-realaudio-plugin\" width=\"" + width + "\" height=\"44\"><param name=\"src\" value=\"" + url + "\" /><param name=\"controls\" value=\"ControlPanel,StatusBar\" /><param name=\"console\" value=\"clip1\" /><param name=\"autostart\" value=\"true\" /></object>";
-  } else {
-    return "<object classid=\"clsid:CFCDAA03-8BE4-11cf-B84B-0020AFBBCCFA\" width=\"" + width + "\" height=\"" + height + "\"><param name=\"src\" value=\"" + url + "\" /><param name=\"controls\" value=\"Imagewindow\" /><param name=\"console\" value=\"clip1\" /><param name=\"autostart\" value=\"true\" /><embed src=\"" + url + "\" type=\"audio/x-pn-realaudio-plugin\" autostart=\"true\" console=\"clip1\" controls=\"Imagewindow\" width=\"" + width + "\" height=\"" + height + "\"></embed></object><br /><object classid=\"clsid:CFCDAA03-8BE4-11cf-B84B-0020AFBBCCFA\" width=\"" + width + "\" height=\"44\"><param name=\"src\" value=\"" + url + "\" /><param name=\"controls\" value=\"ControlPanel\" /><param name=\"console\" value=\"clip1\" /><param name=\"autostart\" value=\"true\" /><embed src=\"" + url + "\" type=\"audio/x-pn-realaudio-plugin\" autostart=\"true\" console=\"clip1\" controls=\"ControlPanel,StatusBar\" width=\"" + width + "\" height=\"44\"></embed></object>";
-  }
-}
-function player_flash(url, width, height) {
-  if (is_ie) {
-    return "<object classid=\"CLSID:D27CDB6E-AE6D-11cf-96B8-444553540000\" width=\"" + width + "\" height=\"" + height + "\"><param name=\"src\" value=\"" + url + "\" /><param name=\"autostart\" value=\"true\" /><param name=\"loop\" value=\"true\" /><param name=\"quality\" value=\"high\" /></object>";
-  } else {
-    return "<object data=\"" + url + "\" type=\"application/x-shockwave-flash\" width=\"" + width + "\" height=\"" + height + "\"><param name=\"autostart\" value=\"true\" /><param name=\"loop\" value=\"true\" /><param name=\"quality\" value=\"high\" /><EMBED src=\"" + url + "\" quality=\"high\" width=\"" + width + "\" height=\"" + height + "\" TYPE=\"application/x-shockwave-flash\" PLUGINSPAGE=\"http://www.macromedia.com/go/getflashplayer\"></EMBED></object>";
-  }
-}
-function player_wmv(url, width, height) {
-  if (height < 64) height = 64;
-  if (is_ie) {
-    return "<object classid=\"CLSID:22D6F312-B0F6-11D0-94AB-0080C74C7E95\" width=\"" + width + "\" height=\"" + height + "\"><param name=\"src\" value=\"" + url + "\" /><param name=\"ShowStatusBar\" value=\"true\" /></object>";
-  } else if (agt.indexOf('firefox') != -1) {
-    return "<object data=\"" + url + "\" type=\"application/x-mplayer2\" width=\"" + width + "\" height=\"" + height + "\" ShowStatusBar=\"true\"><embed type=\"application/x-mplayer2\" src=\"" + url + "\" width=\"" + width + "\" height=\"" + height + "\" ShowStatusBar=\"true\"></embed></object>";
-  } else if (agt.indexOf('safari') != -1) {
-    return "<object type=\"application/x-mplayer2\" width=\"" + width + "\" height=\"" + height + "\"><param name=\"src\" value=\"" + url + "\" /><param name=\"ShowStatusBar\" value=\"true\" /></object>";
-  } else {
-    return "<object classid=\"CLSID:22D6F312-B0F6-11D0-94AB-0080C74C7E95\" width=\"" + width + "\" height=\"" + height + "\"><param name=\"src\" value=\"" + url + "\" /><param name=\"ShowStatusBar\" value=\"true\" /><embed type=\"application/x-mplayer2\" src=\"" + url + "\" width=\"" + width + "\" height=\"" + height + "\" ShowStatusBar=\"true\"></embed></object>";
-  }
-}
-function player_flv(url, width, height) {
-
-  return "<object type=\"application/x-shockwave-flash\" data=\"" + imgpath + "/vcastr3.swf\" width=\"" + width + "\" height=\"" + height + "\"><param name=\"movie\" value=\"" + imgpath + "/vcastr3.swf\"/><param name=\"allowFullScreen\" value=\"true\" /><param name=\"FlashVars\" value=\"xml=<vcastr><channel><item><source>" + url + "</source></item></channel><config><isAutoPlay>false</isAutoPlay><isShowAbout>false</isShowAbout></config><plugIns></plugIns></vcastr>\"/></object>";
-}
-function player_taohua(url, width, height) {
-
-  return "<object classid=\"clsid:D27CDB6E-AE6D-11cf-96B8-444553540000\" width=\"" + width + "\" height=\"" + height + "\"><param name=\"movie\" value=\"" + url + "\"/><param name=\"quality\" value=\"best\" /><param name=\"bgcolor\" value=\"#000000\" /><param name=\"allowScriptAccess\" value=\"sameDomain\"/><param name=\"allowFullScreen\" value=\"true\"/><param name=\"wmode\" value=\"transparent\" /></object>";
-
-}
 
 
 /**
@@ -625,3 +582,102 @@ function createElement() {
     }
     return true;
   }
+
+// 检测是否是中文
+  function isChinese(str){
+    var reg = /^[\u4E00-\u9FA5]+$/g;
+      if(!reg.test(str)){
+        return false;
+      }
+       return true;
+  }
+
+  function isNum(str){
+          var reg = /^[0-9]*$/;
+          if(!reg.test(str)){
+            return false; 
+          }
+          return true;
+        }
+
+
+// 添加收藏夹
+function addFavorites(url,name){
+      if (document.all){
+        window.external.addToFavoritesBar(url,name);
+        } else if (window.sidebar)  {
+         window.sidebar.addPanel(name, url, "");
+        } else {
+           alert('关闭本提示后，请使用Ctrl+D添加到收藏夹');
+        }
+}
+
+// 兼容性的获取clientwidth,clientheight,scrollwidth,scrollheight,scrollleft,scrolltop
+if (document.compatMode == "BackCompat") { 
+cWidth = document.body.clientWidth; 
+cHeight = document.body.clientHeight; 
+sLeft = document.body.scrollLeft; 
+sTop = document.body.scrollTop; 
+} 
+else {
+cWidth = document.documentElement.clientWidth; 
+cHeight = document.documentElement.clientHeight; 
+sLeft = document.documentElement.scrollLeft == 0 ? document.body.scrollLeft : document.documentElement.scrollLeft;
+sTop = document.documentElement.scrollTop == 0 ? document.body.scrollTop : document.documentElement.scrollTop;
+} 
+
+// 获取元素在视窗中的位置(Left)
+  function getElementViewLeft(element){
+　　　　var actualLeft = element.offsetLeft;
+　　　　var current = element.offsetParent;
+　　　　while (current !== null){
+　　　　　　actualLeft += current.offsetLeft;
+　　　　　　current = current.offsetParent;
+　　　　}
+　　　　if (document.compatMode == "BackCompat"){
+　　　　　　var elementScrollLeft=document.body.scrollLeft;
+　　　　} else {
+　　　　　　var elementScrollLeft=document.documentElement.scrollLeft; 
+　　　　}
+　　　　return actualLeft-elementScrollLeft;
+　　}      
+// 获取元素在视窗中的位置(TOP)
+  function getElementViewTop(element){
+　　　　var actualTop = element.offsetTop;
+　　　　var current = element.offsetParent;
+　　　　while (current !== null){
+　　　　　　actualTop += current. offsetTop;
+　　　　　　current = current.offsetParent;
+　　　　}
+　　　　 if (document.compatMode == "BackCompat"){
+　　　　　　var elementScrollTop=document.body.scrollTop;
+　　　　} else {
+　　　　　　var elementScrollTop=document.documentElement.scrollTop; 
+　　　　}
+　　　　return actualTop-elementScrollTop;
+　　}
+
+// 设置中文字符的长度 默认是1
+function setCharLenght(str,num){
+  var restr='';
+  for(var i=0;i<num;i++){
+    restr+='x';
+  }
+  var strReg = /[^\x00-\xff]/g;
+  return str.replace(strReg,restr).length;
+}
+
+/**
+ * 获取鼠标赋值内容
+ */
+function getSelectionText(){
+  if(window.getSelection){
+    return window.getSelection();
+  }
+  else if(document.getSelection){
+    return document.getSelection();
+  }
+  else if(document.selection){
+    return document.selection.createRange().text;
+  }
+}
