@@ -27,10 +27,10 @@ seajs.config({
     'seajs-flush': 'luffy/seajs-flush/1.0.1/seajs-flush',
     'seajs-health': 'luffy/seajs-health/0.1.0/seajs-health',
     // ===jquery===
-    '$': 'lib/gallery/jquery/jquery/1.10.1/jquery',
-    'jquery:': 'lib/gallery/jquery/jquery/1.10.1/jquery',
-    '$-debug': 'lib/gallery/jquery/jquery/1.10.1/jquery-debug',
-    'jquery-debug': 'lib/gallery/jquery/jquery/1.10.1/jquery-debug',
+    '$': 'lib/gallery/jquery/1.10.1/jquery',
+    'jquery:': 'lib/gallery/jquery/1.10.1/jquery',
+    '$-debug': 'lib/gallery/jquery/1.10.1/jquery-debug',
+    'jquery-debug': 'lib/gallery/jquery/1.10.1/jquery-debug',
     // ===arale===
     'class': 'lib/arale/class/1.1.0/class',
     'base': "lib/arale/base/1.1.1/base",
@@ -64,6 +64,7 @@ seajs.config({
 
   //	old browser预加载
   preload: [
+    '$',
     Function.prototype.bind ? '' : 'es5-safe',
     this.JSON ? '' : 'json',
     'seajs-text'
